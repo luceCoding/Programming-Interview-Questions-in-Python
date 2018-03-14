@@ -1,0 +1,17 @@
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+        len_s = len(s)+1
+        dp = [False] * (len_s) # dynamic programming
+        dp[0] = True # avoid out-of-bounds checking trick
+        for end_index in xrange(1, len_s):
+            for start_index in xrange(0, end_index):
+                # split the search into two words
+                # check if the first half is already a word and the second half if its in the dictionary
+                if dp[start_index] == True and s[start_index:end_index] in wordDict:
+                    dp[end_index] = True
+        return dp[-1]
