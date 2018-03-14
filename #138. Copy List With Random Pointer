@@ -1,0 +1,21 @@
+class Solution(object):
+    def copyRandomList(self, head):
+        """
+        :type head: RandomListNode
+        :rtype: RandomListNode
+        """
+        if head == None:
+            return None
+        currNode = head
+        oldToNewHash = dict()
+        while currNode:
+            oldToNewHash[currNode] = RandomListNode(currNode.label)
+            currNode = currNode.next
+        currNode = head
+        while currNode:
+            if currNode.next:
+                oldToNewHash[currNode].next = oldToNewHash[currNode.next]
+            if currNode.random:
+                oldToNewHash[currNode].random = oldToNewHash[currNode.random]
+            currNode = currNode.next
+        return oldToNewHash[head]
