@@ -1,3 +1,17 @@
+When tackling this question, one must try to use divide and conquer.
+Notice that the question only wants a true or false for whether or not the given string is breakable, that is all.
+There is a possible solution that uses recursion or the stack to solve this, but for the worst case it would result to a O(n^2) run-time.
+We will use dynamic programming to achieve a O(nlog(n)) and O(n) space solution, with N being the number of characters in the string.
+So the solution will use a boolean array for each character in the string, the purpose is to store whether or not the current character is breakable or not.
+With that in mind, we can start from the first index and to the last index. For each search, we will search each subset of characters to see if its in the dictionary. Starting with 1 char, then 2 chars, then 3 chars, etc...
+Using that logic, we will only set the array to true if and only if the previous index was true and the current characters are in the dictionary.
+Based on a previous answer we have calculated, we can determine if we should continue searching with the current number of characters or move to the next subset.
+We will also use add an extra true element to begin the search with to avoid off by one checking and making our code a bit cleaner.
+At the end we can then return the end of our array.
+
+A possible follow-up question would be: What if the question wants all the indexes that were breakable?
+You would then have to change the array from storing just booleans, to storing tuples of indexes while using the same logic.
+
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
