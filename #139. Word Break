@@ -9,8 +9,8 @@ With that in mind, we can start from the first index and to the last index. For 
 For example, say we are looking only at a 4 character subset out of a total of 10 characters in the string. Chars 1 to 4 are checked, then chars 2 to 4 are checked, then chars 3 to 4 are checked, lastly, character 4. Now repeat this again but for 5 characters.
 Since we are starting from the first character to N characters, the run-time will look like this: n + n-1, n-2, n-3, ... This will total to log(n) but you are also repeating this for N characters, so the runtime would equal to Nlog(N).
 Using that logic, we will only set the array to true if and only if the previous index was true and the current characters are in the dictionary.
-We will also use add an extra true element to begin the search with to avoid off by one checking and making our code a bit cleaner.
-At the end we can then return the end of our array.
+We will also add an extra true element as the first element of the array to avoid off by one checking and making our code a bit cleaner.
+In the end, we can then return the last element of our array.
 
 A possible follow-up question would be: What if the question wants all the indexes that were breakable?
 You would then have to change the array from storing just booleans, to storing tuples of indexes while using the same logic.
