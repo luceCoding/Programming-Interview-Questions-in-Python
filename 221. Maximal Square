@@ -1,0 +1,31 @@
+class Solution(object):
+    def maximalSquare(self, matrix):
+        """
+        :type matrix: List[List[str]]
+        :rtype: int
+        """
+        if matrix == None or len(matrix) == 0:
+            return 0
+        
+        # convert from str to int
+        dp = [[int(string) for string in row] for row in matrix]
+        
+        if len(dp) == 1: # deal with a one row matrix
+            return max(dp[0])
+        elif len(dp[0]) == 1: # deal with a one col matrix
+            return max(element for row in dp for element in row)
+        
+        # We perform this step for the scenario where everything is zero except the first row or column
+        result = max(max(dp[0]), max(element for row in dp for element in row))
+        
+        # We will start instead at matrix[1][1]
+        # skipping the first row and column in the matrix to avoid off by one checking
+        for row_index, row in enumerate(dp[1:], 1):
+            for col_index, element in enumerate(row[1:], 1):
+                if element == 1:
+                    min_of_3 = min(min(dp[row_index-1][col_index], dp[row_index][col_index-1]), 
+                                   dp[row_index-1][col_index-1])
+                    square_size = min_of_3 + 1
+                    dp[row_index][col_index] = square_size
+                    result = max(square_size, result)
+        return result * result
