@@ -1,5 +1,5 @@
 # Leetcode-Solutions
-After doing over 120+ question from EPI, CTCI and leetcode, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
+After doing over 120+ questions from EPI, CTCI and leetcode combined, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
 
 Each question has its own unique 'gotcha' that you should learn. You want to take each question to the most optimal solution in-order to fully maximize what you can learn from it. Some questions are onion questions, with multiple solutions to the problem, its also important to know them all. For example, do it both recursive and iteratively or BFS and DFS. 
 
