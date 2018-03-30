@@ -1,0 +1,25 @@
+class Solution(object):
+    def removeKdigits(self, num, k):
+        """
+        :type num: str
+        :type k: int
+        :rtype: str
+        """
+        if len(num) == 1 and k > 0:
+            return "0"
+        stack = list()
+        n_pops = 0
+        # starting from left to right, create the smallest number with a stack
+        for element in num:
+            # the last element in the stack will represent the worst digit that should be removed
+            while len(stack) and int(stack[-1]) > int(element) and n_pops != k:
+                stack.pop()
+                n_pops += 1
+            stack.append(element)
+        # if we havn't popped enough, pop off the last (k-n_pops) elements
+        stack = stack[0:len(stack)-(k-n_pops)]
+        if len(stack) == 0:
+            return "0"
+        # clever pythonic way of removing beginning zeros
+        num_convert = int("".join(stack))
+        return str(num_convert)
