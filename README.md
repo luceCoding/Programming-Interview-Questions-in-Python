@@ -39,6 +39,7 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 - #380. Insert Delete GetRandom O(1)
 
 ### How you structure your code
+#### These question are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
 - #36. Valid Sudoku
 - #289. Game of Life
 
