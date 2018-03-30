@@ -9,7 +9,7 @@ This is a perfect solution to use dynamic programming.
 We can start by comparing words of length 2 then 3 then 4, etc... till max length.
 We can intialize our dp to 1 and skip comparing words of length 1.
 As we work our way up, we can use the dp to find what our middle sequence was and only evaluate whether it's a possible palidrone.
-If its not a possible palidrone, then we can take the max of two previous subsequences and move to the next word.
+If its not a possible palidrone, then we can take the max of two previous subsequences and continue on to the next word.
 
 class Solution(object):
     def longestPalindromeSubseq(self, s):
