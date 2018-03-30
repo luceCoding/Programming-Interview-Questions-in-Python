@@ -40,6 +40,7 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 
 ### How you structure your code
 - #36. Valid Sudoku
+- #289. Game of Life
 
 ### How you think
 - #42. Trapping Rain Water
