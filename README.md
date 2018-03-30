@@ -33,15 +33,16 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 - #139. Word Break
 - #516. Longest Palindromic Subsequence
 
-### Combine more than one data structure
-- #146. LRU Cache
-- #355. Design Twitter
-- #380. Insert Delete GetRandom O(1)
-
 ### How you structure your code
 #### These question are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
 - #36. Valid Sudoku
 - #289. Game of Life
+
+### Combine more than one data structure
+#### You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
+- #146. LRU Cache
+- #355. Design Twitter
+- #380. Insert Delete GetRandom O(1)
 
 ### How you think
 #### These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
