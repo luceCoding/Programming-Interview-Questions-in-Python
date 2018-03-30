@@ -1,2 +1,2 @@
 # Leetcode-Solutions
-This is a collection of some of my leetcode solutions in python. I believe each question here are must do's when preparing for on-site whiteboarding iterviews. These questions are selected because I believe they will give you the most effective use of your time spent. Each question here fills in a critical way of thinking to add to your toolbox.
+After doing over 120+ question from EPI, CTCI and leetcode, I've hand selected question I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are question, I believe will give the most bank for your buck and invest on time. Worthy of adding to your arsenal to fight the coding gods!
