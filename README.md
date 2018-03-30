@@ -43,5 +43,6 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 - #289. Game of Life
 
 ### How you think
+#### These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
 - #42. Trapping Rain Water
 - #6. ZigZag Conversion
