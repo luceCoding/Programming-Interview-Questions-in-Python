@@ -1,8 +1,10 @@
 There are multiple ways to solve this problem. Some will be more complicated than others. 
 I believe this is a very simple and intuitive approach. 
+Notice that the question wants the answer in a format that is the top row + middle rows + bottom row. 
 We focus on how a zig zag is really made. The pattern that it creates is by going up then down repeatedly.
 With that in mind, we can implement that idea in many different ways.
 A very simple solution that doesn't require so much thinking is by using a queue and going up and down the queues and pushing elements into them.
+Each queue will represent a row. At the end, concat them together to form the string.
 
 class Solution(object):
     def convert(self, s, numRows):
