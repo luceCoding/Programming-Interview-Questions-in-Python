@@ -1,6 +1,6 @@
 There are multiple ways to solve this problem. Some will be more complicated than others. 
 I believe this is a very simple and intuitive approach. 
-We focus on how a zig zag is really made. The pattern that is creates is by going up then down repeatedly.
+We focus on how a zig zag is really made. The pattern that it creates is by going up then down repeatedly.
 With that in mind, we can implement that idea in many different ways.
 A very simple solution that doesn't require so much thinking is by using a queue and going up and down the queues and pushing elements into them.
 
