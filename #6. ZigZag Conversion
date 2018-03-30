@@ -1,0 +1,34 @@
+There are multiple ways to solve this problem. Some will be more complicated than others. 
+I believe this is a very simple and intuitive approach. 
+We focus on how a zig zag is really made. The pattern that is creates is by going up then down repeatedly.
+With that in mind, we can implement that idea in many different ways.
+A very simple solution that doesn't require so much thinking is by using a queue and going up and down the queues and pushing elements into them.
+
+class Solution(object):
+    def convert(self, s, numRows):
+        """
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+        if s == None:
+            return ""
+        elif numRows == 0 or numRows == 1:
+            return s
+        n_queues = [[] for _ in range(numRows)]
+        curr_row = 0
+        go_down = True
+        for element in s:
+            n_queues[curr_row].append(element)
+            if curr_row == 0:
+                go_down = True
+            elif curr_row == numRows-1:
+                go_down = False
+            if go_down:
+                curr_row += 1
+            else:
+                curr_row -= 1
+        result = ""
+        for row in n_queues:
+            result += "".join(row)
+        return result
