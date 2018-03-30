@@ -44,3 +44,4 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 
 ### How you think
 - #42. Trapping Rain Water
+- #6. ZigZag Conversion
