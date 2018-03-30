@@ -1,0 +1,43 @@
+To tackle this problem, one must reread the question and re-think how a palidrone is formed in relationship to calculating the longest subsequence.
+For example, say you have a word 'aabaca'. The answer to this is 'aabaa'.
+Try to apply divide and conquer to this question. 
+
+You can think of this as 3 parts, a start character, middle sequence, and an end character. 
+The only time a word can become the next largest palidrone subsequence is when the start and end characters equal. 
+At that point you just need to add the middle sequence's longest palidrone subsequence + 2.
+This is a perfect solution to use dynamic programming.
+We can start by comparing words of length 2 then 3 then 4, etc... till max length.
+We can intialize our dp to 1 and skip comparing words of length 1.
+As we work our way up, we can use the dp to find what our middle sequence was and only evaluate whether it's a possible palidrone.
+If its not a possible palidrone, then we can take the max of two previous subsequences and move to the next word.
+
+class Solution(object):
+    def longestPalindromeSubseq(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if s == None or len(s) == 0:
+            return 0
+        size = len(s)
+        # dynamic_programming[first index of word][last index of word]
+        # used to save previously longest sequence calculated to and from an index
+        dp = [[1]*size for _ in xrange(size)]
+        for length in xrange(1, size): # skip single character words
+            for start_index in xrange(0, size-length):
+                end_index = start_index + length
+                if s[start_index] == s[end_index]:
+                    # deal with any 2 character strings like 'aa' should return 2 and not 2 + middle_seq
+                    if length != 1:
+                        # for example, if we found 'aba', we got here because it started and ended with 'a'
+                        # then we want the middle sequence, which is 'b'
+                        # add the middle sequence's longest result from dp to calculation
+                        dp[start_index][end_index] = 2 + dp[start_index+1][end_index-1]
+                    else :
+                        dp[start_index][end_index] = 2
+                else:
+                    # not a potential palidrone that can increase the result, like 'abbc'
+                    # so just get the longest one found so far, like 'abb' or 'bbc' which is 2
+                    dp[start_index][end_index] = max(dp[start_index][end_index-1], 
+                                                     dp[start_index+1][end_index])
+        return dp[0][size-1]
