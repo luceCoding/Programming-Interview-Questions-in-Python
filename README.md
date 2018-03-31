@@ -31,6 +31,7 @@ In conclusion, when you are stuck on a problem, think about which learn phase yo
 - #7. Reverse Integer
 - #29. Divide Two Integers
 - #404. Sum of Left Leaves
+- #367. Valid Perfect Square
 
 ### Hash Tables
 
