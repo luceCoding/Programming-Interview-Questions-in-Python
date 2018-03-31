@@ -1,0 +1,26 @@
+This solution will run at O(log(n)). We use divide and conquer and some concepts from quick sort partitioning to solve this problem the most efficent way.
+If we begin our search at half of number given, for each iteration of the search, reduce our search space by half. You can think of low and high as our starting and end search space. 
+We calculate our product using the middle num or the low or high values. Based on the product, we can determine if the solution is above or below the middle value or just right.
+
+class Solution(object):
+    def isPerfectSquare(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num < 1:
+            return False
+        elif num == 1 or num == 4:
+            return True
+        low = 2
+        high = num/2 #cut down on calculations, won't work with num = 4
+        while (low < high):
+            middle = low + ((high-low)/2)
+            product = middle * middle
+            if product == num:
+                return True
+            elif product > num:
+                high = middle
+            else:
+                low = middle+1
+        return False
