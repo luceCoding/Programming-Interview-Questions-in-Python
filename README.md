@@ -3,6 +3,26 @@ After doing over 120+ questions from EPI, CTCI and leetcode combined, I've hand 
 
 Each question has its own unique 'gotcha' that you should learn. You want to take each question to the most optimal solution in-order to fully maximize what you can learn from it. Some questions are onion questions, with multiple solutions to the problem, its also important to know them all. For example, do it both recursive and iteratively or BFS and DFS. 
 
+# Mindset approach to Whiteboard interviews
+Attempting to pass whiteboard interviews is a daunting task. No one is born natural to it. That is why I'd like to set a tone and mindset when I approach almost anything that I am unfamiliar with. Here are a few quick tips that can get you started.
+
+#### Prepare to fail
+You will fail. Accept it. However, DO NOT ALLOW it to dictate your future actions. There is only one effective way to deal with failure. That is to learn from it. Learn as much as you can from the choices you have made. In this case, that means, learn what you can from each question, encounter and process. This is why this will lead up to my next point.
+
+#### Play to learn, not play to win
+Yes you want that Big N job, we all want it. However, you cannot get that job unless you start shifting your objective from "winning" to "learning". "Winning" should never be your first objective, your first objective is to "learn". Why? For some, if "winning" was their first objective, they run into starter paralysis aka. fear. Afraid to lose. When "winning" or "losing" becomes your first priority, you become blinded from how the process can take you there. Don't get me wrong, having a goal to win is important, but remember, its just a long term goal, not an obstacle.
+
+# How to learn?
+Now this brings me to this dicussion on how one should effectively learn. First, one must understand the different phases of learning. 
+
+Take typing on a keyboard as an example. Before you can type on the keyboard, one must memory map the action they want to do to each key press on the keyboard. For our case, this is an example of python language syntax. Like how a keyboard is a tool, the language one chooses to program in, is also a tool. 
+
+What if you don't know what to type on the keyboard? Now that is related to the set of english words or grammar rules one knows. For us that is the data structures and algothrims a programmer needs to utalize their tool.
+
+Say you have mastered both your english language and your keyboard is there another learning phase? Of course, just like one starts small and build their way up, one can end up from small to large. We need a way to manage our end result and this leads to structure. Without structure, there isn't a good way to maintain and keep it from collapsing. To programmers, those are design patterns, SOLID principles and take your pick of programming paradigms.
+
+In conclusion, when you are stuck on a program, think about which learn phase your are stuck on. Is it the lack of DS/Algos, the language, or programming paradigms? One you are able to figure that out, focus on that part of your missing knowledge. It will be diffcult when you start, as for another starting something new, there is usually more than one knowledge area that is missing.
+
 ### Basics
 - #1. Two Sum
 - #141. Linked List Cycle
