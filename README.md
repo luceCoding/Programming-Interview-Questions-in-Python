@@ -24,6 +24,8 @@ Say you have mastered both your english language and your keyboard is there anot
 In conclusion, when you are stuck on a problem, think about which learn phase your are stuck on. Is it the lack of DS/Algos, the language, or programming paradigms? One you are able to figure that out, focus on that part of your missing knowledge. It will be diffcult when you start, as for another starting something new, there is usually more than one knowledge area that is missing.
 
 # How should you practice for whiteboard coding questions
+### There are infinite amount of question but only a finite amount of pattern solutions
+Remember, there are limitless amount of questions someone can ask you, but that is because you can word it differently here and there but the process to get to the solution is similar if not the same as the next. That is why one should focus on learning patterns instead of trying to memorize or see as many questions. You must prepare for the inevitable scenario that you will have to solve a question you have never heard of it. In-order to tackle this, you must be able to identify patterns in the questions with previous questions you have faced and apply those solutions for this scenario.
 
 ### Basics
 - #1. Two Sum
