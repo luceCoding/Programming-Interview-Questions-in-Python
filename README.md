@@ -48,8 +48,13 @@ I intentionally mixed these together. Some questions, if I were to categoized th
 - #367. Valid Perfect Square
 - #402. Remove K Digits
 
+### How you structure your code
+These questions are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
+- #36. Valid Sudoku
+- #289. Game of Life
+
 ### Intro to dynamic programming
-Dynamic programming is a mystery to some people, this is why I split this into its own separate category so you can focux purely on how you can use it to your advantage.
+Dynamic programming is a mystery to some people, this is why I split this into its own separate category so you can focus purely on how you can use it to your advantage.
 - #198. House Robber
 - #221. Maximal Square
 
@@ -71,11 +76,6 @@ Below, I've tried to select questions I think will give you a different perspect
 ### Deeper with dynamic programming
 - #139. Word Break
 - #516. Longest Palindromic Subsequence
-
-### How you structure your code
-These question are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
-- #36. Valid Sudoku
-- #289. Game of Life
 
 ### Combine more than one data structure
 You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
