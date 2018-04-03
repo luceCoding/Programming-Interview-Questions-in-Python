@@ -39,6 +39,10 @@ So read the question twice, three times, make sure you don't miss anything and P
 ### Repetition
 
 # Resources for your journey
+- https://start.interviewing.io
+- Elements of Programming Interviews
+- Cracking the Coding Interview
+- https://leetcode.com/
 
 ### Basics
 I intentionally mixed these together. Some questions, if I were to categoized them to their respective data structures would give out too much about the question. These I believe one should start with.
