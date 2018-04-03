@@ -42,6 +42,8 @@ So read the question twice, three times, make sure you don't miss anything and P
 
 ### Repetition
 
+### Use encapsulation
+
 # Resources for your journey
 - https://interviewing.io/
 - Elements of Programming Interviews
