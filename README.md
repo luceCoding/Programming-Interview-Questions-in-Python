@@ -7,7 +7,11 @@ Each question has its own unique 'gotcha' that you should learn. You want to tak
 Attempting to pass whiteboard interviews is a daunting task. No one is born natural to it. That is why I'd like to set a tone and mindset when I approach almost anything that I am unfamiliar with. Here are a few quick tips that can get you started.
 
 #### Prepare to fail
-You will fail. Accept it. However, DO NOT ALLOW it to dictate your future actions. There is only one effective way to deal with failure. That is to learn from it. Learn as much as you can from the choices you have made. In this case, that means, learn what you can from each question, encounter and process. This is why this will lead up to my next point.
+You will fail. Accept it. However, DO NOT ALLOW it to dictate your future actions. There is only one effective way to deal with failure. That is to learn from it. Learn as much as you can from the choices you have made. In this case, that means, learn what you can from each question, encounter and process. 
+
+Even if you are prepared, you will have bad days and good days. Things that are out of your control will affect the decisions that other people make. Maybe they had a bad day too. The only thing that can land you the dream job is to try and to try many times. Increasing the chance of being hired with each session and use each session to improve upon what you already know. Only way is moving forward.
+
+This is why this will lead up to my next point.
 
 #### Play to learn, not play to win
 Yes you want that Big N job, we all want it. However, you cannot get that job unless you start shifting your objective from "winning" to "learning". "Winning" should never be your first objective, your first objective is to "learn". Why? For some, if "winning" was their first objective, they run into starter paralysis aka. fear. Afraid to lose. When "winning" or "losing" becomes your first priority, you become blinded from how the process can take you there. For others, people try to cheat the game by memorizing instead of ultimately learning which is by far more fundamentally sound for the lifespan of your career. Don't get me wrong, having a goal to win is important, but remember, its just a long term goal, not an obstacle.
