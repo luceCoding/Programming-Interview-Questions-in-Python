@@ -36,6 +36,8 @@ So read the question twice, three times, make sure you don't miss anything and P
 
 ### Learn how to dilute the question
 
+### Repetition
+
 ### Basics
 - #1. Two Sum
 - #141. Linked List Cycle
