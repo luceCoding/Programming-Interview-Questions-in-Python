@@ -34,6 +34,8 @@ It will be different for you, but I 100% recommend, make sure you run through yo
 
 So read the question twice, three times, make sure you don't miss anything and PLAN! Make sure you spend ATLEAST 10 minutes before you write any code, DRAW IT OUT, TALK IT OUT. I had to draw pictures, my techinique was to draw it and follow with the drawing as I coded. It was the only way I was able to get consistent results. For some questions, I had to use real world objects because I could relate to them easily to find edge cases. Like questions that deal with swapping, I would immediately visualize a theater row of seats. If the question also wanted to pair things together, I would think of boyfriend/girlfriends all randomly seated and your job was to pair the couples together. I know it's wierd, but it worked for me. Find your method, test a few ways and make sure it works for you. 
 
+### Learn how to dilute the question
+
 ### Basics
 - #1. Two Sum
 - #141. Linked List Cycle
