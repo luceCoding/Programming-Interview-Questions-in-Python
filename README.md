@@ -21,7 +21,7 @@ What if you don't know what to type on the keyboard? Now that is related to the 
 
 Say you have mastered both your english language and your keyboard is there another learning phase? Of course, just like one starts small and build their way up, one can end up from small to large. We need a way to manage our end result and this leads to structure. Without structure, there isn't a good way to maintain and keep it from collapsing. To programmers, those are design patterns, SOLID principles and take your pick of programming paradigms.
 
-In conclusion, when you are stuck on a problem, think about which learn phase your are stuck on. Is it the lack of DS/Algos, the language, or programming paradigms? One you are able to figure that out, focus on that part of your missing knowledge. It will be diffcult when you start, as for another starting something new, there is usually more than one knowledge area that is missing.
+In conclusion, when you are stuck on a problem, think about which learning phase you are stuck on. Is it the lack of DS/Algos, the language, or programming paradigms? Once you are able to figure that out, focus on that missing knowledge set. It will be diffcult when you start, as for anyone starting something new, there is usually more than one knowledge area that is missing.
 
 # How should you practice for whiteboard coding questions
 ### There are infinite amount of questions but only a finite amount of methods to the solution
