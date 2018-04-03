@@ -39,12 +39,22 @@ So read the question twice, three times, make sure you don't miss anything and P
 ### Repetition
 
 ### Basics
+I intentionally mixed these together. Some questions, if I were to categoized them to their respective data structures would give out too much about the question. These I believe one should start with.
 - #1. Two Sum
 - #141. Linked List Cycle
 - #7. Reverse Integer
 - #29. Divide Two Integers
 - #404. Sum of Left Leaves
 - #367. Valid Perfect Square
+- #402. Remove K Digits
+
+### Intro to dynamic programming
+Dynamic programming is a mystery to some people, this is why I split this into its own separate category so you can focux purely on how you can use it to your advantage.
+- #198. House Robber
+- #221. Maximal Square
+
+## Deeper into the weeds
+Below, I've tried to select questions I think will give you a different perspective of the category that one may not have been exposed with during their studies.
 
 ### Hash Tables
 
@@ -58,29 +68,22 @@ So read the question twice, three times, make sure you don't miss anything and P
 ### Sorting
 - #215. Kth Largest Element in an Array	
 
-### Stacks
-- #402. Remove K Digits
-
-### Intro to dynamic programming
-- #198. House Robber
-- #221. Maximal Square
-
-### Into the weeds with dynamic programming
+### Deeper with dynamic programming
 - #139. Word Break
 - #516. Longest Palindromic Subsequence
 
 ### How you structure your code
-#### These question are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
+These question are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
 - #36. Valid Sudoku
 - #289. Game of Life
 
 ### Combine more than one data structure
-#### You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
+You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
 - #146. LRU Cache
 - #355. Design Twitter
 - #380. Insert Delete GetRandom O(1)
 
 ### How you think
-#### These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
+These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
 - #42. Trapping Rain Water
 - #6. ZigZag Conversion
