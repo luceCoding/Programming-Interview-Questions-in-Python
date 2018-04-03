@@ -39,7 +39,7 @@ So read the question twice, three times, make sure you don't miss anything and P
 ### Repetition
 
 # Resources for your journey
-- https://start.interviewing.io
+- https://interviewing.io/
 - Elements of Programming Interviews
 - Cracking the Coding Interview
 - https://leetcode.com/
