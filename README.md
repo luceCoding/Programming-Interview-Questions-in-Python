@@ -38,6 +38,8 @@ So read the question twice, three times, make sure you don't miss anything and P
 
 ### Repetition
 
+# Resources for your journey
+
 ### Basics
 I intentionally mixed these together. Some questions, if I were to categoized them to their respective data structures would give out too much about the question. These I believe one should start with.
 - #1. Two Sum
