@@ -14,7 +14,7 @@ Assume, you must match the input entirely in-order to produce an output.
 
 ### EXPLAINATION
 This is from a facebook phone screen.
-Your ability to understand how recursion and the stack relate will greatly help in solving this problem.
+Your ability to understand how recursion and how the stack relate will greatly help in solving this problem.
 There are two issues to point out. First issue is the string pattern matching of the input '123' to the dictionary. Then there is the possible patterns problem after you have accessed a list and started to create your result.
 
 The first issue is fairly easy. You should have a known start and end index in the string then try to match that to the dictionary, if not, increment the end index once and try again.
