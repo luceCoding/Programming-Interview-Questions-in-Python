@@ -44,6 +44,8 @@ So read the question twice, three times, make sure you don't miss anything and P
 
 ### Use encapsulation
 
+### Train with 10x the gravity
+
 # Resources for your journey
 - https://interviewing.io/
 - Elements of Programming Interviews
