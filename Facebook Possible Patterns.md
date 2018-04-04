@@ -38,10 +38,15 @@ def get_possible_patterns(string, dictionary, stack, start_index):
                 if end_index == len(string)-1: #Are we at the end?
                     results.append(''.join(stack))
                 else:
-                    results += get_possible_patterns(string, 
-                                                     dictionary, 
-                                                     stack, 
-                                                     end_index+1)
+                    result = get_possible_patterns(string, 
+                                                   dictionary, 
+                                                   stack, 
+                                                   end_index+1)
+                    if len(result) == 0: 
+                        #there is a dead end, stop the for loop
+                        break
+                    else:
+                        results += result
                 stack.pop()
         end_index += 1
     return results
