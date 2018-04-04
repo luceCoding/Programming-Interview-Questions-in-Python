@@ -14,7 +14,7 @@ An even more optimized solution is to use a pooling technique. For each clientID
 The solution must use a timescale of milliseconds or better. If you were to use seconds, it wouldn't be exact enough. The seconds will be rounded up or down and you would lose precision. Even a tenth of a second would not be enough. If you had 100 requests at 0.1 of a second, then later you get another request at 1.1 of a second. How would you know that it was exactly 1.1 or 1.099 or 1.101?? 1.101 is passed one second.
 
 # SOLUTION
-'''
+```
 import time
 from time import sleep
 
@@ -47,4 +47,4 @@ while counter <= max_counter:
     sleep(0.002)
     print 'counter: {} result: {}'.format(counter, myLimiter.is_allowed(1))
     counter += 1
-'''
+```
