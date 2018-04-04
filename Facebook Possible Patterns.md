@@ -9,8 +9,8 @@ Given a string as input, return the list of all the possible patterns:
 ```
 
 Example if input is "123", then output is ["ADP","ADQ","AEP","AEQ","BDP","BDQ","BEP","BEQ","CDP","CDQ","CEP","CEQ","XP","XQ"]
-Assume, you must match the input entirely in-order to produce an output.
 
+Assume, you must match the input entirely in-order to produce an output.
 
 ### EXPLAINATION
 This is from a facebook phone screen.
