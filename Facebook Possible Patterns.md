@@ -17,7 +17,7 @@ This is from a facebook phone screen.
 Your ability to understand how recursion and how the stack relate will greatly help in solving this problem.
 There are two issues to point out. First issue is the string pattern matching of the input '123' to the dictionary. Then there is the possible patterns problem after you have accessed a list and started to create your result.
 
-The first issue is fairly easy. You should have a known start and end index in the string then try to match that to the dictionary, if not, increment the end index once and try again.
+The first issue is fairly easy. You should have a known start and end index in the string, use these indexes to create a sub-string then try to match that to the dictionary, if not, increment the end index once and try again.
 
 For the second issue, this is when you have to think about how you are going to store your answer. First, we know we have to use recursion for each element in the list. But the next new recursion you call, it must be provided the currently built result so far. Your base case is when you have reached the last index of the string AND the first issue is resolved. Then and only then should you add your current result to the final result. 
 
