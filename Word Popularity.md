@@ -1,7 +1,16 @@
 Given an integer W that represents number of words,
 Write functions insert(word) and getMostPopularWord() such that getMostPopularWord() will always return the most popular word in the last W number of words.
-
 The goal is to make insert(word) as efficient as possible.
+
+For example:
+let W = 3
+insert("A")
+insert("A")
+getMostPopularWord() => "A"
+insert("B")
+getMostPopularWord() => "A"
+insert("B")
+getMostPopularWord() => "B" // since the first inserted "A" is out of the scope of the last 3 words
 
 '''
 from collections import deque
