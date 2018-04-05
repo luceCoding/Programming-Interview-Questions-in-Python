@@ -1,7 +1,7 @@
 # QUESTION
 Given an integer W that represents number of words,
 Write functions insert(word) and getMostPopularWord() such that getMostPopularWord() will always return the most popular word in the last W number of words.
-The goal is to make insert(word) as efficient as possible.
+Create two solutions that will optimize either function. 
 
 For example:
 ```
