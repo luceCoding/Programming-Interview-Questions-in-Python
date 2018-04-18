@@ -53,6 +53,8 @@ So read the question twice, three times, make sure you don't miss anything and P
 - https://leetcode.com/
 - Head first into Design Patterns
 
+# Tackling Recursion
+
 # Tackling Dynamic Programming
 Dynamic programming is using previously calculated information to calculate the next solution. To do this, one must allocate extra space to save sub-answers. This extra space is usually in two forms, either a one-dimensional array or a two-dimensional array, for interviewing purposes, it shouldn't need to go any further. Now the last portion you need to figure out is, what makes a sub-answer? Then you have to ask, what is the sub-problem? Then you have to think in terms of divide and conquer, what is the smallest problem set I could use, that when combining other small problem sets create another 'summation' of other problem sets. This will require a 'feel' of how solutions with dynamic programming work. There isn't a very good way to explain this other than the way I just described, so just dive in.
 
