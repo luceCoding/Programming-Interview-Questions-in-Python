@@ -25,41 +25,38 @@ What happens if you reached the end of the index but the first issue isn't resol
 
 ### SOLUTION
 ```
-def get_possible_patterns(string, dictionary, stack, start_index):
+def get_possible_patterns(string, dictionary, stack):
     results = list()
-    if start_index >= len(string):
-        return results
-    end_index = start_index
-    while end_index < len(string):
-        substring = string[start_index:end_index+1]
+    # is the substring in the dictionary?
+    for index in range(0, len(string)+1):
+        substring = string[0:index+1]
         if substring in dictionary:
-            for element in dictionary[substring ]:
+            # yes, add an element from list and call recursion
+            for element in dictionary[substring]:
                 stack.append(element)
-                if end_index == len(string)-1: #Are we at the end?
+                # are we at end?
+                if index == len(string)-1:
                     results.append(''.join(stack))
                 else:
-                    result = get_possible_patterns(string, 
-                                                   dictionary, 
-                                                   stack, 
-                                                   end_index+1)
-                    if len(result) == 0: 
-                        #there is a dead end, stop the for loop
+                    new_string = string[index+1:]
+                    results_found = get_possible_patterns(
+                                        new_string, 
+                                        dictionary, 
+                                        stack)
+                    if len(results_found) == 0:
+                        stack.pop()
                         break
-                    else:
-                        results += result
+                    results += results_found
                 stack.pop()
-        end_index += 1
     return results
-
-dictionary = {'1':['A','B','C'],
-              '2':['D','E'],
-              '12':['X'],
-              '3':['P','Q']}
-#dictionary = {}
+    
+    
+dictionary = { "1" : ['A', 'B', 'C'],
+               "2" : ['D', 'E'],
+               "12" : ['X'],
+               "3" : ['P', 'Q'] }
 
 string = '123'
-
 stack = list()
-results = get_possible_patterns(string, dictionary, stack, 0)
-print results
+print get_possible_patterns(string, dictionary, stack)
 ```
