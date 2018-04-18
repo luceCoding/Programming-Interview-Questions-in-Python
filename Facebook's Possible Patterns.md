@@ -43,6 +43,8 @@ def get_possible_patterns(string, dictionary, stack):
                                         new_string, 
                                         dictionary, 
                                         stack)
+                    # Reach a dead end
+                    # For the scenario that a list has a majority of the values but can never exactly match the string
                     if len(results_found) == 0:
                         stack.pop()
                         break
