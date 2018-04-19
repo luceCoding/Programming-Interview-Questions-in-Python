@@ -1,9 +1,17 @@
 # QUESTION
-Given an integer W that represents number of words,
+Given an integer W that represents number of words and unlimited space,
 Write functions insert(word) and getMostPopularWord() such that getMostPopularWord() will always return the most popular word in the last W number of words.
-Create two solutions that will optimize either function. 
+Create two solutions that will optimize run-time for either function while sacrificing run-time for the other. 
 
 For example:
+```
+let W = 2
+insert("A")
+getMostPopularWord() => "A"
+insert("B")
+getMostPopularWord() => "B"
+```
+
 ```
 let W = 3
 insert("A")
@@ -120,3 +128,6 @@ print test.getMostPopularWord()
 test.insert('C')
 print test.getMostPopularWord()
 ```
+
+# FOLLOW UP QUESTION
+Can you get both functions to run at O(1) most of the time?
