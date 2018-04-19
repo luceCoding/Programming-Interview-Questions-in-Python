@@ -23,7 +23,7 @@ insert("B")
 getMostPopularWord() => "B" // since the first inserted "A" is out of the scope of the last 3 words
 ```
 
-# SOLUTION 1
+# SOLUTION 1 to optimize getMostPopularWord()
 We will use a queue of W size in-order to remember which was the oldest word that was added so we can decrement its popularity.
 Then use a hash table that uses keys of words that return values of nodes in a sorted list.
 Lastly, we will use a sorted list of nodes. Each node will have its word and its popularity.
@@ -79,12 +79,13 @@ def custom_compare(a, b):
 
 test = solution(2)
 test.insert('A')
-myOtestbj.insert('B')
+test.insert('B')
 test.insert('A')
 print test.getMostPopularWord()
 ```
 
-# SOLUTION 2
+# SOLUTION 2 optimize insert(word)
+For this solution, we will take a slightly different approach. We will use a frequency counter that increments as we add words. Using this, we can insert words into a hash table with keys of words and values of popularity and the frequency counter. Obvious increment and decrements will be performed using the hash table and a queue, as explained above. Then when getMostPopularWord is called, its a simple one pass through the hash table's values to find the most popular word O(n) while having insert at constant run-time.
 ```
 from collections import deque
 import sys
