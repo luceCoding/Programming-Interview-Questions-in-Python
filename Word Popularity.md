@@ -1,7 +1,7 @@
 # QUESTION
-Given an integer W that represents number of words and unlimited space,
+Given an integer W that represents number of words and unlimited space complexity.
 Write functions insert(word) and getMostPopularWord() such that getMostPopularWord() will always return the most popular word in the last W number of words.
-Create two solutions that will optimize run-time for either function while sacrificing run-time for the other. 
+Create two solutions that will optimize run-time complexity for either function while sacrificing the run-time for the other function. 
 
 For example:
 ```
