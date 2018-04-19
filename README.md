@@ -79,6 +79,7 @@ These questions are fairly straight forward, no trick questions or gotchas here.
 Dynamic programming is a mystery to some people, this is why I split this into its own separate category so you can focus purely on how you can use it to your advantage.
 - #198. House Robber
 - #221. Maximal Square
+- #5. Longest Palindromic Substring
 
 ## Deeper into the weeds
 Below, I've tried to select questions I think will give you a different perspective of the category that one may not have been exposed with during their studies.
