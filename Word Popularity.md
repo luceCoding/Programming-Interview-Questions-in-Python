@@ -138,3 +138,8 @@ print test.getMostPopularWord()
 
 # FOLLOW UP QUESTION
 Can you get both functions to run at O(1) most of the time?
+
+# SOLUTION TO FOLLOW UP QUESTION
+
+```
+```
