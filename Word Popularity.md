@@ -24,6 +24,11 @@ getMostPopularWord() => "B" // since the first inserted "A" is out of the scope 
 ```
 
 # SOLUTION 1
+We will use a queue of W size in-order to remember which was the oldest word that was added so we can decrement its popularity.
+Then use a hash table that uses keys of words the return values of nodes in a sorted list.
+Lastly, we will use a sorted list with nodes of words and its popularity.
+The small trick that is use is that, when a new word is added or its popularity increases, we will move the node in the sorted list to the front. Then create a custom sort function that will give priority to nodes in the front of the list when comparing two nodes with the same popularity. In this way, we can maintain order, which will allow us to get the most popular word at O(1) run-time and insert at O(nlog(n)) run-time.
+  
 ```
 from collections import deque
 
