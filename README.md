@@ -47,11 +47,12 @@ So read the question twice, three times, make sure you don't miss anything and P
 ### Train with 10x the gravity
 
 # Resources for your journey
-- https://interviewing.io/
 - Elements of Programming Interviews
 - Cracking the Coding Interview
 - https://leetcode.com/
 - Head first into Design Patterns
+- https://www.pramp.com/
+- https://interviewing.io/
 
 # Tackling Recursion
 
