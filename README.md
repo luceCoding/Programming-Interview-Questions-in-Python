@@ -88,16 +88,17 @@ Below, I've tried to select questions I think will give you a different perspect
 - Facebook Possible Patterns
 
 ### Hash Tables
+- #138. Copy List With Random Pointer
 
 ### Linked lists
 
 ### Heaps
 
-### Pointers
-- #138. Copy List With Random Pointer
-
 ### Sorting
 - #215. Kth Largest Element in an Array	
+
+### Graphs
+- Uber's Location Question
 
 ### Deeper with dynamic programming
 - #139. Word Break
@@ -107,7 +108,7 @@ Below, I've tried to select questions I think will give you a different perspect
 You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
 - #146. LRU Cache
 - #355. Design Twitter
-- #380. Insert Delete GetRandom O(1)
+- Word Popularity
 
 ### Design
 - Design a Rubix Cube
