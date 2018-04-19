@@ -28,7 +28,8 @@ We will use a queue of W size in-order to remember which was the oldest word tha
 Then use a hash table that uses keys of words that return values of nodes in a sorted list.
 Lastly, we will use a sorted list of nodes. Each node will have its word and its popularity.
 In this way, we can use the hash table to increment and decrement the popularity of the nodes quickly then sorting them.
-The small trick that is use is that, when a new word is added or its popularity increases, we will move the node in the sorted list to the front. Then create a custom sort function that will give priority to nodes in the front of the list when comparing two nodes with the same popularity. In this way, we can maintain order, which will allow us to get the most popular word at O(1) run-time and insert at O(nlog(n)) run-time.
+
+Here is the small trick, when a new word is added or its popularity increases, we will move the node in the sorted list to the front. Then create a custom sort function that will give priority to nodes in the front of the list when comparing two nodes with the same popularity. In this way, we can maintain order, which will allow us to get the most popular word at O(1) run-time and insert at O(nlog(n)) run-time.
   
 ```
 from collections import deque
