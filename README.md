@@ -85,6 +85,9 @@ Dynamic programming is a mystery to some people, this is why I split this into i
 ## Deeper into the weeds
 Below, I've tried to select questions I think will give you a different perspective of the category that one may not have been exposed with during their studies.
 
+### BFS and DFS
+- #200. Number of Islands
+
 ### Recursion
 - Facebook Possible Patterns
 
