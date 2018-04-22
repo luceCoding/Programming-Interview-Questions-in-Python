@@ -16,17 +16,6 @@ This is why this will lead up to my next point.
 #### Play to learn, not play to win
 Yes you want that Big N job, we all want it. However, you cannot get that job unless you start shifting your objective from "winning" to "learning". "Winning" should never be your first objective, your first objective is to "learn". Why? For some, if "winning" was their first objective, they run into starter paralysis aka. fear. Afraid to lose. When "winning" or "losing" becomes your first priority, you become blinded from how the process can take you there. For others, people try to cheat the game by memorizing instead of ultimately learning which is by far more fundamentally sound for the lifespan of your career. Don't get me wrong, having a goal to win is important, but remember, its just a long term goal, not an obstacle.
 
-# Effective Learning
-Now this brings me to this dicussion on how one should effectively learn. First, one must understand the different phases of learning. 
-
-Take typing on a keyboard as an example. Before you can type on the keyboard, one must memory map the action they want to do to each key press on the keyboard. For our case, this is an example of python language syntax. Like how a keyboard is a tool, the language one chooses to program in, is also a tool. 
-
-What if you don't know what to type on the keyboard? Now that is related to the set of english words or grammar rules one knows. For us that is the data structures and algothrims a programmer needs to utalize their tool.
-
-Say you have mastered both your english language and your keyboard is there another learning phase? Of course, just like one starts small and build their way up, one can end up from small to large. We need a way to manage our end result and this leads to structure. Without structure, there isn't a good way to maintain and keep it from collapsing. To programmers, those are design patterns, SOLID principles and take your pick of programming paradigms.
-
-In conclusion, when you are stuck on a problem, think about which learning phase you are stuck on. Is it the lack of DS/Algos, the language, or programming paradigms? Once you are able to figure that out, focus on that missing knowledge set. It will be diffcult when you start, as for anyone starting something new, there is usually more than one knowledge area that is missing.
-
 # How should you practice for whiteboard coding questions
 ### There are infinite amount of questions but only a finite amount of methods to the solution
 Remember, there are limitless amount of questions someone can ask you, but that is because you can word it differently here and there but the process to get to the solution is similar if not the same as the next. That is why one should focus on learning patterns instead of trying to memorize or see as many questions. You must prepare for the inevitable scenario that you will have to solve a question you have never heard of it. In-order to tackle this, you must be able to identify patterns in the questions with previous questions you have faced and apply those solutions for this scenario. That is why you should focus on learning the coding patterns and techniques.
