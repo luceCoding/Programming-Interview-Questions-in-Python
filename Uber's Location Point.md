@@ -65,10 +65,10 @@ def are_locations_valid(strings):
 def add_to_graph(graph, node1, node2):
     if node1 in graph:
         if node2 not in graph[node1]:
-            graph[node1].append(node2)
+            graph[node1].add(node2)
     else:
-        graph[node1] = list()
-        graph[node1].append(node2)
+        graph[node1] = set()
+        graph[node1].add(node2)
         
 def does_cycle_exist(graph, starter_node):
     if starter_node in graph:
