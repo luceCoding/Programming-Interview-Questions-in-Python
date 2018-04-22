@@ -70,7 +70,7 @@ I intentionally mixed these together. Some questions, if I were to categoized th
 - #404. Sum of Left Leaves
 - #367. Valid Perfect Square
 - #402. Remove K Digits
-- #47. Permutations II
+- #46. Permutations
 
 ### How you structure your code
 These questions are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
