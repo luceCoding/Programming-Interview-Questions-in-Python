@@ -33,7 +33,9 @@ The next issue is, which node should you begin with to start finding acyclic pat
 Instead, we must use four directed graphs for north, south, east and west to deal with this issue. We can pick an arbitary node, say node A, for north and south, then another arbitary node, say node B, for east and west. Then with node A, we search north then south for cyclic relationships. We then do the same for node B for east and west.
 
 Run-time: O(n)
+
 Space: O(n)
+
 n = number of nodes
 
 # SOLUTION
