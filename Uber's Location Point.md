@@ -24,7 +24,17 @@ A N B
 is considered valid.
 
 # EXPLAINATION
+This is question is a graph problem. It is easily recongized when you notice that A and B are creating relationships with each other. Now, if you were to tackle this problem the traditional way, that is, create an entire adjacency matrix or list with north, south, east, west relationships. Your code would be very complex.
 
+Instead, think about how the non-valid case is found. You will notice that you must figure out if the graph is acyclic. That is, if B points to A then if A points back to B, you have a non-valid direction. You can solve this by creating a directed graph.
+
+The next issue is, which node should you begin with to start finding acyclic paths? Ideally, for a non-cyclic graph, starting at the node that doesn't have any nodes pointing to it is ideal. But we can never know which one that would be for sure. If we were to search for cycles for each node in the graph, our run-time complexity increases greatly to N^N, N being number of total nodes.
+
+Instead, we must use four directed graphs for north, south, east and west to deal with this issue. We can pick an arbitary node, say node A, for north and south, then another arbitary node, say node B, for east and west. Then with node A, we search north then south for cyclic relationships. We then do the same for node B for east and west.
+
+Run-time: O(n)
+Space: O(n)
+n = number of nodes
 
 # SOLUTION
 ```
