@@ -31,6 +31,7 @@ So read the question twice, three times, make sure you don't miss anything and P
 It is important that you struggle with questions. This struggling will allow you to see why your current way of thinking is incorrect. This way, when the solution is given to you, you can figure out the difference between the ideal and your method. You must be open to new approaches and methods that are foreign to you. When I first started, I approached problems radically different than I do know. My past solutions were very wonky and unconcise. Multiple problems with the use of the language, structure, dead complex code and naming of variables/functions. It made it very hard for someone else to read. I have since refined my code to be as dumb proof as I can do while being very simple. Take the time to refine your solutions by comparing what others have done.
 
 ### Learn how to dilute the question
+Prior to writing or testing your code. The question may come with an example that might be too big of a test case. If the example has 10 items in an array, dilute it to 3 or 4 to run your test cases. If the questions happens to deal with 2d arrays, use a 2x2 or 3x3 array as your test case. If the question deals with a list of strings, use simple one or two character words like, [aa, bb, cc] or [a,b,c]. In any case, always try to dilute the question by using simple and easy to test examples to help you avoid dealing with ambiguous test examples. This will also allow you to wrap your head around the question quicker by using this approach.
 
 ### Repetition
 
