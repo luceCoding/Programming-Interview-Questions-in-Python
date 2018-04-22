@@ -45,6 +45,9 @@ So read the question twice, three times, make sure you don't miss anything and P
 - https://www.pramp.com/
 - https://interviewing.io/
 
+# Bottom-Up and Top-Down Approaches
+Usually solutions will take either one of these approaches. Depending on the question, either or will be easier than the other. In interviews however, both approaches are fine. I rarely get asked to implement a specific approach, instead this is more or less the interviewee's choice of preference. I advise exploring and getting a 'feel' with the pros and cons of either approach. There isn't a very good way of explaining when to use one over the other. You just sort of 'know' based on how familiar you are to the implementation.
+
 # Tackling Recursion
 
 # Tackling Dynamic Programming
