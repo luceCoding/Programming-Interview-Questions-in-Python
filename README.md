@@ -16,7 +16,7 @@ This is why this will lead up to my next point.
 #### Play to learn, not play to win
 Yes you want that Big N job, we all want it. However, you cannot get that job unless you start shifting your objective from "winning" to "learning". "Winning" should never be your first objective, your first objective is to "learn". Why? For some, if "winning" was their first objective, they run into starter paralysis aka. fear. Afraid to lose. When "winning" or "losing" becomes your first priority, you become blinded from how the process can take you there. For others, people try to cheat the game by memorizing instead of ultimately learning which is by far more fundamentally sound for the lifespan of your career. Don't get me wrong, having a goal to win is important, but remember, its just a long term goal, not an obstacle.
 
-# How to learn?
+# Effective Learning
 Now this brings me to this dicussion on how one should effectively learn. First, one must understand the different phases of learning. 
 
 Take typing on a keyboard as an example. Before you can type on the keyboard, one must memory map the action they want to do to each key press on the keyboard. For our case, this is an example of python language syntax. Like how a keyboard is a tool, the language one chooses to program in, is also a tool. 
@@ -37,6 +37,8 @@ Everyone has different levels of thinking. When I first started, I had trouble e
 It will be different for you, but I 100% recommend, make sure you run through your 'theorical' solution a few times with a couple edge cases. Ascending, descending, empty list, duplicates, even, odd etc... I've had tons of scenarios where I would implement my solution to find out I forgot an important missing piece. 
 
 So read the question twice, three times, make sure you don't miss anything and PLAN! Make sure you spend ATLEAST 10 minutes before you write any code, DRAW IT OUT, TALK IT OUT. I had to draw pictures, my techinique was to draw it and follow with the drawing as I coded. It was the only way I was able to get consistent results. For some questions, I had to use real world objects because I could relate to them easily to find edge cases. Like questions that deal with swapping, I would immediately visualize a theater row of seats. If the question also wanted to pair things together, I would think of boyfriend/girlfriends all randomly seated and your job was to pair the couples together. I know it's wierd, but it worked for me. Find your method, test a few ways and make sure it works for you. 
+
+### Figure out how you currently think
 
 ### Learn how to dilute the question
 
