@@ -104,7 +104,7 @@ Below, I've tried to select questions I think will give you a different perspect
 ### Deeper with dynamic programming
 - #139. Word Break
 - #516. Longest Palindromic Subsequence
-- # Knapsack problems:
+- #### Knapsack problems:
   - #518. Coin Change 2
 
 ### Combine more than one data structure
