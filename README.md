@@ -93,12 +93,11 @@ Below, I've tried to select questions I think will give you a different perspect
 
 ### Linked lists
 
-### Heaps
-
 ### Sorting
 - #215. Kth Largest Element in an Array	
+- #56. Merge Intervals
 
-### Graphs
+### Trees: BST, Graphs, Heaps
 - Uber's Location Question
 
 ### Deeper with dynamic programming
