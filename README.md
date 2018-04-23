@@ -34,7 +34,8 @@ It is important that you struggle with questions. This struggling will allow you
 Prior to writing or testing your code. The question may come with an example that might be too big of a test case. If the example has 10 items in an array, dilute it to 3 or 4 to run your test cases. If the questions happens to deal with 2d arrays, use a 2x2 or 3x3 array as your test case. If the question deals with a list of strings, use simple one or two character words like, [aa, bb, cc] or [a,b,c]. In any case, always try to dilute the question by using simple and easy to test examples to help you avoid dealing with ambiguous test examples. This will also allow you to wrap your head around the question quicker by using this approach.
 
 ### Repetition
-
+If you come across a question that you greatly struggle with and had to look up the solution, or your solution to a question was slow or unconcise. Try to redo this question in a few weeks. This will again help you figure out what else you are still missing to learn from the question. You can also select another question in a similar category with the question you were struggling with.
+ 
 ### Use encapsulation
 
 ### Train with 10x the gravity
