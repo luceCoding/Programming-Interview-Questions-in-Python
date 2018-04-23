@@ -87,11 +87,25 @@ def find_cycle(node, graph, visited):
     
 test_strings1 = ['A NW B', 
                  'A N B']
-    
+
+assert are_locations_valid(test_strings1) == True
+
 test_strings2 = ['A N B', 
                 'B NE C',
                 'C N A']
 
-assert are_locations_valid(test_strings1) == True
 assert are_locations_valid(test_strings2) == False
+
+test_strings3 = ['A N B',
+                 'A N C',
+                 'C N B']
+
+assert are_locations_valid(test_strings3) == True
+
+test_strings4 = ['A N B',
+                 'A N C',
+                 'B N A',
+                 'C N B']
+
+assert are_locations_valid(test_strings4) == False
 ```
