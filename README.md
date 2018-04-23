@@ -104,6 +104,8 @@ Below, I've tried to select questions I think will give you a different perspect
 ### Deeper with dynamic programming
 - #139. Word Break
 - #516. Longest Palindromic Subsequence
+- # Knapsack problems:
+  - #518. Coin Change 2
 
 ### Combine more than one data structure
 You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
