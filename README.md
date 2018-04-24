@@ -28,11 +28,11 @@ It will be different for you, but I 100% recommend, make sure you run through yo
 So read the question twice, three times, make sure you don't miss anything and PLAN! Make sure you spend ATLEAST 10 minutes before you write any code, DRAW IT OUT, TALK IT OUT. I had to draw pictures, my techinique was to draw it and follow with the drawing as I coded. It was the only way I was able to get consistent results. For some questions, I had to use real world objects because I could relate to them easily to find edge cases. Like questions that deal with swapping, I would immediately visualize a theater row of seats. If the question also wanted to pair things together, I would think of boyfriend/girlfriends all randomly seated and your job was to pair the couples together. I know it's wierd, but it worked for me. Find your method, test a few ways and make sure it works for you. 
 
 These are the usual stages people are in:
-Stage 1: I can't even think of any solution!
-Stage 2: I can think of a solution but its not optimal.
-Stage 3: I can think of the optimal solution but I can't implement my idea correctly.
-Stage 4: I can implement my idea correctly but not within 20-30 mins.
-Stage 5: I've ascended!
+- Stage 1: I can't even think of any solution!
+- Stage 2: I can think of a solution but its not optimal.
+- Stage 3: I can think of the optimal solution but I can't implement my idea correctly.
+- Stage 4: I can implement my idea correctly but not within 20-30 mins.
+- Stage 5: I've ascended!
 
 ### Figure out how you currently think
 It is important that you struggle with questions. This struggling will allow you to see why your current way of thinking is incorrect. This way, when the solution is given to you, you can figure out the difference between the ideal and your method. You must be open to new approaches and methods that are foreign to you. When I first started, I approached problems radically different than I do know. My past solutions were very wonky and unconcise. Multiple problems with the use of the language, structure, dead complex code and naming of variables/functions. It made it very hard for someone else to read. I have since refined my code to be as dumb proof as I can do while being very simple. Take the time to refine your solutions by comparing what others have done.
