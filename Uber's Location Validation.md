@@ -82,7 +82,8 @@ def find_cycle(node, graph, visited):
     visited.add(node)
     if node in graph:
         for neighbor in graph[node]:
-            return find_cycle(neighbor, graph, visited)
+            if find_cycle(neighbor, graph, visited):
+                return True
     return False
     
 test_strings1 = ['A NW B', 
