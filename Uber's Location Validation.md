@@ -23,6 +23,12 @@ A N B
 ```
 is considered valid.
 
+```
+A N B
+A NE B
+```
+is considered valid because A is somewhere north of B for the first one, not exactly north of B.
+
 # EXPLAINATION
 This is question is a graph problem. It is easily recongized when you notice that A and B are creating relationships with each other. Now, if you were to tackle this problem the traditional way, that is, create an entire adjacency matrix or list with north, south, east, west relationships. Your code would be very complex.
 
