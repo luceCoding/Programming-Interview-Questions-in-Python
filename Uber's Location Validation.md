@@ -1,13 +1,18 @@
 # QUESTION
 A rule looks like this:
 ```
+A N B
+```
+This means point A is somewhere north of point B. It could be northeast, northwest or north. You arn't sure.
+
+```
 A NE B
 ```
-This means this means point A is located northeast of point B.
+This means this means point A is located exactly northeast of point B.
 ```
 A SW C
 ```
-means that point A is southwest of C.
+means that point A is exactly southwest of C.
 
 Given a list of rules, check if the sum of the rules validate. For example:
 ```
