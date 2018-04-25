@@ -1,7 +1,7 @@
 # QUESTION
 Given an unsorted binary tree of numbers. Find the maximum product you can have with one continous path in the tree.
-For example:
 
+For example:
 ```
         4
       /   \
