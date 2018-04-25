@@ -19,7 +19,7 @@ Similarly:
     / \   / \
    3   5 8   6
 ```
-Then the result would be [4,2,8] which is 64.
+Then the result would be [8,2,6] which is 96.
 
 ```
 def find_max_product_path_in(root):
@@ -63,5 +63,14 @@ node8 = Node(8, None, None)
 node6 = Node(6, None, None)
 node2 = Node(2, node8, node6)
 root = Node(4, node1, node2)
-print find_max_product_path_in(root)
+print find_max_product_path_in(root) # return 320
+
+node0 = Node(0, node3, node5)
+root = Node(4, node0, node2)
+print find_max_product_path_in(root) # returns 96
+
+node0A = Node(0, None, None)
+node0B = Node(0, None, None)
+root = Node(4, node0A, node0B)
+print find_max_product_path_in(root) # returns 4
 ```
