@@ -25,7 +25,6 @@ Then the result would be [4,2,8] which is 64.
 def find_max_product_path_in(root):
     if not root:
         return 0
-    result1, result2 = 0, 0
     result1, result2 = find_max_product_path_helper(root)
     return max(result1, result2)
     
