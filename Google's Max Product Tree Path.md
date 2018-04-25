@@ -21,6 +21,9 @@ Similarly:
 ```
 Then the result would be [8,2,6] which is 96.
 
+# EXPLAINATION
+
+# SOLUTION
 ```
 def find_max_product_path_in(root):
     if not root:
