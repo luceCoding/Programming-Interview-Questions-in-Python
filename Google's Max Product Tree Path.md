@@ -7,7 +7,7 @@ For example:
       /   \
      1     2
     / \   / \
-   3   5 8   2
+   3   5 8   6
 ```
 The result would be the product of [5,1,4,2,8] which is 240.
 
@@ -17,6 +17,6 @@ Similarly:
       /   \
      0     2
     / \   / \
-   3   5 8   2
+   3   5 8   6
 ```
 Then the result would be [4,2,8] which is 64.
