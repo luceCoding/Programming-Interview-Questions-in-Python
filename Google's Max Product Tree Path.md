@@ -38,7 +38,7 @@ You can see that, [5,1,4] is the final result. But as node 1 you believe that [3
 
 As a node, all you really care about is who the best left and right product. From there you can use those two and your node's value to figure out the best product. But as you've seen above, you need more than that. You also need to know who is the best left product that you can connect with your node as well as the best left product that is not connectable to create a path with your node, similar case for the right. Also consider the case, where you sum the products of your node and connectable left and right to create a product is that not connectable by a parent node.
 
-# SOLUTION
+# SOLUTION (DOES NOT WORK WITH NEGATIVE VALUES)
 ```
 def find_max_product_path_in(root):
     if not root:
