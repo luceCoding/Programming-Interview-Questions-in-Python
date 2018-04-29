@@ -1,4 +1,4 @@
-# Leetcode-Solutions (Work in Progress)
+# Programming Interview Questions (Work in Progress)
 After doing over 120+ questions from EPI, CTCI and leetcode combined, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
 
 Each question has its own unique 'gotcha' that you should learn. You want to take each question to the most optimal solution in-order to fully maximize what you can learn from it. Some questions are onion questions, with multiple solutions to the problem, its also important to know them all. For example, do it both recursive and iteratively or BFS and DFS. 
@@ -113,6 +113,7 @@ Below, I've tried to select questions I think will give you a different perspect
 - #516. Longest Palindromic Subsequence
 - #### Knapsack problems:
   - #518. Coin Change 2
+  - Google's Min Train Stops
 
 ### Combine more than one data structure
 You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
@@ -123,9 +124,6 @@ You may start these questions once the above questions have been completed. Thes
 ### Design
 - Design a Rubix Cube
 - Design a parking lot
-
-### Twist
-- Google's sorting couples
 
 ### How you think
 These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
