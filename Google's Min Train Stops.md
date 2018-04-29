@@ -9,7 +9,7 @@ When n = 2, the second train stops at stops 0, 2, 4, 6, 8, etc.
 
 When n = 3, the third train stops at stops 0, 4, 8, 12, etc.
 
-Given a start station number and end station number, return the minimum number of stops between them. You can use any of the trains to get from one stop to another stop.
+Given a start station number and end station number, return the minimum number of stops between them. You can use any of the trains to get from one stop to another stop. Trains can only go to a station that has a greater incresing number.
 
 For example, the minimum number of stops between start = 1 and end = 4 is 3 because we can get from 1 to 2 to 4.
 
@@ -65,3 +65,8 @@ def find_n_stops(start, end):
     return dp[-1][-1]+1
 print find_n_stops(7,14)
 ```
+
+# FOLLOW UP QUESTION
+What happens if trains were able to go in both directions? 
+
+For example, the minimum number of stops between start = 1 and end = 8 is 3 because we can get from 1 to 0 to 8.
