@@ -49,8 +49,7 @@ def find_n_stops(start, end):
                 dp[row_index][col_index] = min(dp[row_index-1][col_index],
                                                dp[row_index][col_index-1])+1
             else:
-                n_stops_to_prev_station = curr_station % curr_train
-                if n_stops_to_prev_station == 0: # we can use this train
+                if (curr_station % curr_train) == 0: # we can use this train
                     # this train stops at this station
                     prev_station_col_index = col_index - curr_train
                     if prev_station_col_index >= 0:
