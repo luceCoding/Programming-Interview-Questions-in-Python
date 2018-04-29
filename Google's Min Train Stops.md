@@ -21,6 +21,8 @@ I use 2^row_index to find the starting train value, like, 1,2,4,8,16,32, basical
 # SOLUTION
 ```
 def find_n_stops(start, end):
+    if end < start:
+        return 0
     if start == end:
         return 1
     n_cols = end - start + 1
