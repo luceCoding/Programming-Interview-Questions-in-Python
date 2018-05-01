@@ -47,6 +47,9 @@ If you come across a question that you greatly struggle with and had to look up 
 
 ### Train with 10x the gravity
 
+### Mock Interviews
+If I were to say which part was the more important step from this entire post. I would pick this one here. Mock interviews are EXTREMELY IMPORTANT! Did you hear me? EXTREMELY IMPORTANT! I highly recommend you find another person who is in a similar situation like you, both in skill level and dedication. This step requires some dedication and sticking to a schedule. Both of you should agree to meet up a few times a week to practice interviews. For example, I found mine on pramp, both us would try to solve a question then when we would meet up using google hangouts and google docs, we would ask each other the question we just solved. As you do this a couple times, you understand the areas of each other weakness and provide feedback. You can sometimes learn some new way of approaching problems from each other. Its a great and important learning step to have instant feedback on your performance. We use to do marathon mock interviews to over prepare. Like give each other 5 questions in a row and try to solve them as quickly as possible. Our sessions would usually last around 3 hours. So again, this step really only works if you can find someone willing to put in the time and effort just like you would. So use websites like pramp to start mock interviews and as you go ask if they are willing to do this type of preparation.
+
 # Resources for your journey
 - Elements of Programming Interviews
 - Cracking the Coding Interview
