@@ -23,6 +23,20 @@ A N B
 ```
 is considered valid.
 
+```
+A N B
+A NW B
+```
+is also considered valid.
+
+For clarity, do not assume direction also implys equal distance. For example, 
+```
+A N B
+A NW B
+B NE C
+```
+
+
 # EXPLAINATION
 This is question is a graph problem. It is easily recongized when you notice that A and B are creating relationships with each other. Now, if you were to tackle this problem the traditional way, that is, create an entire adjacency matrix or list with north, south, east, west relationships. Your code would be very complex.
 
