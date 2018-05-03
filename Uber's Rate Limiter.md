@@ -44,4 +44,10 @@ while counter <= max_counter:
     sleep(0.002)
     print 'counter: {} result: {}'.format(counter, myLimiter.is_allowed(1))
     counter += 1
+max_counter = 110
+sleep(1)
+while counter <= max_counter:
+    sleep(0.002)
+    print 'counter: {} result: {}'.format(counter, myLimiter.is_allowed(1))
+    counter += 1
 ```
