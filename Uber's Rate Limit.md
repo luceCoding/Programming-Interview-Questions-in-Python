@@ -17,31 +17,28 @@ The solution must use a timescale of milliseconds or better. If you were to use 
 ```
 import time
 from time import sleep
+import collections
 
 class PreciseRateLimiter(object):
     def __init__(self, max_requests, time_interval_ms):
         self._max_requests = max_requests
         self._time_interval_ms = time_interval_ms
-        self._clientIDs = {}
+        self._clientIDs = collections.defaultdict(collections.deque)
         
     def is_allowed(self, clientID):
         current_ms_time = int(round(time.time() * 1000))
-        if clientID in self._clientIDs:
-            if len(self._clientIDs[clientID]) >= self._max_requests:
-                time_diff = current_ms_time - self._clientIDs[clientID][-1]
-                self._clientIDs[clientID].pop()
-                self._clientIDs[clientID].append(current_ms_time)
-                if time_diff < self._time_interval_ms:
-                    return False
-            else:
-                self._clientIDs[clientID].append(current_ms_time)
+        if len(self._clientIDs[clientID]) >= self._max_requests:
+            time_diff = current_ms_time - self._clientIDs[clientID][-1]
+            self._clientIDs[clientID].pop()
+            self._clientIDs[clientID].appendleft(current_ms_time)
+            if time_diff < self._time_interval_ms:
+                return False
         else:
-            self._clientIDs[clientID] = list()
-            self._clientIDs[clientID].append(current_ms_time)
+            self._clientIDs[clientID].appendleft(current_ms_time)
         return True
     
 myLimiter = PreciseRateLimiter(100, 1000)
-max_counter = 101
+max_counter = 102
 counter = 1
 while counter <= max_counter:
     sleep(0.002)
