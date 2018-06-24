@@ -30,6 +30,8 @@ The question want us to figure out which sections of roads should we place a new
 
 However, there are a few edge cases to consider. We want to avoid evaluating sections of roads that have no length. Also what happens when we revisit the same section of road? If that happens, we need to restart the process of replacing the stations on that road if there were any. So we need to keep a few key peices of information. The total length of this section of road, the current number of stations on this road and the distance between each station on this road. The distance between each station on this road will be used to sort the max heap.
 
+When I was given this question. I was only given 30 mins. So you can attempt the solution with indexes which is much hard but not necessary to pass the interview.
+
 # SOLUTION 1
 ```
 import heapq
