@@ -16,7 +16,8 @@ Example:
 N = 5, M = 20, K = 3, T = [3, 7, 15, 18, 1] 
 Minimum uncovered : 3 (obtainable for example by adding petrol stations at positions: 5, 10 and 13) 
 
-St-Ps----Ps----Np----Ps-------Np-------Np----Ps-------Ps----Fn 
+St-Ps----Ps----Np----Ps-------Np-------Np----Ps-------Ps----Fn
+
 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 
 
 St - start of motorway
