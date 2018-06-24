@@ -33,6 +33,7 @@ However, there are a few edge cases to consider. We want to avoid evaluating sec
 When I was given this question. I was only given 30 mins. So you can attempt the solution with indexes which is much hard but not necessary to pass the interview.
 
 # SOLUTION 1
+So this will run at Nlog(N) where N is the sections of road. However, if there wasn't a need to sort inorder to find the sections of road and we were given the heap already, the run-time would be Klog(N).
 ```
 import heapq
 
