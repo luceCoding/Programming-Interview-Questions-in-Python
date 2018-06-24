@@ -25,7 +25,12 @@ Fn - finish of motorway
 Ps - pre-existing petrol station 
 Np - new petrol station in optimal solution
 
-# SOLUTION
+# EXPLAINATION
+The question want us to figure out which sections of roads should we place a new station given k stations. By using a max heap, we can figure out the longest road we currently have and place a station on it. However, to get the sections of roads, we must first sort the array and iterate it to get those sections. Then we can build our max heap with it. 
+
+However, there are a few edge cases to consider. We want to avoid evaluating sections of roads that have no length. Also what happens when we revisit the same section of road? If that happens, we need to restart the process of replacing the stations on that road if there were any. So we need to keep a few key peices of information. The total length of this section of road, the current number of stations on this road and the distance between each station on this road. The distance between each station on this road will be used to sort the max heap.
+
+# SOLUTION 1
 ```
 import heapq
 
