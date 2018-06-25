@@ -2,7 +2,7 @@
 ```
 import copy
 
-def concat_longest_title(titles):
+def get_longest_title(titles):
     adj_list = create_adj_list(titles)
     global_visit = set()
     longest_title = list()
@@ -19,7 +19,19 @@ def concat_longest_title(titles):
                                         memo)
             if len(local_result) > len(longest_title):
                 longest_title = copy.deepcopy(local_result)
-    return longest_title
+    return concat_title(longest_title)
+
+def concat_title(titles):
+    if len(titles) == 0:
+        return ''
+    result = ''
+    result = titles[0]
+    for index in range(1, len(titles)):
+        title = titles[index]
+        sub_title = title[1:]
+        result += sub_title
+    return result
+        
 
 def create_adj_list(titles):
     firstWord_to_titles_hash = dict()
@@ -62,12 +74,15 @@ def visit_title(title, stack, adj_list, local_visit, global_visit, memo):
         if len(stack) > len(result):
                 result = copy.deepcopy(stack)
         stack.pop()
+        local_visit.remove(title)
     memo[title] = result 
     return result
         
 Input = ['OF MICE AND MEN', 'BLACK MASS', 'MEN IN BLACK']
-Input = ['a b', 'b c', 'c d', 'c e', 'e f']  
-Input = ['a b', 'b c', 'c a'] 
+#Input = ['a b', 'b c', 'c d', 'c e', 'e f']  
+#Input = ['a b', 'b c', 'c a'] 
+Input = ['e f', 'c e', 'c d','b c', 'a b']
+#Input = ['c d','b c', 'a b', 'e f', 'c e']
     
-print concat_longest_title(Input)
+print get_longest_title(Input)
 ```
