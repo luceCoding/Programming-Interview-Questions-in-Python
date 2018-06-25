@@ -12,7 +12,7 @@ You could further join 'OF MICE AND MEN IN BLACK' wth 'BLACK MASS' to form 'OF M
 ```
 
 # EXPLAINATION
-This is another graph problem. Make an adjacent list for each title. You may need need a hash table to help you perform this, mainly a hash table with first word as the key and the title as the value.
+This is another graph problem. Make an adjacent list for each title. You may need a hash table to help you perform this, mainly a hash table with first word as the key and the title as the value.
 
 Then create a method that goes through all the titles and performs a DFS. When using a DFS on a graph, you will need a stack/recursion to keep the current longest title found so far. For each neighbor, we will call a DFS and concat the result from that search to our title and check if that new result is better than our result found so far.
 
