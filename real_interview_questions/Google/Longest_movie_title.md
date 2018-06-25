@@ -24,7 +24,8 @@ Worst case occurs when the titles you start your DFS search will always create t
 You can avoid O(n^2) by using memoization. Therefore, you can get O(n). Also if there is a recursive solution, there will be a dp solution. You can also use your memoization as your global visited set in this case.
 
 # SOLUTION
-```import copy
+```
+import copy
 
 def get_longest_title(titles):
     adj_list = create_adj_list(titles)
@@ -116,6 +117,9 @@ assert(get_longest_title(Input) == 'a')
 
 Input = ['a', 'b']
 assert(get_longest_title(Input) == 'a' or get_longest_title(Input) == 'b')
+
+Input = ['a', 'a b']
+assert(get_longest_title(Input) == 'a b')
 
 Input = ['a b', 'b c', 'c d', 'c e', 'e f']
 assert(get_longest_title(Input) == 'a b c e f')
