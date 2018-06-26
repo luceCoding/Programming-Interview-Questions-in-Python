@@ -31,7 +31,6 @@ def get_most_freq_word(paragraph, banned_words):
 def sanitize(tokens):
     result = list()
     for token in tokens:
-        letters = token.split()
         full_word = list()
         for letter in token:
             letter = letter.lower()
