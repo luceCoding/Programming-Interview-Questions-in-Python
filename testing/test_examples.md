@@ -37,6 +37,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+### Basic mocking of a dependency within your test target.
 ```
 from mock import patch
 
