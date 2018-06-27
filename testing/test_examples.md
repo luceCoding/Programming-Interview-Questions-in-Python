@@ -36,3 +36,24 @@ class TestAddTwoNums(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 ```
+
+```
+from mock import patch
+
+def foo(request):
+    if isRequestOK(request):
+        return True
+    else:
+        return False
+    
+class TestFoo():
+    @patch("application.isRequestOK")
+    def testGoodRequest(mock_isRequestOK):
+        mock_isRequestOK.return_value = True
+        assert_equals(foo('gg'), True)
+        
+    @patch("application.isRequestOK")
+    def testGoodRequest(mock_isRequestOK):
+        mock_isRequestOK.return_value = False
+        assert_equals(foo('gg'), False)
+```
