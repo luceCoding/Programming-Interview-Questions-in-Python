@@ -93,9 +93,13 @@ class TestFoo(unittest.TestCase):
         testClass = myClass()
         mock_isRequestOK.return_value = True
         
-        testClass.foo('gg')
+        parameter = 'gg'
+        testClass.foo(parameter)
+        mock_isRequestOK.assert_called_once_with(parameter)
         assert(mock_doSomething.call_count == 1)
         assert(mock_doSomethingElse.call_count == 0)
+        
+        
         
 if __name__ == '__main__':
     unittest.main()
