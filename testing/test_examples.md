@@ -60,6 +60,7 @@ class TestFoo():
 ```
 
 ### What if your app doesn't return anything?
+Verify that the methods were called X times and that the correct parameters were passed.
 ```
 from mock import patch
 import unittest
