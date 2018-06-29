@@ -59,8 +59,8 @@ class TestFoo():
         assert_equals(foo('gg'), False)
 ```
 
-### What if you app doesn't return anything?
-'''
+### What if your app doesn't return anything?
+```
 from mock import patch
 import unittest
 
@@ -99,4 +99,4 @@ class TestFoo(unittest.TestCase):
         
 if __name__ == '__main__':
     unittest.main()
-'''
+```
