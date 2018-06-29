@@ -54,7 +54,49 @@ class TestFoo():
         assert_equals(foo('gg'), True)
         
     @patch("application.isRequestOK")
-    def testGoodRequest(mock_isRequestOK):
+    def testBadRequest(mock_isRequestOK):
         mock_isRequestOK.return_value = False
         assert_equals(foo('gg'), False)
 ```
+
+### What if you app doesn't return anything?
+'''
+from mock import patch
+import unittest
+
+class myClass:
+    def foo(self, request):
+        if self.isRequestOK(request):
+            self.doSomething()
+        else:
+            self.doSomethingElse()
+            
+    def isRequestOK(request):
+        pass
+        
+    def doSomething(self):
+        pass
+    
+    def doSomethingElse(self):
+        pass
+    
+class TestFoo(unittest.TestCase):
+    
+    @patch.object(myClass, "doSomethingElse")
+    @patch.object(myClass, "doSomething")
+    @patch.object(myClass, "isRequestOK")
+    def testGoodRequest(self, 
+                        mock_isRequestOK,
+                        mock_doSomething, 
+                        mock_doSomethingElse):
+                
+        testClass = myClass()
+        mock_isRequestOK.return_value = True
+        
+        testClass.foo('gg')
+        assert(mock_doSomething.call_count == 1)
+        assert(mock_doSomethingElse.call_count == 0)
+        
+if __name__ == '__main__':
+    unittest.main()
+'''
