@@ -13,6 +13,8 @@ If they arn't equal, we take the top value from the biggest heap as our median.
 
 With this method, we will sort the heap in log(N) time, N times, which equates to Nlog(N). During the rebalance phase, there can be an extra sort which can bring us to Nlog(N) + log(N) but in terms of big O, it will boil down to Nlog(N).
 
+https://www.youtube.com/watch?v=VmogG01IjYc&t=480s
+
 # SOLUTION
 ```
 class MedianFinder(object):
