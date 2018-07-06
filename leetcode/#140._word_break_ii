@@ -1,0 +1,29 @@
+# EXPLAINATION
+
+# SOLUTION
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: List[str]
+        """
+        memo = dict()
+        return self.word_break_helper(0, s, wordDict, memo)
+    
+    def word_break_helper(self, start_index, string, word_dict, memo):
+        if start_index in memo:
+            return memo[start_index]
+        local_results = list()
+        for end_index in range(start_index, len(string)):
+            curr_word = string[start_index:end_index+1]
+            if curr_word in word_dict:
+                if end_index == len(string)-1:
+                    local_results.append(curr_word)
+                else:
+                    found_words = self.word_break_helper(end_index+1, string, word_dict, memo)
+                    for words in found_words:
+                        new_words = curr_word + ' ' + words
+                        local_results.append(new_words)
+        memo[start_index] = local_results
+        return local_results
