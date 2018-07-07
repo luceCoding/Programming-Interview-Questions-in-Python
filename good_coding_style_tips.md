@@ -7,3 +7,10 @@ There are some exception during interviews, it tends to deal with recursion. Som
 In this scenario, you will have to pass in a global_result object list for each recursion because you won't know when the save trigger occurs.
 
 However, outside of recursion, I would recommend to always return an object over passing in an object and modifying it.
+
+# SOLID Principles
+### Single Responsiblity Principle
+### Open/Closed Principle
+### Liskov Substitution Principle
+### Interface Segregation Principle
+### Dependency Inversion
