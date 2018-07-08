@@ -172,6 +172,8 @@ class Solution(object):
         return next_pos
     
     def rotate_right(self, robot):
+        # mimicking a clockwise direction scheme
+        # could use a circular linked list and a hash table to be more efficient
         for index, direction in enumerate(self.dirs):
             if direction == self.curr_dir:
                 if index >= len(self.dirs)-1:
