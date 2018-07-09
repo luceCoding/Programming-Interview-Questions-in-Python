@@ -19,10 +19,11 @@ Output: 7
 Explanation: Given three buildings at (0,0), (0,4), (2,2), and an obstacle at (0,2),
              the point (1,2) is an ideal empty land to build a house, as the total 
              travel distance of 3+3+1=7 is minimal. So return 7.
-Note:
-There will be at least one building. If it is not possible to build such house according to the above rules, return -1.
              
 ```
+
+Note:
+There will be at least one building. If it is not possible to build such house according to the above rules, return -1.
 
 # SOLUTION (Time Limit Exceeded)
 ```
