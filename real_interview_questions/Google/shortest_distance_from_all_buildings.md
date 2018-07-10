@@ -34,7 +34,6 @@ class Solution(object):
         :rtype: int
         """
         n_buildings = sum(x.count(1) for x in grid)
-        bfs_queue = collections.deque()
         result = -1
         
         for row_index in range(0, len(grid)):
@@ -84,6 +83,86 @@ class Solution(object):
             next_indexes = (indexes[0]+direction[0], indexes[1]+direction[1])
             if self.within_bounds(next_indexes, grid):
                 results.append(next_indexes)
+        return results
+
+    def within_bounds(self, indexes, grid):
+        row_i = indexes[0]
+        col_i = indexes[1]
+        if row_i >= 0 and col_i >= 0 and row_i < len(grid) and col_i < len(grid[0]):
+            return True
+        return False
+```
+
+# SOLUTION
+Instead of doing a BFS for all lands, we will utalize the fact that the question wants the sum of the distance as the answer. With this, we can instead BFS from each building instead. This will reduce the amount of BFS we have to perform. During each iteration of the BFS, we will use another array to store the distances of each land and how many buildings this land has been touched by a building. After all BFSes, we will look at the distance array and check for the min distance that have touched all buildings.
+```
+class Solution(object):
+    def shortestDistance(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        dp = [[[0,0] for _ in range(len(grid[0]))] for _ in range(len(grid))]
+        n_buildings = 0
+        
+        for row_index in range(0, len(grid)):
+            for col_index in range(0, len(grid[0])):
+                element = grid[row_index][col_index]
+                if element == 1: # start with a building
+                    n_buildings += 1
+                    start_indexes = (row_index, col_index)
+                    local_result = self.bfs_all_lands(start_indexes, grid, dp)
+        return self.find_shortest_distance(dp, n_buildings)
+    
+    def find_shortest_distance(self, dp, n_buildings):
+        result = sys.maxint
+        reached_all_buildings = False
+        for row_index in range(0, len(dp)):
+            for col_index in range(0, len(dp[0])):
+                dp_element = dp[row_index][col_index]
+                if dp_element[1] == n_buildings:
+                    reached_all_buildings = True
+                    result = min(result, dp_element[0])
+        if reached_all_buildings == False:
+            return -1
+        return result
+    
+    def bfs_all_lands(self, start_indexes, grid, dp):
+        # add all neighboring lands
+        bfs_queue = collections.deque()
+        visited_set = set()
+        neighbors = self.get_land_neighbors(start_indexes, grid)
+        for neighbor in neighbors:
+            bfs_queue.appendleft(neighbor)
+            visited_set.add(neighbor)
+        distance = 0
+        
+        while len(bfs_queue) != 0:
+            n_pops = len(bfs_queue)
+            distance += 1
+            while n_pops > 0:
+                curr_indexes = bfs_queue.pop()
+                n_pops -= 1
+                
+                dp_element = dp[curr_indexes[0]][curr_indexes[1]]
+                dp_element[0] += distance # sum the distance from each building
+                dp_element[1] += 1 # record how many buildings this land has reached
+                
+                land_neighbors = self.get_land_neighbors(curr_indexes, grid)
+                for neighbor in land_neighbors:
+                    if neighbor not in visited_set:
+                        visited_set.add(neighbor)
+                        bfs_queue.appendleft(neighbor)
+
+    def get_land_neighbors(self, indexes, grid):
+        directions = [(0,-1),(1,0),(0,1),(-1,0)]
+        results = list()
+        for direction in directions:
+            next_indexes = (indexes[0]+direction[0], indexes[1]+direction[1])
+            if self.within_bounds(next_indexes, grid):
+                element = grid[next_indexes[0]][next_indexes[1]]
+                if element == 0:
+                    results.append(next_indexes)
         return results
 
     def within_bounds(self, indexes, grid):
