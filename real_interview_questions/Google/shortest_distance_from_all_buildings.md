@@ -56,11 +56,11 @@ class Solution(object):
         visited_set.add(start_indexes)
         distance = result = 0
         total_n_buildings_found = 0
+        memo = dict()
         
         while len(bfs_queue) != 0 and total_n_buildings_found < n_buildings:
             n_pops = len(bfs_queue)
             distance += 1
-            n_buildings_found = 0
             while n_pops > 0:
                 curr_indexes = bfs_queue.pop()
                 n_pops -= 1
@@ -72,11 +72,8 @@ class Solution(object):
                         if element == 0:
                             bfs_queue.appendleft(neighbor)
                         elif element == 1:
-                            n_buildings_found += 1
+                            result += distance
                             total_n_buildings_found += 1
-                if n_buildings_found != 0:
-                    result += (distance * n_buildings_found)
-                    n_buildings_found = 0
         if total_n_buildings_found != n_buildings:
             return -1
         return result
