@@ -111,7 +111,7 @@ class Solution(object):
                 if element == 1: # start with a building
                     n_buildings += 1
                     start_indexes = (row_index, col_index)
-                    local_result = self.bfs_all_lands(start_indexes, grid, dp)
+                    self.bfs_all_lands(start_indexes, grid, dp)
         return self.find_shortest_distance(dp, n_buildings)
     
     def find_shortest_distance(self, dp, n_buildings):
