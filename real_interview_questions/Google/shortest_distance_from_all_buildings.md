@@ -56,7 +56,6 @@ class Solution(object):
         visited_set.add(start_indexes)
         distance = result = 0
         total_n_buildings_found = 0
-        memo = dict()
         
         while len(bfs_queue) != 0 and total_n_buildings_found < n_buildings:
             n_pops = len(bfs_queue)
