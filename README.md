@@ -1,7 +1,10 @@
-# Programming Interview Questions (Work in Progress)
-After doing over 120+ questions from EPI, CTCI and leetcode combined, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
+# Python Programming Interview Questions (Work in Progress)
+After doing over 200+ questions from EPI, CTCI and leetcode combined, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
 
 Each question has its own unique 'gotcha' that you should learn. You want to take each question to the most optimal solution in-order to fully maximize what you can learn from it. Some questions are onion questions, with multiple solutions to the problem, its also important to know them all. For example, do it both recursive and iteratively or BFS and DFS. 
+
+# DISCLAIMER
+I am not an expert coder, nor do I call myself 'amazing' at coding. The example I provide, please use them with a grain of salt. I am a human just like you, we make mistakes. My code examples aren't flawless nor are they fully optimial. However, they are enough to pass interviews. So use them as such, just examples. You can always come up with something better than my code but that is not my intend with this repository. It is to show good enough code to pass Big N interviews, thats all.
 
 # Mindset approach to Whiteboard interviews
 Attempting to pass whiteboard interviews is a daunting task. No one is born natural to it. That is why I'd like to set a tone and mindset when I approach almost anything that I am unfamiliar with. Here are a few quick tips that can get you started.
