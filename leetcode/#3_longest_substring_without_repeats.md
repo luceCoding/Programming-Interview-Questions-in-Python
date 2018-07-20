@@ -1,8 +1,8 @@
-#QUESTION
+# QUESTION
 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
-#SOLUTION
-'''
+# SOLUTION
+```
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         """
@@ -30,4 +30,4 @@ class Solution(object):
             new_length = curr_index - start_index + 1
             result = max(result, new_length)
         return result
-'''
+```
