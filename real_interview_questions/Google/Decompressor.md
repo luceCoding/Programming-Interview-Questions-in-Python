@@ -1,6 +1,8 @@
 # QUESTION
 Given a compressed string in which a number followed by [] indicate how many times those characters occur, decompress the string
+
 Eg. : a3[b2[c1[d]]]e will be decompressed as abcdcdbcdcdbcdcde.
+
 Assume the string is well formed and number will always be followed by a [].
 
 # SOLUTION
@@ -15,7 +17,6 @@ def decompress(compressed_string):
         return ''
     token_stack = list()
     result_stack = list()
-    # token_stack.append(tokens[0])
     curr_token_index = 0
     while curr_token_index < len(tokens):
         curr_token = tokens[curr_token_index]
