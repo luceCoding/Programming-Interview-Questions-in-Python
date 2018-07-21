@@ -5,8 +5,21 @@ Eg. : a3[b2[c1[d]]]e will be decompressed as abcdcdbcdcdbcdcde.
 
 Assume the string is well formed and number will always be followed by a [].
 
+# EXPLAINATION
+Yes, this question can get very complicated. Notice that 'a' is in the front of 'bcdcdbcdcdbcdcd' which corresponds to '[b2[c1[d]]]'. Then 'e' is at the end. You can think of 'a' and 'e' as a start of a new set of decompression/calculations.
+
+The idea is to use recursion to decompress the string. My solution does it iteratively instead.
+
+First break up the string into tokens, 'a3[b2[c1[d]]]e' -> 'a3','[','b2','[','c','[','d',']',']',']','e'
+
+We will use two stacks, one stack(result stack) stores results of the decompressed string, which will be joined at the end. 
+And another stack(token stack) keeps track of what tokens need to be decompressed. 
+When encountering an open bracket, push the next token into the token stack. 
+If we encounter a closed bracket, we should grab the top token then duplicate what was on the top result stack X times then append that token to the front and save it into the result stack. 
+If we instead encounter a token, the suggests that a new result needs to be calculated, this is what was observed with 'a' and 'e' from above. That means any tokens remaining need to be calculated and saved into the result stack before we can start anew. A small trick is to place an empty string into the result stack as a placeholder for calculating the next set of decompression.
+
 # SOLUTION
-Need to clarify what a2[b2[c]d2[e]]f would decompress to. I would assume to 'abccdeebccdeef'.
+Need to clarify what 'a2[b2[c]d2[e]]f' would decompress to. I would assume to 'abccdeebccdeef'.
 ```
 import re
 
