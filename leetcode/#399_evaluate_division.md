@@ -1,5 +1,5 @@
 # EXPLAINATION
-Once the mathy part of the question. I know its a bit tricky to understand how a/b=2.0, b/c=3.0 which means a/c=6.0. 
+This is not a mathy question. I know its a bit tricky to understand how a/b=2.0, b/c=3.0 which means a/c=6.0. 
 Just keep in mind that you can multiply previous calculated answers. By looking at the examples, you can easily find that relationship.
 
 So it should be very obvious this is a graph problem. However, unlike other graph problems, edges have weights associated to them. You need to keep track of them when building your graph.
