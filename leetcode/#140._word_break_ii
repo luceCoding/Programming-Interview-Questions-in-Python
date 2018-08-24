@@ -1,6 +1,7 @@
 # EXPLAINATION
 
 # SOLUTION
+```
 class Solution(object):
     def wordBreak(self, s, wordDict):
         """
@@ -27,3 +28,4 @@ class Solution(object):
                         local_results.append(new_words)
         memo[start_index] = local_results
         return local_results
+```
