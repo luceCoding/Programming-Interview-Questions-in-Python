@@ -1,3 +1,7 @@
+# General Testing Tips
+- https://testing.googleblog.com/
+- http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html
+
 # Unit Testing in Python
 - https://nedbatchelder.com/ 
 - http://www.diveintopython.net/unit_testing/index.html
