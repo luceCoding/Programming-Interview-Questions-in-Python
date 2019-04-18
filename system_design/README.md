@@ -7,3 +7,6 @@ I recommend checking this guy's channel
 
 ### Rest Api and HTTP
 - https://www.youtube.com/watch?v=rhTkRK53XdQ
+
+### Grokking the System Design Interview
+- https://www.educative.io/collection/5668639101419520/5649050225344512
