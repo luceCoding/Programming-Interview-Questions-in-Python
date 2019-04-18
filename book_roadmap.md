@@ -26,6 +26,10 @@ Once you get a few months of being a programmer, its important to learn how to a
 - Domain-Driven Design: Tackling Complexity in the Heart of Software
 - Clean Architecture: A Craftsman's Guide to Software Structure and Design
 
+### DevOps: Continuous Integration and Continuous Deployment
+You don't need to necessarily understand the full scope of DevOps as a programmer but quite franking you should at-least understand the perspective of a DevOps engineer you are coding for. Utlimately, your code has to be executed and if its coded in a way that is hard to configure, deploy, compile or test its going to making the operation teams' lives difficult. Additionally, too many companies do not have a good software development pipeline in place. They do not follow the idea of continuous testing per commit nor do they have automatic ways to midgating risk of deploying bad code to production.
+- The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations
+
 ### Life Skills
 Life skills is rather important, as software engineers tend to solo themselves rather than work together with the team. As you age, you will find that you can't finish the project alone and you have to leverage your teammates at some point to get the job done. How you communicate with your peers is just as important as how you code. You have to work with people in this world, there is no avoiding it.
 - How to Win Friends & Influence People
