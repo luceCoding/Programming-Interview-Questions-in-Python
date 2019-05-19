@@ -1,5 +1,6 @@
-### Other Resources
-- http://highscalability.com/
+### Grokking the System Design Interview
+Start here.
+- https://www.educative.io/collection/5668639101419520/5649050225344512
 
 ### How would you design a messenger app?
 I recommend checking this guy's channel
@@ -10,3 +11,6 @@ I recommend checking this guy's channel
 
 ### Grokking the System Design Interview
 - https://www.educative.io/collection/5668639101419520/5649050225344512
+
+### Other Resources
+- http://highscalability.com/
