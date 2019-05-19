@@ -10,8 +10,5 @@ I recommend checking this guy's channel (Success in Tech). I would actually avoi
 ### Rest Api and HTTP
 - https://www.youtube.com/watch?v=rhTkRK53XdQ
 
-### Grokking the System Design Interview
-- https://www.educative.io/collection/5668639101419520/5649050225344512
-
 ### Other Resources
 - http://highscalability.com/
