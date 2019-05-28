@@ -1,4 +1,10 @@
 # Author: Joseph Luce
+
+# Donate
+If you like the material here, why not buy me a coffee? I <3 coffee!
+
+[Buy me Coffee!](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J3VL7FN23KG8A&source=url)
+
 # Python Programming Interview Questions (Work in Progress)
 After doing over 200+ questions from EPI, CTCI and leetcode combined, I've hand selected questions I believe every software engineer needs to complete in preparation for the Big N whiteboarding interviews. These are questions, I believe will give the most bang for your buck and investment on time. Worthy of adding to your arsenal to fight the coding gods! 
 
