@@ -46,6 +46,7 @@ def get_result(n1, n2, operator):
 
 assert calculate_string('1+2-[3-4]') == 4
 #assert calculate_string('1+2-[-3-4]') == 10
+#assert calculate_string('11+22-[-3-44]') == 80
 assert calculate_string('[1-2]+[3+4]') == 6
 assert calculate_string('1+2-3-4') == -4
 assert calculate_string('[1-2]+3-4') == -2
