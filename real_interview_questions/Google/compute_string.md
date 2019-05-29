@@ -1,9 +1,14 @@
+# QUESTION
+Given a string containing numbers and operators (+ and \*), calculate the result. The string can contain brackets (\[ and \]) which means you must perform that operation before adding any other operators to it.
+
+For example, '1+2-\[3-4\]' results in 4.
+
 # SOLUTION (Run: O(n), Space: O(n), N = number of characters in string)
 This was one given during an onsite interview at google. I did this question with recursion which I believe was a mistake. 
 Before the interview, he said he was testing my ability to write in Python, but the recursion method wasn't a good way to show that.
 Now this solution is the dirty way to do, there is a cleaner pythonic method to this down below.
 
-Overall, this is a medium question, as long as you can see that stacks need to be used in one way or the other, the question is fairly straight forward.
+Overall, this is a medium question, as long as you can see that stacks need to be used in one way or the other, the question is fairly straight forward. By using two stacks, one to keep the numbers and one to keep the operators in, we can easily retrieve the past calculated answers and perform operations on them.
 
 ```
 def calculate_string(input):
@@ -39,7 +44,8 @@ def get_result(n1, n2, operator):
     elif operator == '-':
         return n1 - n2
 
-assert calculate_string('1+2-[3+4]') == -4
+assert calculate_string('1+2-[3-4]') == 4
+#assert calculate_string('1+2-[-3-4]') == 10
 assert calculate_string('[1-2]+[3+4]') == 6
 assert calculate_string('1+2-3-4') == -4
 assert calculate_string('[1-2]+3-4') == -2
