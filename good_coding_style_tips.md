@@ -14,3 +14,6 @@ However, outside of recursion, I would recommend to always return an object over
 ### Liskov Substitution Principle
 ### Interface Segregation Principle
 ### Dependency Inversion
+
+# Python Style Guide
+https://google.github.io/styleguide/pyguide.html
