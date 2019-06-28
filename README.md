@@ -152,6 +152,19 @@ You may start these questions once the above questions have been completed. Thes
 - Design a Rubix Cube
 - Design a parking lot
 
-### How you think
-These questions can be diffcult if you use the wrong data structure or set of logic, but is quite easy once you focus on 'how' the solution is built. Try to use a simple test case but focus purely on the lowest denominator solution. What's makes a trapped rain water? Or what makes a zig zag a zig zag?
-- #42. Trapping Rain Water
+### When do you know you are ready?
+I recommend doing at least 200 questions and several mock interviews before you begin your phone screens. Do the top 100 liked easy questions and the top 100 liked medium questions found on leetcode. Then cherry pick some of the most common hard questions. At this point you should be ready to begin your phone screens.
+
+A good benchmark to be able to answer most of the easy questions in 10-20 mins and the medium questions in 20-30 mins. You should be able to one-click success the solutions 90% of the easy and medium questions. If after 200+ questions you are not able to do this, this means you are putting quantity over quality. Repeat your questions, understand the fundamentals, don't try new questions until you can hit this benchmark consistently. 
+
+This should give you a month or two left to squeeze in any other questions found in EOPI or CTCI in preparation for on-site. The next 100 questions should be done on paper or the white-board. Start looking at the honors section of EOPI but majority of your focus should now be 30% easy, 50% medium, 20% hard. Similar to the first 200 questions, one-click sucesss 90% of the time. At the end of everything, you should have done a total of 300+ questions between leetcode and the two books. 
+
+Depending on your role, system design will need to be sprinkled in during your studies. Use mock interviews to gauge how much system design you need left to study. 
+
+### Organizing your interviews
+Rank your companies in tiers from 1,2,3.
+- Tier 1 - I would join them if I got an offer instantly.
+- Tier 2 - I would join them if it was right for me.
+- Tier 3 - I would join them if I was desperate.
+
+Tier 3 would most obviously be your practice rounds. You can apply to all tiers then schedule them in sections. For example, schedule Tier 3 interviews in mid-June, then Tier 2 interviews in early-July, then Tier 1 interviews in late-July. If you were to get any offer in a higher tier, it would more or less mean you would accept that over any lower tier offers.
