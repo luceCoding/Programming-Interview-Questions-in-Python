@@ -29,7 +29,7 @@ class Solution:
 
 Keeping a dictionary of occurrences when you just want to find one major element is performing extra work.
 You can instead pass through the array once while keeping track of your current major number and any other number is a reason your current major number should be decremented, else increment it.
-Once your current major number's count reaches zero, then it is a reason a new major number takes its place.
+Once your current major number's count reaches zero, then it is a reason a new number take its place.
 
 ```
 class Solution:
