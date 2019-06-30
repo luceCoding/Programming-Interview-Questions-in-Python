@@ -18,26 +18,35 @@ In the perspective of node 1, what do you need?
 - You will need to know what the current longest path found so far from either left or right is.
 - You will also need to know what the longest 'connectable' path is.
 
-Connectable path means taking your child's connectable path and connecting it with yourself, hence, creating a long chain.
+Connectable path means taking your child's connectable path and connecting it with yourself, hence, creating a longer chain.
 This is completely separate from the curent longest path. 
-You want to know if you can create a longer chain than the current longest path found so far.
+You want to know if you can create a longer chain than the current longest path found so far by adding the node you are currently on and the longest paths from the right and left that also include themselves as part of the chain.
 
 ```
 class Solution:
+    def __init__(self):
+        self.longest = 0
+    
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        def length_helper(root):
-            if root is None:
-                return 0, 0
-            # Figure out the longest right and left
-            # Then see if we can use either right or left to create a longer path
-            longest_right, n_right_connectable_nodes = length_helper(root.right)
-            longest_left, n_left_connectable_nodes = length_helper(root.left)
-            n_connected_nodes = n_right_connectable_nodes + n_left_connectable_nodes + 1
-            local_longest = max(longest_right, longest_left, n_connected_nodes)
-            best_n_connectable_nodes = max(n_right_connectable_nodes+1, n_left_connectable_nodes+1)
-            return local_longest, best_n_connectable_nodes
         if root is None:
             return 0
-        longest_path, longest_connectable_path = length_helper(root)
-        return longest_path-1
+        longest_connectable_path = self._get_diameter_helper(root)
+        return self.longest-1
+    
+    def _get_diameter_helper(self, root):
+        if root is None:
+            return 0
+        n_right_connectable_nodes = self._get_diameter_helper(root.right)
+        n_left_connectable_nodes = self._get_diameter_helper(root.left)
+        n_connected_nodes = n_right_connectable_nodes + n_left_connectable_nodes + 1
+        self.longest = max(self.longest, n_connected_nodes)
+        return max(n_right_connectable_nodes, n_left_connectable_nodes)+1
+```
+
+# Follow-up Question
+Return instead the values of the nodes that are the longest. 
+With the above example, return a list containing [4,2,1,3] and [5,2,1,3].
+
+```
+
 ```
