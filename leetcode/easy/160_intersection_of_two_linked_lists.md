@@ -1,6 +1,6 @@
 # 160. Intersection of Two Linked Lists
 
-## Solution with dictionary
+## Best Solution
 - Runtime: O(N)
 - Space: O(1)
 - N = Number of nodes in linked list
