@@ -39,7 +39,9 @@ class Solution:
 - Space: O(N)
 - N = Number of elements in both trees
 
-Similar to the recursion solution, however, will need to keep two items in the each element of the stack since the idea was to traverse the nodes in pairs. You could use two stacks but I believe the code would be more clunky.
+Similar to the recursion solution, however, we will need to keep two items in each element of the stack.
+Since the idea was to traverse the nodes in pairs. 
+You could use two stacks but I believe the code would be more clunky.
 
 ```
 class Solution:
@@ -52,7 +54,7 @@ class Solution:
             node1, node2 = stack.pop()
             if node1 is None or node2 is None:
                 continue
-            node1.val += node2.val
+            node1.val += node2.val # node1 is the primary tree
             if node2.left is not None and node1.left is None:
                 node1.left = TreeNode(0)
             if node2.right is not None and node1.right is None:
