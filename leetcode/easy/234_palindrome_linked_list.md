@@ -21,7 +21,9 @@ If you found the middle node, you could then reverse the linked list from that m
 ```
 Notice how the linked list with the even number of nodes has two nodes pointing to it. Does it matter? Not at all.
 By having two pointers on either end of the linked list after the reversal, you can then iterate and easily compare their values.
-Essentially solving the problem in two passes. Make sure you ask the interviewer if you can modify the original linked list.
+Essentially solving the problem in two passes. 
+
+Make sure you ask the interviewer if you can modify the original linked list. If cannot, then similarly, find the middle node, then create a brand new linked list from there, then compare.
 
 ```
 class Solution:
