@@ -90,68 +90,6 @@ Dynamic programming is using previously calculated information to calculate the 
 # Recommended Event Timeline
 Assuming you are starting from ground zero, no idea about Algos and Data Structures. First read CTCI's chapters, for each chapter, you can attempt to do a few questions until you hit a wall. Don't try to understand every chapter fully, you should figure out the scope and breath of knowledge you need to know by reading each chapter. After reading each chapter, tackle a chapter you "think" you can accomplish in a week. Use that entire week to purely focus on a specific category. For example, I suck at heaps, so I do a bunch of questions on heaps for a week. Then switch to recursion for a week, then graphs then back to heaps again. Every other week you revisit a topic to test whether or not you truely understand that topic or not. Over time it will get easier.
 
-# Question List
-
-### Basics
-I intentionally mixed these together. Some questions, if I were to categoized them to their respective data structures would give out too much about the question. These I believe one should start with.
-- #1. Two Sum
-- #141. Linked List Cycle
-- #7. Reverse Integer
-- #29. Divide Two Integers
-- #404. Sum of Left Leaves
-- #367. Valid Perfect Square
-- #402. Remove K Digits
-- #46. Permutations
-
-### How you structure your code
-These questions are fairly straight forward, no trick questions or gotchas here. You should try to improve and shave the excess fat off your code when trying to solve this. If an interviewer asks you one of these questions, it is to test your ability to write 'clean' code, not how you utalize DS or Algos.
-- #36. Valid Sudoku
-- #289. Game of Life
-
-### Intro to dynamic programming
-Dynamic programming is a mystery to some people, this is why I split this into its own separate category so you can focus purely on how you can use it to your advantage.
-- #198. House Robber
-- #221. Maximal Square
-- #5. Longest Palindromic Substring
-
-## Deeper into the weeds
-Below, I've tried to select questions I think will give you a different perspective of the category that one may not have been exposed with during their studies.
-
-### BFS and DFS
-- #200. Number of Islands
-
-### Recursion
-- Facebook Possible Patterns
-
-### Hash Tables
-- #138. Copy List With Random Pointer
-
-### Linked lists
-
-### Sorting
-- #215. Kth Largest Element in an Array	
-- #56. Merge Intervals
-
-### Trees: BST, Graphs, Heaps
-- Uber's Location Question
-
-### Deeper with dynamic programming
-- #139. Word Break
-- #516. Longest Palindromic Subsequence
-- #### Knapsack problems:
-  - #518. Coin Change 2
-  - Google's Min Train Stops
-
-### Combine more than one data structure
-You may start these questions once the above questions have been completed. These set of questions test your ability to combine more than one data structure together to create an efficent solution. A must do, as it will greatly strengthen your ability to establish relationships between data structures.
-- #146. LRU Cache
-- #355. Design Twitter
-- Word Popularity
-
-### Design
-- Design a Rubix Cube
-- Design a parking lot
-
 ### When do you know you are ready?
 I recommend doing at least 200 questions and several mock interviews before you begin your phone screens. Do the top 100 liked easy questions and the top 100 liked medium questions found on leetcode. Then cherry pick some of the most common hard questions. At this point you should be ready to begin your phone screens.
 
