@@ -55,7 +55,7 @@ class Solution:
         stack = list()
         curr_node = root
         greater_vals = 0
-        while True:
+        while curr_node is not None or len(stack) > 0:
             if curr_node is not None:
                 stack.append(curr_node)
                 curr_node = curr_node.right
@@ -64,7 +64,5 @@ class Solution:
                 greater_vals += curr_node.val
                 curr_node.val = greater_vals
                 curr_node = curr_node.left
-            else: # At a leaf node and stack is empty
-                break
         return root
 ```
