@@ -5,7 +5,7 @@
 - Space: O(1)
 - N = Number of nodes in linked list
 
-If you first count the amount of nodes in both linked list, you can then figure out the difference in the number of nodes between the two.
+If you first count the number of nodes in both linked lists, you can then figure out the difference in the number of nodes between the two.
 Using that, you can then move the starting pointer of the longest linked list to the position where you can iterate both linked lists at the same time to find the intersection node.
 
 ```
