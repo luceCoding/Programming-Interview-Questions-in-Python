@@ -42,3 +42,29 @@ class Solution:
         self._convert_bst_helper(root)
         return root
 ```
+
+## Iterative Solution
+- Runtime: O(N)
+- Space: O(N)
+- N = Number of nodes in BST
+
+```
+class Solution:
+
+    def convertBST(self, root: TreeNode) -> TreeNode:
+        stack = list()
+        curr_node = root
+        greater_vals = 0
+        while True:
+            if curr_node is not None:
+                stack.append(curr_node)
+                curr_node = curr_node.right
+            elif len(stack) > 0: # At a leaf node
+                curr_node = stack.pop()
+                greater_vals += curr_node.val
+                curr_node.val = greater_vals
+                curr_node = curr_node.left
+            else: # At a leaf node and stack is empty
+                break
+        return root
+```
