@@ -9,6 +9,14 @@ The idea is to calculate the products going from left to right, then again going
 Storing these calculations as two arrays will allow one last calculation to find the products from the left and right for each number.
 
 ```
+For example:
+Input: [1,2,3,4]
+Left Array: [1,1,2,6]
+Right Array: [24,12,4,1]
+Result: [24,12,8,6]
+```
+
+```
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         if len(nums) == 0:
