@@ -29,8 +29,8 @@ class Solution:
         
     def calc_left_product(self, nums):
         result = [1]*len(nums)
-        curr_prod = nums[0]
-        for index, n in enumerate(nums[1:], 1):
+        curr_prod = 1
+        for index, n in enumerate(nums):
             result[index] = curr_prod
             curr_prod *= n
         return result
@@ -59,8 +59,8 @@ class Solution:
         
     def calc_left_product(self, nums):
         result = [1]*len(nums)
-        curr_prod = nums[0]
-        for index, n in enumerate(nums[1:], 1):
+        curr_prod = 1
+        for index, n in enumerate(nums):
             result[index] = curr_prod
             curr_prod *= n
         return result
