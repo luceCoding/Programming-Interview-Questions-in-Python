@@ -26,3 +26,29 @@ class Solution:
         
         return has_path_sum_helper(root, 0, sum)
 ```
+
+## Iterative Solution
+- Runtime: O(N)
+- Space: O(N)
+- N = Number of nodes in tree
+
+Similar to the recursive solution, but we need to store an additional current sum with the node in the stack.
+Since we will never need to go back up the tree once we have traverse down, there is no need to implement a global sum.
+
+```
+class Solution:
+    def hasPathSum(self, root: TreeNode, target: int) -> bool:
+        stack = list([(root, 0)])
+        while len(stack) > 0:
+            curr_node, curr_sum = stack.pop()
+            if curr_node is None:
+                continue
+            curr_sum += curr_node.val
+            if curr_node.left is None and curr_node.right is None:
+                if curr_sum == target:
+                    return True
+                continue
+            stack.append((curr_node.right, curr_sum))
+            stack.append((curr_node.left, curr_sum))
+        return False
+```
