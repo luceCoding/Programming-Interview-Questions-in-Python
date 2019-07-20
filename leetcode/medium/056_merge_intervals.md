@@ -7,6 +7,8 @@
 
 By sorting the intervals, we can then recreate the result by comparing previous intervals with the current interval from left to right.
 In this way, we can check if the two intervals overlap each other after the sort.
+We can keep a temporary new interval that we compare to as we loop.
+When finding a non-overlapping interval, we can insert the new interval into the result and set the new interval as the current interval.
 
 ```
 class Solution:
