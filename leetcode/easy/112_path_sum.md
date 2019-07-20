@@ -33,7 +33,7 @@ class Solution:
 - N = Number of nodes in tree
 
 Similar to the recursive solution, but we need to store an additional current sum with the node in the stack.
-Since we will never need to go back up the tree once we have traverse down, there is no need to implement a global sum.
+Since we will never need to go back up the tree or revisit any nodes once we have traverse down, there is no need to implement a global sum.
 
 ```
 class Solution:
