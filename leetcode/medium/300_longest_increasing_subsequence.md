@@ -9,8 +9,9 @@ If we were to start from the left to the right, we would have seen the longest s
 Inorder for us to know what those longest subsequences were, we will need a way to store that, hello dynamic programming. 
 
 For each element, we would need look at the numbers less than the current element on the left side.
-Now that we know which numbers are those, we can look at their corresponding longest subsequence the in dynamic programming array.
-This will tell us what to set as our longest subsequence for this current element.
+Now that we know which numbers those are, we can then look at their corresponding longest subsequence in the dynamic programming array.
+From this list, get the longest subsequence.
+This will tell us what to set as our longest subsequence for this current element + 1.
 
 We are basically building the longest increasing subsequence from the bottom up.
 
