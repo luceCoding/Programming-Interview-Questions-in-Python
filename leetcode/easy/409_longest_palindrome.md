@@ -20,7 +20,7 @@ Solution Steps:
 
 This only one and greater than one is for when we were selecting the middle character to build the palindrome with.
 If there exists a character that only exists once, that means we can use that as the middle character of the palindrome, all other characters that occur once will be ignored.
-Similarly, if no character that exists once exists, since we only count the highest even occurance for every occurance, we can simply add one to the length if there was an odd occurance greather than one.
+Similarly, if no character has an occurance of one, since we only count the highest even occurance for every occurance, we can simply add one to the length if there was an odd occurance greater than one.
 
 ```
 from collections import Counter
