@@ -29,7 +29,7 @@ class Solution:
     def longestPalindrome(self, s: str) -> int:
         ch_to_count = Counter(s)
         longest_length = 0
-        only_one = greater_than_one = False
+        only_one = odd_greater_than_one = False
         for count in ch_to_count.values():
             if count % 2 == 0: # even
                 longest_length += count
@@ -37,11 +37,11 @@ class Solution:
                 if count == 1:
                     only_one = True
                 else:
-                    greater_than_one = True
+                    odd_greater_than_one = True
                 longest_length += count-1
         if only_one:
             longest_length += 1
-        elif greater_than_one:
+        elif odd_greater_than_one:
             longest_length += 1
         return longest_length
 ```
