@@ -31,3 +31,9 @@ class Solution:
 ## Brownie Points
 You can do some more optimizations for some inputs if you mention binary search.
 Since after the sort, we can binary search to find the index of the furthest right interval that is overlapping or itself.
+This however, does not improve the run-time, the worst case is still O(Nlog(N)) due to the sort.
+Even after the sort, worst case can still be O(N) if the array is full of non-overlapping intervals.
+
+```
+
+```
