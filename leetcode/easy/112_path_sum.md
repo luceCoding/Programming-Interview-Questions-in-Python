@@ -62,7 +62,7 @@ class Solution:
 - Space: O(N)
 - N = Number of nodes in tree
 
-This implementation is similar to the above approach, however, it falls in line with how you would do an inorder traversal iteratively due to backtracking. It is important to fully understand this implementation. Try drawing it out if it confuses you, it will click better. Then try it doing pre-order and post-order traversals.
+This implementation is similar to the above approach, however, it falls in line with how you would do an inorder traversal iteratively due to backtracking. It is important to fully understand this implementation. Try drawing it out if it confuses you, it will click better.
 
 ```
 class Solution:
