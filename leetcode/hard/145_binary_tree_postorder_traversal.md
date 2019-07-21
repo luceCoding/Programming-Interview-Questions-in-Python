@@ -31,8 +31,8 @@ class Solution:
 
 The iterative solution for post order is fairly diffucult to come up with on your own.
 It requires two stacks. 
-The first stack is used to traverse the tree but in the opposite direction, going to the right side first then visiting the left nodes.
-During the traversal, the 1st stack will transfer its nodes to the 2nd stack, this will place the nodes in the reverse order or post-order when they are popped off the stack later.
+The first stack is used to traverse the tree but in the opposite direction (node -> right -> left).
+During the traversal, the 1st stack will transfer its nodes to the 2nd stack, this will place the nodes in the reverse order or post-order (left -> right -> node) when they are popped off the stack later.
 I recommend drawing this out, as its important to understand the relationships and responsibilities.
 
 ```
