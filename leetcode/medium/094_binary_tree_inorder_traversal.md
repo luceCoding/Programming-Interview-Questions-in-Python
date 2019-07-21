@@ -2,7 +2,7 @@
 
 ## Recursive solution
 - Runtime: O(N)
-- Space: O(1)
+- Space: O(N)
 - N = Number of elements in tree
 
 Inorder traversal is left -> node -> right.
@@ -27,7 +27,7 @@ class Solution:
 
 ## Iterative solution
 - Runtime: O(N)
-- Space: O(1)
+- Space: O(N)
 - N = Number of elements in tree
 
 By using a stack, we mimic what the computer would do when it does this recursively.
