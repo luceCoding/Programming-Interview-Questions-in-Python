@@ -5,6 +5,8 @@
 - Space: O(N)
 - N = Number of nodes in tree
 
+Post order is left, right, node.
+
 The recusive solution is fairly easy. Most of the heavy lifting is abstracted away by the recursion call.
 
 ```
