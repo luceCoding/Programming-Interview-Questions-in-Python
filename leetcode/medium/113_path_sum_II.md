@@ -6,7 +6,7 @@
 - N = Number of nodes in tree
 
 There are a few things that need to be added outside of a normal traversal of a binary tree.
-Outside of these things, everything else is a post order traversal.
+Outside of these things, everything else is a pre-order traversal (node -> left -> right).
 
 1. Keep track of the sum as we traverse.
 2. Have a result we can modify as we traverse.
