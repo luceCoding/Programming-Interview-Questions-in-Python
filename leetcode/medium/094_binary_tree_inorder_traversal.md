@@ -6,7 +6,7 @@
 - N = Number of elements in tree
 
 Make sure you understand the recursive solution first before attempting the iterative one.
-The main point is to understand the recursive call and how it backtracks to the previous call when it reaches the base case.
+The main point is to understand is the recursive call and how it backtracks to the previous call when it reaches the base case.
 
 ```
 class Solution:
@@ -41,10 +41,10 @@ class Solution:
         stack, result = list(), list()
         curr_node = root
         while True:
-            if curr_node is not None:
+            if curr_node is not None: # Going down the tree
                 stack.append(curr_node)
                 curr_node = curr_node.left
-            elif len(stack) > 0:
+            elif len(stack) > 0: # Going up the tree (backtracking)
                 curr_node = stack.pop()
                 result.append(curr_node.val)
                 curr_node = curr_node.right
