@@ -5,6 +5,8 @@
 - Space: O(1)
 - N = Number of elements in tree
 
+Inorder traversal is left -> node -> right.
+
 Make sure you understand the recursive solution first before attempting the iterative one.
 The main point is the recursive call and how it backtracks to the previous call when it reaches the base case.
 
@@ -28,12 +30,15 @@ class Solution:
 - Space: O(1)
 - N = Number of elements in tree
 
+By using a stack, we mimic what the computer would do when it does this recursively.
+The current node is used to traverse the tree while the stack is used when we need to backtrack to the previous node.
+
 To fully understand this implementation, I recommend you draw this out step by step.
 Iterative inorder traversal can be confusing, no amount of words can help describe its inner workings.
 Don't try to memorize this, understand it.
 
-A good starting point for converting a recursive binary tree solution into an iterative one is to start with a stack, current node variable and a while loop.
-Those should be your starting ingredients.
+A good starting point is to start with a stack, current node variable and a while loop.
+Those should be your starting ingredients for inorder traversal.
 
 ```
 class Solution:
