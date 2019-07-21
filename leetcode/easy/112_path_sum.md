@@ -27,13 +27,16 @@ class Solution:
         return has_path_sum_helper(root, 0, sum)
 ```
 
-## Iterative Solution
+## Iterative Solution (Lazy Approach)
 - Runtime: O(N)
 - Space: O(N)
 - N = Number of nodes in tree
 
 Similar to the recursive solution, but we need to store an additional current sum with the node in the stack.
-Since we will never need to go back up the tree or revisit any nodes once we have traverse down, there is no need to implement a global sum.
+By having both the current node and current sum at any given point, its simpliy a matter of visiting all nodes in the tree, then calculating the result.
+
+I would consider this implementation "lazy", as it doesn't truely show full understanding of stacks and recursion.
+If you follow the traversal of this implementation, it doesn't follow any of the pre-order, in-order, or post-order traversals, since it total skips nodes and doesn't backtrack up at all.
 
 ```
 class Solution:
@@ -50,5 +53,32 @@ class Solution:
                 continue
             stack.append((curr_node.right, curr_sum))
             stack.append((curr_node.left, curr_sum))
+        return False
+```
+
+
+## Inorder Iterative Solution (Preferred Approach)
+
+This implementation is similar to the above approach, however, it falls in line with how you would do an inorder traversal iteratively due to backtracking. It is important to fully understand this implementation. Try drawing it out if it confuses you, it will click better. Then try it doing pre-order and post-order traversals.
+
+```
+class Solution:
+    def hasPathSum(self, root: TreeNode, target: int) -> bool:
+        stack = list()
+        curr_node, curr_sum = root, 0
+        while True:
+            if curr_node is not None: # going down the tree
+                curr_sum += curr_node.val
+                stack.append((curr_node, curr_sum))
+                if curr_node.left is None \
+                  and curr_node.right is None \
+                  and curr_sum == target:
+                    return True
+                curr_node = curr_node.left
+            elif len(stack) > 0: # going up the tree
+                curr_node, curr_sum = stack.pop()
+                curr_node = curr_node.right
+            else:
+                break
         return False
 ```
