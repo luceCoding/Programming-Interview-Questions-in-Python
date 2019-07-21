@@ -6,7 +6,7 @@
 - N = Number of elements in tree
 
 Make sure you understand the recursive solution first before attempting the iterative one.
-The main point is to understand is the recursive call and how it backtracks to the previous call when it reaches the base case.
+The main point is the recursive call and how it backtracks to the previous call when it reaches the base case.
 
 ```
 class Solution:
