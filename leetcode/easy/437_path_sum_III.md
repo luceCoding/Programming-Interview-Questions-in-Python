@@ -1,4 +1,4 @@
-# 112. Path Sum
+# 437. Path Sum III
 
 ## Brute Force Recursive Solution
 - Runtime: O(3^N)
