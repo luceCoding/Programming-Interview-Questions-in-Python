@@ -13,7 +13,8 @@ We will need to create a graph, as it is not provided to us, it can be an adjace
 For any dfs, you will need a global visited and a local visited.
 The global visited will tell us if we need to dfs starting at this node, this is to reduce run-time, else it will be O(N^N).
 The local visited is for when we are traversing the graph via. dfs and looking for cycles.
-I decided to use a dictionary to simplify the code, -1 will be used during the dfs, then after the dfs, changed into a 1, showing that its already visited and has no cycles.
+
+I decided to use a dictionary to simplify the code, -1 will be used during the dfs, then after the dfs, changed into a 1, showing that its already visited and has no cycles. You can always use two separate visited sets but I find the code gets clunky.
 
 ```
 from collections import defaultdict
