@@ -1,8 +1,8 @@
 # 437. Path Sum III
 
 ## Brute Force Top Down Recursive Solution
-- Runtime: O(3^N)
-- Space: O(3^N)
+- Runtime: O(2^N)
+- Space: O(2^N)
 - N = Number of nodes in tree
 
 Thinking about the brute force method, for every node in the tree, traverse their left child and right child to find the target sum.
@@ -13,8 +13,10 @@ This is similar to a DFS implementation.
 
 The runtime can be calculated in this way. 
 For each recursive call, we want to traverse the left and right children down to the leaf nodes, this is O(N) runtime. 
-Since we would have to do this again but for the left and right children, it about O(N-1) for each.
-So we basically have O(N) three times which means O(3^N).
+Since we would have to do this again but for the left and right children, it about O(log(N)) for each.
+So we basically have O(N), O(log(N)), O(log(N)).
+The two O(log(N)) can be simplified to O(N-1).
+So O(N) and O(N-1) per call = O(2^N)
 
 Remember the formula for recursion, (Number of calls ^ (Big O per call))
 
