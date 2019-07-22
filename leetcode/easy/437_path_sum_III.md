@@ -1,6 +1,6 @@
 # 437. Path Sum III
 
-## Brute Force Recursive Solution
+## Brute Force Top Down Recursive Solution
 - Runtime: O(3^N)
 - Space: O(3^N)
 - N = Number of nodes in tree
