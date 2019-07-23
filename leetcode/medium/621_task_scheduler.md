@@ -35,7 +35,7 @@ from collections import Counter
 
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
-        n_intervals = n_idles = 0
+        n_intervals = 0
         ch_to_count = Counter(tasks)
         max_heap = [-count for count in ch_to_count.values()]
         heapq.heapify(max_heap)
@@ -46,18 +46,11 @@ class Solution:
                     popped_items.append(heapq.heappop(max_heap))
                 else:
                     break
-                    
-            n_intervals += len(popped_items) + n_idles
-            if len(popped_items) < n:
-                n_idles = n - len(popped_items) + 1
-            elif len(popped_items) > n:
-                n_idles = 0
-            else: # len(popped_items) == n
-                n_idles = 1
                 
-            popped_items = [count+1 for count in popped_items if count+1 != 0]
-            max_heap += popped_items
+            max_heap += [count+1 for count in popped_items if count+1 != 0]
             heapq.heapify(max_heap)
             
-        return n_intervals 
+            n_intervals += len(popped_items) if len(max_heap) == 0 else n+1
+            
+        return n_intervals
 ```
