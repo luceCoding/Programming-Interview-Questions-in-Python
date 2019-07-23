@@ -8,7 +8,7 @@
 
 This question requires a greedy algothrim.
 We want to use the task that occurs the most first so we can reduce the amount of idle time there is.
-With that, a heap can help us find those set of tasks.
+With that, a max heap can help us find those set of tasks.
 
 However, there is one tricky edge case that I've noted below.
 If you had an input will many tasks that occur the same amount of times and one that occurs many times. 
