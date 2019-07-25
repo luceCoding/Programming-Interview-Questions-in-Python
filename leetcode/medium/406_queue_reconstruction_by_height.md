@@ -30,7 +30,7 @@ Insertion:
 6. [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
 ```
 
-The first sort is O(Nlog(N)) while the second sort is O(N) due to known indexes for insertion.
+The first sort is O(Nlog(N)) while the second sort is O(N) due to known indexes for insertion, however, python's implementation of arrays is different from theoretical. This may end up being O(N^2(log(N))) with python.
 
 ```
 class Solution:
