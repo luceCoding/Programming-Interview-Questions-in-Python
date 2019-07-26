@@ -37,7 +37,6 @@ Then we will iterate the list a second time and find all the numbers that were n
 ```
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        results = list()
         for n in nums:
             other_index = abs(n)-1
             nums[other_index] = -abs(nums[other_index])
