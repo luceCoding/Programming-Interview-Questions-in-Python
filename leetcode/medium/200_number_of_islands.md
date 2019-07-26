@@ -24,7 +24,7 @@ class Solution:
                 return
             visited.add((x,y))
             for neighbor_x, neighbor_y in get_neighbors_gen(x, y, grid):
-                traverse_islands_dfs_recursion(neighbor_x, neighbor_y, grid, visited)
+                traverse_islands_bfs_recursion(neighbor_x, neighbor_y, grid, visited)
                 
         def get_neighbors_gen(x, y, grid):
             yield x, y-1 # top
