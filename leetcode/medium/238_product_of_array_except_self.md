@@ -22,17 +22,14 @@ class Solution:
         if len(nums) == 0:
             return []
         left, right = self.calc_left_product(nums), self.calc_left_product(nums[::-1])[::-1]
-        result = [1]*len(nums)
-        for index, n in enumerate(zip(left, right)):
-            result[index] = n[0]*n[1]
+        result = list()
+        for l, r in zip(left, right):
+            result.append(l*r)
         return result
         
     def calc_left_product(self, nums):
-        result = [1]*len(nums)
-        curr_prod = 1
-        for index, n in enumerate(nums):
-            result[index] = curr_prod
-            curr_prod *= n
+        nums = [1] + nums[:-1]
+        result = list(itertools.accumulate(nums, operator.mul))
         return result
 ```
 
@@ -58,10 +55,7 @@ class Solution:
         return result
         
     def calc_left_product(self, nums):
-        result = [1]*len(nums)
-        curr_prod = 1
-        for index, n in enumerate(nums):
-            result[index] = curr_prod
-            curr_prod *= n
+        nums = [1] + nums[:-1]
+        result = list(itertools.accumulate(nums, operator.mul))
         return result
 ```
