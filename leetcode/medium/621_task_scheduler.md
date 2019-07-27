@@ -11,9 +11,9 @@ We want to use the task that occurs the most first so we can reduce the amount o
 With that, a max heap can help us find those set of tasks.
 
 However, there is one tricky edge case that I've noted below.
-If you had an input will many tasks that occur the same amount of times and one that occurs many times. 
-Its actually bad to start all the tasks in the first go around.
-Its better to interweave them between the one task that occurs many times to reduce idle times.
+If we had an input with many tasks that occur the same amount of times and one that occurs many times. 
+It is actually bad to start all the tasks in the first go around.
+Better to interweave them between the one task that occurs many times to reduce idle times.
 
 **Important edge case to consider**
 ```
