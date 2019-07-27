@@ -19,6 +19,8 @@ Then we have to keep a dynamic counter, decrementing and incrementing character 
 With this, after we moved the right pointer to the right, we can use these two dictionaries to check if this is a substring that meets the requirements.
 If so, we can then try pruning with the left pointer all the way to the right pointer or if it doesn't meet the requirement.
 
+For the run-time, worst case, we will be visiting each character twice.
+
 You may think that the run-time for this is exponential, especially when we are checking the two dictionaries.
 However, don't be mistaken, the comparison is actually a constant T run-time, it doesn't change based on S, but rather on T.
 There is one slight problem, python's implementation of string concatention is actually **O(N)**.
