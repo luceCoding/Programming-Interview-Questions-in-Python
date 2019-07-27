@@ -28,10 +28,10 @@ There is one slight problem, python's implementation of string concatention is a
 When the question wants the actual substring and not a count, even using a deque will not solve this problem.
 So this implementation is technically **O(S * (S+T))** due to python.
 
-When implementing these type of two pointer questions.
-I recommend to **avoid using indexes as much as possible and use iterators**.
+We could use indexes instead of string slices, however, the code gets complex. 
+When implementing these type of two pointer questions, I recommend to **avoid using indexes as much as possible and use iterators**.
 It is very easy to get a one off error doing these and within a 30 minute timeframe, it is very risky.
-Just talk about using indexes instead and you will be fine.
+Just talk about how to refactor with indexes.
 
 ```
 from collections import defaultdict
@@ -75,7 +75,7 @@ We can still use a dictionary to count the occurances, but we can also keep a se
 This will represent the number of unique valid characters of T.
 
 If T = 'abcc', then there are 3 keys in the dictionary.
-When ever we increment a key in the dictionary, we can then compare the dictionary T's count with dictionary S's count. 
+Whenever we increment a key in the dictionary, we can then compare the dictionary T's count with dictionary S's count. 
 If S's count equals exactly what T's count is, then we just got one of the 3 keys validated. 
 If we decrement, and S's count is T's count-1, then we just unvalidated one of those keys.
 
