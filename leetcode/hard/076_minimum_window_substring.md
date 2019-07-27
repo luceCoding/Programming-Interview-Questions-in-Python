@@ -88,7 +88,7 @@ from collections import Counter
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        char_counter = CharacterCounter(t)
+        char_counter = MinCharacterCounter(t)
         str_builder, min_substr, found = '', s, False
         for right_ch in s:
             char_counter.increment(right_ch)
@@ -105,7 +105,7 @@ class Solution:
                     str_builder = str_builder[1:]
         return min_substr if found else ''
         
-class CharacterCounter:
+class MinCharacterCounter:
     def __init__(self, source_str):
         self._ch_to_n_counts = defaultdict(int)
         self._source_counts = Counter(source_str)
