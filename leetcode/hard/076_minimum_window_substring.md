@@ -62,3 +62,65 @@ def chars_occur_ge(ch_to_n_counts, all_ch_counts):
             return False
     return True
 ```
+
+## Two Pointer with Map Solution (Optimized)
+- Runtime: O(S)
+- Space: O(S)
+- S = Number of characters in string S
+- T = Number of unique characters in string T
+
+We can further improve the solution by optimizing the way we check if its a valid substring.
+We can still use a dictionary to count the occurances, but we can also keep a separate count for the unique characters in T.
+This will represent the number of unique valid characters of T.
+
+If T = 'abcc', then there are 3 keys in the dictionary.
+When ever we increment a key in the dictionary, we can then compare the dictionary T's count with dictionary S's count. 
+If S's count equals exactly what T's count is, then we just got one of the 3 keys validated. 
+If we decrement, and S's count is T's count-1, then we just unvalided one of those keys.
+
+This will remove the need to traverse all the keys whenever we need to validate the substring.
+Hence, this validation will run at O(1).
+
+```
+from collections import defaultdict
+from collections import Counter
+
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        char_counter = CharacterCounter(t)
+        str_builder, min_substr, found = '', s, False
+        for right_ch in s:
+            char_counter.increment(right_ch)
+            str_builder += right_ch
+            if char_counter.is_valid:
+                for left_ch in str_builder:
+                    if char_counter.is_valid:
+                        found = True
+                        if len(str_builder) < len(min_substr):
+                            min_substr = str_builder
+                    else:
+                        break
+                    char_counter.decrement(left_ch)
+                    str_builder = str_builder[1:]
+        return min_substr if found else ''
+        
+class CharacterCounter:
+    def __init__(self, source_str):
+        self._ch_to_n_counts = defaultdict(int)
+        self._source_counts = Counter(source_str)
+        self._n_valid_chars = 0
+
+    def increment(self, char):
+        self._ch_to_n_counts[char] += 1
+        if char in self._source_counts and self._ch_to_n_counts[char] == self._source_counts[char]:
+            self._n_valid_chars += 1
+        
+    def decrement(self, char):
+        self._ch_to_n_counts[char] -= 1
+        if char in self._source_counts and self._ch_to_n_counts[char] == self._source_counts[char]-1:
+            self._n_valid_chars -= 1
+    
+    @property
+    def is_valid(self):
+        return self._n_valid_chars == len(self._source_counts.keys())
+```
