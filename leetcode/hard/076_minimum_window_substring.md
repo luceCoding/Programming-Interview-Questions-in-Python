@@ -12,6 +12,7 @@ Once we have that, we need to basically prune it, remove the extra characters fr
 Finally, we keep repeating this until we reach the end.
 We can traverse the string via. two pointers, a left and right iterator.
 Right is bound within the given string S and left is bound within the substring created by the right pointer.
+This is an example of a sliding window.
 
 To figure out if we have all the characters in this substring, we would have to count T via. a dictionary.
 This is our known count that is required for each substring.
@@ -28,7 +29,7 @@ When the question wants the actual substring and not a count, even using a deque
 So this implementation is technically **O(S * (S+T))** due to python.
 
 When implementing these type of two pointer questions.
-I recommend to avoid using indexes as much as possible and use iterators.
+I recommend to **avoid using indexes as much as possible and use iterators**.
 It is very easy to get a one off error doing these and within a 30 minute timeframe, it is very risky.
 Just talk about using indexes instead and you will be fine.
 
@@ -76,10 +77,10 @@ This will represent the number of unique valid characters of T.
 If T = 'abcc', then there are 3 keys in the dictionary.
 When ever we increment a key in the dictionary, we can then compare the dictionary T's count with dictionary S's count. 
 If S's count equals exactly what T's count is, then we just got one of the 3 keys validated. 
-If we decrement, and S's count is T's count-1, then we just unvalided one of those keys.
+If we decrement, and S's count is T's count-1, then we just unvalidated one of those keys.
 
-This will remove the need to traverse all the keys whenever we need to validate the substring.
-Hence, this validation will run at O(1).
+This will remove the need to traverse all the keys whenever we need to revalidate the substring.
+Hence, this validation will run at O(1). String slicing will still slow us down however.
 
 ```
 from collections import defaultdict
