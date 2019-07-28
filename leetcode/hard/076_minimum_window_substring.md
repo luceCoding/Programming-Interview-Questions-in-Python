@@ -1,10 +1,10 @@
 # 76. Minimum Window Substring
 
 ## Two Pointer with Map Solution
-- Runtime: O(S * T) but O(S * (S+T)) due to string slicing
+- Runtime: O(S * T) + O(T) but O(S * (S+T)) + O(T) due to string slicing
 - Space: O(S)
 - S = Number of characters in string S
-- T = Number of unique characters in string T
+- T = Number of characters in string T
 
 So the definition of a result requires the substring to contain all characters in T. It then wants the smallest substring.
 With that, we have to begin the solution by finding the first instance of that substring.
@@ -65,10 +65,10 @@ def chars_occur_ge(ch_to_n_counts, all_ch_counts):
 ```
 
 ## Two Pointer with Map Solution (Optimized)
-- Runtime: O(S)
+- Runtime: O(S) + O(T) but O(S * S) + O(T) due to string slicing
 - Space: O(S)
 - S = Number of characters in string S
-- T = Number of unique characters in string T
+- T = Number of characters in string T
 
 We can further improve the solution by optimizing the way we check if its a valid substring.
 We can still use a dictionary to count the occurances, but we can also keep a separate count for the unique characters in T.
@@ -104,6 +104,55 @@ class Solution:
                     char_counter -= left_ch
                     str_builder = str_builder[1:]
         return min_substr if found else ''
+        
+class CharacterCounter:
+    def __init__(self, source_str):
+        self._ch_to_n_counts = defaultdict(int)
+        self._source_counts = Counter(source_str)
+        self._n_valid_chars = 0
+
+    def __iadd__(self, char):
+        self._ch_to_n_counts[char] += 1
+        if char in self._source_counts and self._ch_to_n_counts[char] == self._source_counts[char]:
+            self._n_valid_chars += 1
+        return self
+        
+    def __isub__(self, char):
+        self._ch_to_n_counts[char] -= 1
+        if char in self._source_counts and self._ch_to_n_counts[char] == self._source_counts[char]-1:
+            self._n_valid_chars -= 1
+        return self
+    
+    @property
+    def is_valid(self):
+        return self._n_valid_chars == len(self._source_counts.keys())
+```
+
+## Two Pointer with Map Solution (No String slicing)
+- Runtime: O(S) + O(T)
+- Space: O(S)
+- S = Number of characters in string S
+- T = Number of characters in string T
+
+```
+from collections import defaultdict
+from collections import Counter
+
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        char_counter = CharacterCounter(t)
+        left_i, left_i_result, right_i_result = 0, 0, len(s)-1
+        found = False
+        for right_i, right_ch in enumerate(s):
+            char_counter += right_ch
+            if char_counter.is_valid:
+                while left_i <= right_i and char_counter.is_valid:
+                    found = True
+                    if right_i-left_i < right_i_result-left_i_result:
+                        right_i_result, left_i_result = right_i, left_i
+                    char_counter -= s[left_i]
+                    left_i += 1
+        return s[left_i_result:right_i_result+1] if found else ''
         
 class CharacterCounter:
     def __init__(self, source_str):
