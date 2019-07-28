@@ -41,7 +41,7 @@ Now, you may think this is solution is terrible compared to the previous recursi
 That maybe true but only if we were to always create a unique sum every single time.
 Maybe an input like [1,10,100,1000,10000...]
 However, given any other input, since its add and subtract and not multiply or divide, its unlikely and its more likely we will have overlapping sums.
-So U is actually less than O(2^N) on most cases while the brute force solution above will always be run at 2^N.
+So U is actually less than O(2^N) on most cases while the brute force solution above will always be ran at 2^N.
 
 ```
 from collections import defaultdict
