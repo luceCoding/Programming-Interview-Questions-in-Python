@@ -2,7 +2,7 @@
 
 ## Two Pointer with Map Solution
 - Runtime: O(S * T) + O(T) but O(S * (S+T)) + O(T) due to string slicing
-- Space: O(S)
+- Space: O(S) + O(T)
 - S = Number of characters in string S
 - T = Number of characters in string T
 
@@ -66,7 +66,7 @@ def chars_occur_ge(ch_to_n_counts, all_ch_counts):
 
 ## Two Pointer with Map Solution (Optimized)
 - Runtime: O(S) + O(T) but O(S * S) + O(T) due to string slicing
-- Space: O(S)
+- Space: O(S) + O(T)
 - S = Number of characters in string S
 - T = Number of characters in string T
 
@@ -130,7 +130,7 @@ class CharacterCounter:
 
 ## Two Pointer with Map Solution (No String slicing)
 - Runtime: O(S) + O(T)
-- Space: O(S)
+- Space: O(S) + O(T)
 - S = Number of characters in string S
 - T = Number of characters in string T
 
