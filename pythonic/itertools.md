@@ -50,6 +50,8 @@ for each in itertools.starmap(operator.mul, data)
 
 ## tee()
 
+## izip()
+
 ## zip_longest()
 
 ## combinations()
