@@ -10,7 +10,7 @@ If we were to start at amount 0 and go up to the given amount.
 We can build the minimum coins as we increasing the amount by using the previous calculated minimum coins.
 
 For example, if you have an input of [1,5,6] coins.
-As we known the minimum coins for amount 1 and 5 is 1. 
+The minimum coins for amount 1 and 5 is 1. 
 When we get to amount 6 with coin 5, we will look at amount 1 (6-5=1) for its minimum coin, which is 1 and do 1+1 at amount 6.
 Similarly, when we get to amount 12 with coin 6, we do 12-6=6, look at amount 6 which is 2 minimum coins and do 2+1 for amount 12.
 We repeat this until we reach the given amount.
