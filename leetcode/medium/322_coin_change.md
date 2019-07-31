@@ -16,7 +16,7 @@ Similarly, when we get to amount 12 with coin 6, we do 12-6=6, look at amount 6 
 We repeat this until we reach the given amount.
 
 We can do some further optimizations by removing coins that are over the given amount.
-We can also use the minimum coin as our starting amount instead of starting at amount 0.
+We can also use the smallest coin as our starting amount instead of starting at amount 0.
 
 ```
 class Solution:
