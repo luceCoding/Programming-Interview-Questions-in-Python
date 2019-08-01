@@ -3,8 +3,9 @@
 ## Recursive Solution
 
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(H)
 - N = Number of elements in both trees
+- H = Height of highest tree
 
 By traversing both trees together, the solution is much simpler. 
 Use one of the trees as your primary merge tree during the recursion and create new nodes when the primary doesn't have one and the secondary tree does.
@@ -36,8 +37,9 @@ class Solution:
 ## Iterative Solution
 
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(H)
 - N = Number of elements in both trees
+- H = Height of highest tree
 
 Similar to the recursion solution, however, we will need to keep two items in each element of the stack.
 Since the idea was to traverse the nodes in pairs. 
