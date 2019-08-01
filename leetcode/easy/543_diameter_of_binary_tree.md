@@ -2,9 +2,9 @@
 
 ## Best Solution
 - Runtime: O(N)
-- Space: O(D)
+- Space: O(H)
 - N = Number of elements in tree
-- D = Depth of Tree
+- H = Height of Tree
 
 Take this binary tree example:
 ```
