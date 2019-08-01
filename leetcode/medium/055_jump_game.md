@@ -1,5 +1,35 @@
 # 55. Jump Game
 
+## Dynamic Programming Top Down Solution
+
+- Runtime: O(N^2)
+- Space: O(N)
+- N = Number of elements in array
+
+You can see that the question is basically asking, given a certain index, can get we to the start or end, depending on which way you look at it.
+So in essence, you really only need to save a variable boolean for each index stating that its reachable or not.
+This requires an array of size N.
+Then its simply iterating each index and setting all reachable indexes to True, requiring two for loops.
+This will equate to O(N^2) run-time and O(N) space.
+
+You can do this in a bottom up manner but it will just have to be in reverse.
+
+```
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        if len(nums) == 0:
+            return False
+        dp = [False] * len(nums)
+        dp[0] = True
+        for start_index in range(0, len(nums)):
+            if dp[start_index]:
+                for jump_index in range(start_index, min(len(nums), start_index+nums[start_index]+1)):
+                    dp[jump_index] = True
+            else:
+                break
+        return dp[-1]
+```
+
 ## Best Solution
 - Runtime: O(N)
 - Space: O(1)
