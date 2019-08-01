@@ -2,8 +2,9 @@
 
 ## Recursive Solution
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(H)
 - N = Number of elements in tree
+- H = Height of tree
 
 Preorder traversal is node -> left -> right
 
@@ -24,8 +25,9 @@ class Solution:
 
 ## Iterative Solution
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(H)
 - N = Number of elements in tree
+- H = Height of tree
 
 This is one of the more easier iterative solutions out of the three traversals to understand.
 The current first in last out attributes of the stack conforms to the preorder traversal naturally.
