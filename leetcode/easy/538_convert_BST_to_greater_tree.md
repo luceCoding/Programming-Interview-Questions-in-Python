@@ -1,7 +1,8 @@
 ## Recursive Solution
 - Runtime: O(N)
-- Space: O(N)
-- N = Number of nodes in BST
+- Space: O(H)
+- N = Number of elements in tree
+- H = Height of Tree
 
 Take for example this BST:
 ```
@@ -45,8 +46,9 @@ class Solution:
 
 ## Iterative Solution
 - Runtime: O(N)
-- Space: O(N)
-- N = Number of nodes in BST
+- Space: O(H)
+- N = Number of elements in tree
+- H = Height of Tree
 
 ```
 class Solution:
