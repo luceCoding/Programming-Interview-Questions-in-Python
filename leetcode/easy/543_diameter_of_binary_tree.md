@@ -2,8 +2,9 @@
 
 ## Best Solution
 - Runtime: O(N)
-- Space: O(N)
-- N = Number of nodes in binary tree
+- Space: O(D)
+- N = Number of elements in tree
+- D = Depth of Tree
 
 Take this binary tree example:
 ```
@@ -46,7 +47,3 @@ class Solution:
 # Follow-up Question
 Return instead the values of the nodes that are the longest. 
 With the above example, return a list containing [4,2,1,3] and [5,2,1,3].
-
-```
-
-```
