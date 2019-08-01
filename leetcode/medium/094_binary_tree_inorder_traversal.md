@@ -2,8 +2,9 @@
 
 ## Recursive solution
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(D)
 - N = Number of elements in tree
+- D = Depth of Tree
 
 Inorder traversal is left -> node -> right.
 
@@ -27,8 +28,9 @@ class Solution:
 
 ## Iterative solution
 - Runtime: O(N)
-- Space: O(N)
+- Space: O(D)
 - N = Number of elements in tree
+- D = Depth of Tree
 
 By using a stack, we mimic what the computer would do when it does this recursively.
 The current node is used to traverse the tree while the stack is used when we need to backtrack to the previous node.
