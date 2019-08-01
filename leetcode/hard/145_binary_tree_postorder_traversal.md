@@ -2,8 +2,9 @@
 
 ## Recursive Solution
 - Runtime: O(N)
-- Space: O(N)
-- N = Number of nodes in tree
+- Space: O(H)
+- N = Number of elements in tree
+- H = Height of tree
 
 Post order is left, right, node.
 
@@ -26,8 +27,9 @@ class Solution:
 
 ## Iterative Solution
 - Runtime: O(N)
-- Space: O(N)
-- N = Number of nodes in tree
+- Space: O(H)
+- N = Number of elements in tree
+- H = Height of tree
 
 The iterative solution for post order is fairly diffucult to come up with on your own.
 It requires two stacks. 
