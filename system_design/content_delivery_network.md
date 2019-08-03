@@ -25,6 +25,6 @@ Roughly the opposite of pull based CDNs, instead of waiting for a user to ask fo
 Obviously, this may result in extra processing that may or may not be needed if the new content is never asked, especially in locations with little to no traffic or a location that likes one sub section of a website more than other sections. Another con is that the content needs to be packaged up by the main server per update, increasing its load.
 
 ## When to use CDNs?
-A great scenario to use CDNs is if most of the website content is static, say images, videos, documents that do not require input from your main server.
+A great scenario to use CDNs is if most of the website content is static, say images, videos, documents that do not require input from your main server. Things like templates, user agreement, privacy, FAQs, contact us, logos and icons.
 You can think of this as having the client side of the content independent to the server side content.
 CDNs could also be used to host the static files while a different architecture or set of services handles the dynamic webpages if they were requested.
