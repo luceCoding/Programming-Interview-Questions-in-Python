@@ -18,11 +18,11 @@ Mainly used when a user or users from a remote geographic location requests for 
 The closest CDN to that request will check if that content is avaliable, if its not, it will then ask the main server for that content.
 Then the main server will deliver the content to the CDN, the CDN then caches that request and finally returns the content to the user.
 
-So this is basically a process a request if asked approach.
+So this is basically a process a request if asked approach. The con is that this approach decreases speeds, its like a CDN never existed in the first place for that specific user.
 
 ## Push Based CDNs
-Roughly the opposite of pull based CDNs, instead of waiting for a user to ask for the content. When the main server as an update, it will automatically push that content to the CDNs. So when the user does ask for the content, it will be avaliable immediately.
-Obviously, this may result in extra processing that may or may not be needed if the new content is never asked, especially in locations with little to no traffic or a location that likes one sub section of a website more than other sections.
+Roughly the opposite of pull based CDNs, instead of waiting for a user to ask for the content. When the main server has an update, it will automatically push that content to the CDNs. So when the user does ask for the content, it will be avaliable immediately.
+Obviously, this may result in extra processing that may or may not be needed if the new content is never asked, especially in locations with little to no traffic or a location that likes one sub section of a website more than other sections. Another con is that the content needs to be packaged up by the main server per update, increasing its load.
 
 ## When to use CDNs?
 A great scenario to use CDNs is if most of the website content is static, say images, videos, documents that do not require input from your main server.
