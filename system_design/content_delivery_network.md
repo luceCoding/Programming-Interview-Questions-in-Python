@@ -21,8 +21,10 @@ Then the main server will deliver the content to the CDN, the CDN then caches th
 So this is basically a process a request if asked approach.
 
 ## Push Based CDNs
+Roughly the opposite of pull based CDNs, instead of waiting for a user to ask for the content. When the main server as an update, it will automatically push that content to the CDNs. So when the user does ask for the content, it will be avaliable immediately.
+Obviously, this may result in extra processing that may or may not be needed if the new content is never asked, especially in locations with little to no traffic or a location that likes one sub section of a website more than other sections.
 
 ## When to use CDNs?
-A great scenario to use CDNs is if most of the website content is static, say images, videos, documents that do no require input from your main server.
+A great scenario to use CDNs is if most of the website content is static, say images, videos, documents that do not require input from your main server.
 You can think of this as having the client side of the content independent to the server side content.
 CDNs could also be used to host the static files while a different architecture or set of services handles the dynamic webpages if they were requested.
