@@ -1,6 +1,6 @@
 # 102. Binary Tree Level Order Traversal
 
-## Solution
+## Recursive Solution
 - Runtime: O(N)
 - Space: O(N)
 - N - # nodes in tree
