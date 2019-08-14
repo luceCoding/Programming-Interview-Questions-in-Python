@@ -5,8 +5,8 @@
 - Space: O(N)
 - N - # nodes in tree
 
-We essentially need to visit the left side of the tree first to find the first elements to create each level.
-Then we need to dictionary of lists to store these levels, each level will contain a list of elements.
+We essentially need to visit the left side of the tree first to find the elements to create each level before we visit the right side.
+Then we need a dictionary of lists to store these levels, each level will contain a list of elements.
 So as we traverse in a preorder traversal fashion, we store the values into the dictionary.
 
 ```
