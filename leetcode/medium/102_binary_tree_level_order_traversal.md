@@ -1,6 +1,6 @@
 # 102. Binary Tree Level Order Traversal
 
-## Recursive Solution
+## Recursive Perorder Traversal Solution with dictionary
 - Runtime: O(N)
 - Space: O(N)
 - N - # nodes in tree
@@ -24,4 +24,36 @@ class Solution:
         level_map = defaultdict(list)
         level_order_helper(root, 0, level_map)
         return level_map.values()
+```
+
+## BFS Solution
+- Runtime: O(N)
+- Space: O(N)
+- N - # nodes in tree
+
+Similar approach, to the one above. 
+However, instead of doing a preorder traversal, we traverse each level one at a time instead.
+
+```
+from collections import deque
+from collections import defaultdict
+
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        if root is None:
+            return list()
+        queue = deque([root])
+        levels = defaultdict(list)
+        curr_lvl = 0
+        while len(queue) > 0:
+            n_pops = len(queue)
+            for _ in range(n_pops):
+                curr_node = queue.popleft()
+                levels[curr_lvl].append(curr_node.val)
+                if curr_node.left is not None:
+                    queue.append(curr_node.left)
+                if curr_node.right is not None:
+                    queue.append(curr_node.right)
+            curr_lvl += 1
+        return levels.values()
 ```
