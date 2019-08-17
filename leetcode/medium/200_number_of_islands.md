@@ -40,7 +40,16 @@ class Solution:
         return traverse_helper(grid)
 ```
 
-## Traditional BFS Iterative Solution
+## BFS Recursive Solution
+- Runtime: O(N)
+- Space: O(N)
+- N = Number of elements in grid
+
+```
+
+```
+
+## BFS Iterative Solution
 - Runtime: O(N)
 - Space: O(N)
 - N = Number of elements in grid
