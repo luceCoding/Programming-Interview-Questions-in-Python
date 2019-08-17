@@ -26,7 +26,7 @@ Futhermore, other examples to test your theory are valleys and peak inputs, [1,2
 
 So the points to remember are:
 - We push increasing values onto the stack.
-- If we find a decreasing value, pop onto the stack until we find a value on top of the stack less than the current value. During this, we keep a max area variable.
+- If we find a decreasing value, pop onto the stack until we find a value on top of the stack less than or equal to the current value. During this, we keep a max area variable.
 - We can deduct that, whatever is on top of the stack, is the beginning index for the width.
 
 ```
