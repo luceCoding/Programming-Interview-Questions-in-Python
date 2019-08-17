@@ -1,6 +1,6 @@
 # 84. Largest Rectangle in Histogram
 
-## Two Stack Solution
+## Stack Solution
 - Runtime: O(N)
 - Space: O(N)
 - N = Number of heights
