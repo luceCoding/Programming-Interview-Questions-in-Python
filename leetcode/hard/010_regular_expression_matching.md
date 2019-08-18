@@ -41,7 +41,7 @@ In respect to the wildcard pattern character:
 
 We will also need to intialize our dynamic programming array correctly.
 The first column is matching aganist S = '' an empty string.
-So if you have a pattern P = 'b*a*', all wildcards postions are True because they can occur zero times.
+So if you have a pattern P = 'b\*a\*', all wildcards postions are True because they can occur zero times.
 
 ```
 class Solution:
