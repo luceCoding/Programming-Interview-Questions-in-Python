@@ -39,6 +39,10 @@ In respect to the wildcard pattern character:
 2. For occuring zero times, we need to look at the previous 2 pattern letters if thats true. If given P = 'ba*' and S = 'b', you basically want to check if previous pattern P = 'b' at S = 'b' was True. 
 3. Occurring multiple times is the trickest of the three. You need to make sure the previous pattern letter matches your current string letter or if the pattern = '.' while the dp value to the left is true. Given P = 'ba*' and S = 'baaa', we want to know if P = 'ba*' at S = 'ba' was true, then if P = 'ba*' at S = 'baa' was True.
 
+We will also need to intialize our dynamic programming array correctly.
+The first column is matching aganist S = '' an empty string.
+So if you have a pattern P = 'b*a*', all wildcards postions are True because they can occur zero times.
+
 ```
 class Solution:
     def isMatch(self, string: str, pattern: str) -> bool:
