@@ -34,9 +34,9 @@ In respect to the wildcard, we will need to break this down into three parts.
 3. Can I occur multiple times?
 
 In using the dynamic programming array, what do we need from it to match these three cases?
-1. Occuring only once can be achieved by looking at the previous pattern letter on the same string letter, basically the one above the current dp element. You will also need to check if the character before the wildcard matches your current string letter.
-2. For occuring zero times, we need to look at the previous 2 pattern letters if thats true.
-3. Occurring multiple times is the trickest of the three. You need to make sure the previous pattern letter matches your current string letter or if the pattern = '.' while the dp value to the left is true.
+1. Occuring only once can be achieved by looking at the previous pattern letter on the same string letter, basically the one above the current dp element. You will also need to check if the character before the wildcard matches your current string letter. If given P = 'ba*' and S = 'ba', you basically want to check if previous pattern P = 'ba' at S = 'ba' was True.
+2. For occuring zero times, we need to look at the previous 2 pattern letters if thats true. If given P = 'ba*' and S = 'b', you basically want to check if previous pattern P = 'b' at S = 'b' was True. 
+3. Occurring multiple times is the trickest of the three. You need to make sure the previous pattern letter matches your current string letter or if the pattern = '.' while the dp value to the left is true. Given P = 'ba*' and S = 'baaa', we want to know if P = 'ba*' at S = 'ba' was true, then if P = 'ba*' at S = 'baa' was True and lastly if P = 'ba*' at S = 'baaa' was True. 
 
 ```
 class Solution:
