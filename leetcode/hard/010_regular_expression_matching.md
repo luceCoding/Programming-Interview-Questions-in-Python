@@ -15,7 +15,7 @@ If given S = 'ba' and P = 'b.' we can draw a grid as such:
 b   F T F
 .   F F T
 ```
-Notice we start with an empty string and pattern, this is always True. Then we go left to right starting with the first row.
+Notice we start with an empty string and pattern, this is always True. Then we go left to right starting with the second row after the first row and column have been set.
 Each row is the current pattern letter and each column is the current string letter.
 
 1. S = 'b', P = 'b' -> True
