@@ -6,6 +6,7 @@
 - H = Height of tree
 
 You can do a brute force solution with a dfs down the tree for each node, but at run-time O(N\*N).
+If you get a linked list as a tree, its essentially for each node, visit all the other nodes below.
 You can get a better run-time by using a dictionary, you can do this either top down or bottom up approach, this example I did top-down.
 Both approaches will have the same run-time and space complexities.
 
