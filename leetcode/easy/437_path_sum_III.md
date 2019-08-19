@@ -5,7 +5,7 @@
 - Space: O(H*H)
 - H = Height of tree
 
-You can do a brute force solution with a dfs down the tree for each node, but an exponential run-time O(H^H).
+You can do a brute force solution with a dfs down the tree for each node, but at run-time O(N\*N).
 You can get a better run-time by using a dictionary, you can do this either top down or bottom up approach, this example I did top-down.
 Both approaches will have the same run-time and space complexities.
 
