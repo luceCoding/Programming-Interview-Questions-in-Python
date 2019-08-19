@@ -1,8 +1,9 @@
 # 437. Path Sum III
 
 ## Top Down Recursive Solution
-- Runtime: O(N*H)
-- Space: O(H*H)
+- Runtime: O(N\*H)
+- Space: O(H\*H)
+- N = Number of nodes in tree
 - H = Height of tree
 
 You can do a brute force solution with a dfs down the tree for each node, but at run-time O(Nlog(N)).
