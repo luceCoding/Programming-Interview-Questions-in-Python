@@ -44,6 +44,15 @@ The first column is matching aganist S = '' an empty string.
 So if you have a pattern P = 'b\*a\*', all wildcards postions are True because they can occur zero times.
 
 ```
+   '' b a b a
+''  T F F F F
+b   F T F F F
+*   T T F F F
+a   F F T F F
+*   T F T F F
+```
+
+```
 class Solution:
     def isMatch(self, string: str, pattern: str) -> bool:
         dp = [[False] * (len(string)+1) for _ in range(len(pattern)+1)]
