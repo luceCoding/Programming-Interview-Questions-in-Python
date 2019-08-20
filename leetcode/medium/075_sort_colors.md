@@ -8,7 +8,7 @@
 
 Since we know the range of numbers, 0, 1 and 2, we can just use two pointers for each end of the array.
 The left pointer will point to the first unsorted number != 0 and the right pointer will point to the last unsorted number != 2.
-We will then traverse the array from left to right swapping the current pointer to either the left or right depending if its a 0 or 2, ignoring ones.
+We will then traverse the array from left to right swapping the current pointer to either the left or right depending if its a 0 or 2, ignoring 1s.
 Eventually, when we reach the right pointer, it would have sorted the entire array and all the 1s will be in the middle.
 
 ```
