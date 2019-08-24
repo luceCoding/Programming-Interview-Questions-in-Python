@@ -15,6 +15,7 @@ This will allow you to keep nodes that are across the span of the tree.
 
 You can also think of this by dividing the tree in two parts, say a left tree and a right tree.
 You give your recursion two nodes or "two root nodes" and go down the tree at the same time.
+Just remember the question is about being a mirror.
 
 ```
 class Solution:
@@ -28,4 +29,26 @@ class Solution:
                 and is_symmetric_helper(root.right, other_node.left) \
                 and root.val == other_node.val
         return is_symmetric_helper(root, root)
+```
+
+## Iterative Solution
+- Runtime: O(N)
+- Space: O(N)
+- N = Number of nodes in tree
+
+```
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        stack = list([(root, root)])
+        while len(stack) != 0:
+            n1, n2 = stack.pop()
+            if n1 is None and n2 is None:
+                continue
+            if n1 is None or n2 is None:
+                return False
+            if n1.val != n2.val:
+                return False
+            stack.append((n1.left, n2.right))
+            stack.append((n1.right, n2.left))
+        return True
 ```
