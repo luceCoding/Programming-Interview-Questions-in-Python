@@ -6,7 +6,7 @@
 - N = Number of nodes in tree
 
 I recommend drawing out a tree of height 4 to find the intuition for the solution.
-You should notice that everytime you want to go left, you care about the one on the most right of the tree.
+You should notice that everytime you want to go left, you care about the right-most node of the tree.
 The tough part is what to do with the inner nodes?
 
 If your recursion passed in two nodes at a time, a left node and a right node, and traverse down the tree one height at a time. 
@@ -25,9 +25,9 @@ class Solution:
                 return True
             if root is None or other_node is None:
                 return False
-            return is_symmetric_helper(root.left, other_node.right) \
-                and is_symmetric_helper(root.right, other_node.left) \
-                and root.val == other_node.val
+            return root.val == other_node.val \
+                and is_symmetric_helper(root.left, other_node.right) \
+                and is_symmetric_helper(root.right, other_node.left)
         return is_symmetric_helper(root, root)
 ```
 
