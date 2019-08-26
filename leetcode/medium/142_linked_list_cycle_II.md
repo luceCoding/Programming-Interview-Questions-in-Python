@@ -6,7 +6,7 @@
 - N = Nodes in linked list
 
 By using a fast and slow pointer, slow moves once while fast moves twice, we can figure out if there is a cycle.
-However, there is a second property in doing this, at the point where slow and fast meet in the cycle, it is exactly K steps away from the start of the cycle as the head is as fast is to the beginning of the cycle.
+However, there is a second property in doing this, at the point where slow and fast meet in the cycle, it is exactly K steps away from the start of the cycle as the head is to the beginning of the cycle.
 
 Reason why this works is that, no matter where the cycle begins or if the number of nodes is even or odd: 
 1. Slow and fast will always end up moving an even number of times. 
