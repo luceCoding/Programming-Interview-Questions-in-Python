@@ -1,5 +1,5 @@
 # Block Storage
-- Data are chopped up into blocks of bytes, leaving the system unknown as to what it is storing until all the blocks are put back together.
+- Data are chopped up into blocks of bytes, leaving the system unknown as to what is stored until all the blocks are put back together.
 - Data are able to be retrieved at low latency. Very high performance. However, this means that storage cannot have a lot of distance between each other, generally multiple servers will be in the same physical location from each other.
 - Cannot deal with many users editing the same file. No locking ability among data.
 - No metadata. Very little over head.
