@@ -41,6 +41,9 @@ We don't want to store very long URLs in our database.
 Instead, we can hash the URLs, however, that is not always a guarantee due to collisions.
 If we have to visit more pages than there are possible hash codes, this would be a problem.
 
+You can have webpages that have links to other websites, your crawlers can then end up crawling the entire internet.
+This is up to the URL Manager to keep a set of domains to compare to when deciding if its a valid URL.
+
 # Content Manager
 We don't want to store a bunch of pages with the same set of data.
 So we need a way to filter the content that we recieve after we have scraped the data.
