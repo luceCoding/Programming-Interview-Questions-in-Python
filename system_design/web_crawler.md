@@ -54,9 +54,9 @@ This isn't 100% best solution due to collisions, this is a question you need to 
 
 # Fault Tolerance
 The URL Manager and the Content Manager should both have a master-slave architecture for better up-time.
-However, if both go down at the same time, we can revive them by using the database.
+However, if both go down at the same time, we can revive them by using each their own database.
 Since the URL Manager will be getting a stream of URLs, hence, having a queue, it would be important to save this queue into the database.
-Therefore, requiring the database to have a visited URL hash codes and unvisited set of URL links.
+Therefore, requiring the database to have visited set of URL hash codes and an unvisited set of URL links.
 
 For the extractors, it will depend if the extractors will have a queue or not.
 If they will hold a queue, it will be important to also have a master-slave architecture.
