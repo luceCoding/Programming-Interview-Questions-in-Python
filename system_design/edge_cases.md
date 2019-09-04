@@ -11,6 +11,13 @@ Another case is that maybe 20% of your data is accessed by 80% of your users. Yo
 
 The 80/20 rule is a great thing to think about after you have laid out your design. This is when you want to further optimize the design.
 
+# Race Conditions
+Identify any part of your system that requires more than one component to share some piece of data.
+For example, if two services need to book a room at a hotel, there can be a scenario that two users want to book the same room at the hotel. You would need a locking service to block/hold any other requests for a particular room.
+
+If you are making a web crawler, you need to keep track of visited webpages.
+Instead of allowing the web crawlers to manage the visited set, reverse the responsibilities and dedicate a component like a URL manager to distribute the URLs to the web crawlers while keeping track of the visited URLs.
+
 # Shut everything down
 During the interview, generally a good interviewer will start asking the question of "What if this dies?".
 This is to move you to start thinking about single points of failures.
