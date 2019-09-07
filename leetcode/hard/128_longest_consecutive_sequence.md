@@ -5,7 +5,7 @@
 - Space: O(N)
 - N = Number of elements in array
 
-Most likely the most intuitive solution is to sort the array, then iterate each number to find the longest range.
+The most intuitive solution is to sort the array, then iterate each number to find the longest range.
 Hoever, that would be N(log(N)) run-time.
 
 To improve the run-time, we can store all the numbers into a set, then check if the left(n-1) and right(n+1) numbers are in the set.
