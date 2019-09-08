@@ -36,9 +36,10 @@ k=1
 [-1,1,-1,1]
     ------  <-- k
  ---------  <-- sum
- ---        <-- x
+ --         <-- x
  
 x = sum - k
+-1 = 1 - 1
 ```
 
 To find X, we need to take the current rolling sum and subtract it with k.
