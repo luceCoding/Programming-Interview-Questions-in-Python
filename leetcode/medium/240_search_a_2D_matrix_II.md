@@ -48,7 +48,7 @@ class Solution:
 - C = Number of columns
 
 The previous solution partially used the properties of the sorted matrix, but not at the fullest extend.
-Depending on where you starting point is on the matrix, for this example, the top-right most element in the matrix.
+Depending on where your starting point is on the matrix, for this example, the top-right most element in the matrix.
 We can ask, does this element exist on this row?
 We will check if the current element is greater than or equal to the target.
 If yes, we move to the left, if not, we move down one row.
