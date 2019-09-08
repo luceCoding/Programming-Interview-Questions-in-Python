@@ -61,7 +61,7 @@ These two cases will eliminate our search space over this sorted matrix.
 ```
 class Solution:
     def searchMatrix(self, matrix, target):
-        if len(matrix) == 0 or len(matrix[0]) == 0:
+        if not any(matrix):
             return False
         row_idx, col_idx = 0, len(matrix[0])-1
         # start at top-right most element
