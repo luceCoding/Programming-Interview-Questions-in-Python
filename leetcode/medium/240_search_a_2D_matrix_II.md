@@ -63,8 +63,7 @@ class Solution:
     def searchMatrix(self, matrix, target):
         if not any(matrix):
             return False
-        row_idx, col_idx = 0, len(matrix[0])-1
-        # start at top-right most element
+        row_idx, col_idx = 0, len(matrix[0])-1 # start at top-right most element
         while row_idx < len(matrix) and col_idx >= 0:
             if matrix[row_idx][col_idx] == target:
                 return True
