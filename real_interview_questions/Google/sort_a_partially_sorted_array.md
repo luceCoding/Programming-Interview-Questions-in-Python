@@ -75,14 +75,14 @@ def sort_partial_sorted_28b(nums):
     for num in nums:
         if (num & mask) != curr_28b: # start sort
             for bucket, occurance in enumerate(buckets):
-                for o in range(occurance):
+                for _ in range(occurance):
                     results.append(curr_28b | bucket)
             curr_28b = num & mask # set to next 28 bit group
             buckets = [0] * 16 # reset
         # add to buckets
         buckets[num & 15] += 1
     for bucket, occurance in enumerate(buckets):
-        for o in range(occurance):
+        for _ in range(occurance):
             results.append(curr_28b | bucket)
     return results
 ```
