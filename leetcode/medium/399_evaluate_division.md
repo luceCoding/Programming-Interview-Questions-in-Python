@@ -16,29 +16,29 @@ from collections import defaultdict
 class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
         
-        def create_adj_list():
-            adj_list = defaultdict(dict)
+        def create_graph():
+            graph = defaultdict(dict)
             for equation, val in zip(equations, values):
                 start, end = equation
-                adj_list[start][end] = val
-                adj_list[end][start] = 1.0 / val
-            return adj_list
+                graph[start][end] = val
+                graph[end][start] = 1.0 / val
+            return graph
         
-        def dfs(adj_list, start, end, visited):
-            if start in visited or start not in adj_list:
+        def dfs(graph, start, end, visited):
+            if start in visited or start not in graph:
                 return -1.0
             if start == end:
                 return 1.0
             visited.add(start)
-            for neighbor, val in adj_list[start].items():
-                result = dfs(adj_list, neighbor, end, visited)
+            for neighbor, val in graph[start].items():
+                result = dfs(graph, neighbor, end, visited)
                 if result > 0:
                     return result * val
             return -1.0
         
-        adj_list = create_adj_list()
+        graph = create_graph()
         results = list()
         for start, end in queries:
-            results.append(dfs(adj_list, start, end, set()))
+            results.append(dfs(graph, start, end, set()))
         return results
 ```
