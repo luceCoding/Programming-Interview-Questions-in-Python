@@ -11,39 +11,38 @@ The core of the problem is to find a cycle in the graph, as example 2 of the pro
 
 We will need to create a graph, as it is not provided to us, it can be an adjacent list or a matrix, doesn't matter.
 For any dfs, you will need a global visited and a local visited.
-The global visited will tell us if we need to dfs starting at this node, this is to reduce run-time, else it will be O(N^N).
+The global visited will tell us if we need to dfs starting at this node, this is to reduce run-time, else it will be O(N^2).
 The local visited is for when we are traversing the graph via. dfs and looking for cycles.
-
-I decided to use a dictionary to simplify the code, -1 will be used during the dfs, then after the dfs, changed into a 1, showing that its already visited and has no cycles. You can always use two separate visited sets but I find the code gets clunky.
 
 ```
 from collections import defaultdict
 
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        adj_list = self.create_adj_list(prerequisites)
-        visited = defaultdict(int)
-        for node in adj_list:
-            if not self.dfs(node, adj_list, visited):
-                return False
-        return True
-        
-    def dfs(self, node, adj_list, visited):
-        if visited[node] == -1: # currently visiting, cycle
-            return False
-        if visited[node] == 1: # already visited, no cycle
+        def create_graph():
+            graph = defaultdict(list)
+            for course, prereq in prerequisites:
+                graph[course].append(prereq) 
+                graph[prereq]
+            return graph
+            
+        def dfs(course, graph, visited, global_visited):
+            if course in visited:
+                return False # found cycle
+            if course in global_visited:
+                return True
+            visited.add(course)
+            global_visited.add(course)
+            for prereq in graph[course]:
+                if not dfs(prereq, graph, visited, global_visited):
+                    return False
+            visited.remove(course)
             return True
-        visited[node] = -1
-        for neighbor in adj_list[node]:
-            if not self.dfs(neighbor, adj_list, visited):
-                return False
-        visited[node] = 1
-        return True
         
-    def create_adj_list(self, prereqs):
-        adj_list = defaultdict(list)
-        for course, prereq in prereqs:
-            adj_list[course].append(prereq)
-            adj_list[prereq]
-        return adj_list
+        graph = create_graph() # key: course, val: list of prereqs
+        global_visited = set()
+        for course in graph:
+            if not dfs(course, graph, set(), global_visited): # cycle
+                return False
+        return True
 ```
