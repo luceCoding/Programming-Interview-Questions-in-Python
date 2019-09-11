@@ -30,3 +30,20 @@ class Solution:
                                                          amount_to_min_n_coins[curr_amount-coin]+1)
         return amount_to_min_n_coins[amount] if amount_to_min_n_coins[amount] <= amount else -1
 ```
+
+```
+import sys
+
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        min_amounts = [-1] * (amount+1)
+        min_amounts[0] = 0
+        for a in range(1, amount+1):
+            curr_min = sys.maxsize
+            for coin in coins:
+                prev_min = a - coin
+                if prev_min >= 0 and min_amounts[prev_min] != -1:
+                    curr_min = min(curr_min, min_amounts[prev_min]+1)
+            min_amounts[a] = curr_min if curr_min != sys.maxsize else -1
+        return min_amounts[amount]
+```
