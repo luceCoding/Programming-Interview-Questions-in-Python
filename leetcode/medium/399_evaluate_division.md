@@ -64,7 +64,7 @@ class Solution:
         
         def bfs(start, end, results):
             queue = deque([(start, 1.0)])
-            visited = set()
+            visited = set([start])
             while len(queue) != 0:
                 node, curr_prod = queue.pop()
                 if node not in graph:
@@ -72,9 +72,9 @@ class Solution:
                 if node == end:
                     results.append(curr_prod)
                     break
-                visited.add(node)
                 for neighbor, val in graph[node].items():
                     if neighbor not in visited:
+                        visited.add(neighbor)
                         queue.appendleft((neighbor, curr_prod * val))
             else:
                 results.append(-1.0)
