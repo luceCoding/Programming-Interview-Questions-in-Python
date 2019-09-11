@@ -36,6 +36,7 @@ import sys
 
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        coins = list(filter(lambda x: x <= amount, coins)) # remove coins out of range
         min_amounts = [-1] * (amount+1)
         min_amounts[0] = 0
         for a in range(1, amount+1):
