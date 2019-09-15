@@ -49,8 +49,8 @@ class Solution:
         return sum(n_combos[-1])
 ```
 
-## Sub-Optimal Dynamic Programming Solution
-- Runtime: O(A(C^2))
+## Optimal Dynamic Programming Solution
+- Runtime: O(AC))
 - Space: O(AC)
 - C = Number of Coins
 - A = Amount
