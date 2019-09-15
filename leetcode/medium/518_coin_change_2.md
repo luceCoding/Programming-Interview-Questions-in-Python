@@ -51,7 +51,7 @@ class Solution:
 
 ## Optimal Dynamic Programming Solution
 - Runtime: O(AC))
-- Space: O(AC)
+- Space: O(C)
 - C = Number of Coins
 - A = Amount
 
