@@ -24,6 +24,8 @@ You should notice a pattern here, if we are at amount 5, we can figure out the c
 So if we are at amount=5 and coin=2, we can take 5-2=3, which is our previous amount.
 We find that at amount=3 and coin=2, there is 2+1 as a combination, so we can create 2+1+2 as a new combination.
 
+Since the question is asking for minimum combinations, we can instead just store the number of combinations per coin for each amount as a dynamic programming 2d array. Rows are the amounts and the coins are the columns.
+
 However, you will notice that we have to figure out all the previous combinations for all the coins.
 This will eat up our run-time.
 
