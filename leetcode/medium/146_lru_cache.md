@@ -16,7 +16,7 @@ Since the get() will reorder our nodes in the queue, for example, if we get a ke
 We need a way to move it to the front of the queue.
 To do that, the dictionary will be a pointer to that node in the queue. 
 For the dictionary, we can use the key as the key and the value will be node in the queue.
-Another key thing to note is that each node in the queue will need to be a linked list.
+Another thing to note is that each node in the queue will need to be a doubly linked list.
 During the removal process of a node in the queue, we would need to know what the previous and next nodes are.
 
 Put() will simply add to the front of the queue and update the dictionary.
