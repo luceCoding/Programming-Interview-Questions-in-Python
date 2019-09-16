@@ -92,6 +92,11 @@ class Node(object):
         self.key = key
 ```
 
+## Solution with OrderedDict
+- Runtime: O(1)
+- Space: O(C)
+- C = Capacity
+
 For those interested in the implementation with an OrderedDict. Here is an example.
 
 ```
