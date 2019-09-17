@@ -3,7 +3,7 @@
 ## Quick Sort
 
 - Runtime: O(Nlog(N)), worst case O(N^2)
-- Space: O(N)
+- Space: O(log(N))
 - N = Number of elements in list
 
 It is important to know the inner workings of a quicksort and how to implement it.
