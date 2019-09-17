@@ -59,3 +59,29 @@ class Solution(object):
                 n_ways[idx] += n_ways[idx-2]
         return n_ways[-1]
 ```
+
+## Optimal Solution
+
+- Runtime: O(N)
+- Space: O(1)
+- N = Number of elements in list
+
+You can further optimize space by just keeping just two variables to represent the previous character and the one before that previous character. We don't need the entire N array, once we use up the past DP elements, they will no longer be used anymore.
+
+```
+class Solution(object):
+    def numDecodings(self, s):
+        if len(s) == 0:
+            return 0
+        s = '0' + s # represent empty string
+        prev_prev, prev = 0, 1
+        for idx, ch in enumerate(s[1:], 1):
+            result = 0
+            if int(ch) != 0:
+                result += prev
+            if 10 <= int(s[idx-1:idx+1]) <= 26:
+                result += prev_prev
+            prev_prev = prev
+            prev = result
+        return prev
+```
