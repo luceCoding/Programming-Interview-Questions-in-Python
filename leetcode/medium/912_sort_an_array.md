@@ -40,3 +40,32 @@ class Solution(object):
         
         return quick_sort(nums)
 ```
+
+## Quick Sort In-Place
+
+- Runtime: O(Nlog(N)), worst case O(N^2)
+- Space: O(log(N))
+- N = Number of elements in list
+
+To do an in-place quicksort with python, we have to avoid using string slicing.
+
+```
+class Solution(object):
+    def sortArray(self, nums):
+        
+        def quick_sort(l_idx, r_idx):
+            if l_idx >= r_idx:
+                return
+            pivot = nums[r_idx]
+            last_unsorted_idx = l_idx
+            for idx in range(l_idx, r_idx):
+                if nums[idx] <= pivot:
+                    nums[last_unsorted_idx], nums[idx] = nums[idx], nums[last_unsorted_idx]
+                    last_unsorted_idx += 1
+            nums[last_unsorted_idx], nums[r_idx] = nums[r_idx], nums[last_unsorted_idx]
+            quick_sort(l_idx, last_unsorted_idx-1)
+            quick_sort(last_unsorted_idx+1, r_idx)
+            
+        quick_sort(0, len(nums)-1)
+        return nums
+```
