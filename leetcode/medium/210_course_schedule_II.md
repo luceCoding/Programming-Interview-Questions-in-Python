@@ -12,7 +12,7 @@ I find this one most helpful: [Toplogical Sort Video](https://www.youtube.com/wa
 You can think of topological sort as an extension of DFS.
 
 Also the question has a misleading edge case, given numCourses = 1 and prerequisites = [], expected output is [0].
-They are just saying that there exists one course and that course is course 0.
+They are just saying that there exists one course and that course is course 0. Essentially islands in the graph or courses with no prerequisites.
 
 ```
 from collections import defaultdict
