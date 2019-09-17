@@ -5,6 +5,9 @@
 - Space: O(N)
 - N = Number of elements in array
 
+The intuition is recognize that for each number, we can either add it or not.
+Therefore, using recursion, we can easily backtrack the solution and try choice #2.
+
 Using the ability for recursion to backtrack will allow us to populate the result.
 During each recursion, we will loop through the given array, during this loop, the number represent a choosen number for the subset.
 The numbers that were not choosen yet will be passed to the next recursion to be choosen again, hence, creating the result.
@@ -23,17 +26,19 @@ Input: [1,2,3]
 9. R1: Select 3 -> [3] -> Pop 3 -> Done
 
 ```
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        results = list()
-        results.append([])
-        self.subset_helper(nums, [], results)
-        return results
+class Solution(object):
+    def subsets(self, nums):
         
-    def subset_helper(self, nums, curr_result, results):
-        for index, n in enumerate(nums):
-            curr_result.append(n)
-            results.append([str(n) for n in curr_result])
-            self.subset_helper(nums[index+1:], curr_result, results)
-            curr_result.pop()
+        def subset_helper(idx, results, path=[]):
+            if idx == len(nums):
+                results.append(path)
+                return
+            # add
+            subset_helper(idx+1, results, path+[nums[idx]])
+            # don't add
+            subset_helper(idx+1, results, path)
+            
+        results = list()
+        subset_helper(0, results)
+        return results
 ```
