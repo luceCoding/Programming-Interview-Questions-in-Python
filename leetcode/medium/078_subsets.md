@@ -5,7 +5,7 @@
 - Space: O(N)
 - N = Number of elements in array
 
-The intuition is recognize that for each number, we can either add it or not.
+The intuition is to recognize that for each number, we can either add it or not.
 Therefore, using recursion, we can easily backtrack the solution and try choice #2.
 
 Using the ability for recursion to backtrack will allow us to populate the result.
