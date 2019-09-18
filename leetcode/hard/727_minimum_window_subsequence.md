@@ -22,26 +22,24 @@ Expected Output = 'abdcd'
 ```
 
 ```
-class Solution(object):
-    def minWindow(self, S, T):
-        
-        def trim(start, end):
-            t_idx = len(T)-1
-            for idx, ch in reversed(list(enumerate(S[start:end+1], start))):
-                if ch == T[t_idx]:
-                    t_idx -= 1
-                if t_idx < 0:
-                    return idx
-            return start
-        
-        min_substr = S + ' '
-        t_idx = start_idx = 0
-        for idx, ch in enumerate(S):
-            if ch == T[t_idx]:
+class Solution:
+    def minWindow(self, S: str, T: str) -> str:
+        window = S + ' '
+        t_idx = 0
+        s_idx = 0
+        while s_idx < len(S):
+            if S[s_idx] == T[t_idx]:
                 t_idx += 1
-            if t_idx >= len(T):
-                start_idx = trim(start_idx, idx)
-                min_substr = min(min_substr, S[start_idx:idx+1], key=lambda x: len(x))
-                t_idx = len(T)-1
-        return min_substr if len(min_substr) < len(S) else ''
+                if t_idx == len(T):
+                    end = s_idx
+                    t_idx -= 1
+                    while t_idx >= 0:
+                        if S[s_idx] == T[t_idx]:
+                            t_idx -= 1
+                        s_idx -= 1
+                    s_idx += 1
+                    t_idx += 1
+                    window = min(window, S[s_idx:end+1], key=lambda x: len(x))
+            s_idx += 1
+        return window if len(window) < len(S) else ''
 ```
