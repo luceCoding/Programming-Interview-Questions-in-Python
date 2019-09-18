@@ -50,7 +50,7 @@ class Solution:
 ```
 
 ## Dynamic Programming Solution
-- Runtime: O(S)
+- Runtime: O(S\*T)
 - Space: O(T)
 - S = Number of characters in S
 - T = Number of characters in T
@@ -62,6 +62,9 @@ If a character of S exists in T, then we will set appropriate element of DP to t
 This builds the chain-like property to fulfill the ordering requirement of the sub-string.
 
 The only exception to this rule is if we find that the given character of S is the first character of T (T[0]), then we should set all duplicate characters of T first before changing DP[0] to the current index. This will start a new possible chain link that could ripple across the other DP elements if the right ordering occurs.
+
+Worst case is when T and S are the same duplicate set of characters. Like S = 'aaaaaaa' and T = 'aa'.
+This would make us set all DP elements of T for each S.
 
 ```
 from collections import defaultdict
