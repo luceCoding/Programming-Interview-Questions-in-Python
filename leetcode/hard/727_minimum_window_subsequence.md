@@ -66,6 +66,51 @@ The only exception to this rule is if we find that the given character of S is t
 Worst case is when T and S are the same duplicate set of characters. Like S = 'aaaaaaa' and T = 'aa'.
 This would make us set all DP elements of T for each S.
 
+Given S = 'abcabdcd', T = 'abcd'
+```
+abcabdcd
+
+
+DP:
+a  b  c  d
+-1 -1 -1 -1
+--------------
+
+abcabdcd
+^^^
+
+DP:
+a  b  c  d
+0  0  0 -1
+--------------
+
+01234567
+abcabdcd
+   ^
+
+DP:
+a  b  c  d
+3  0  0 -1
+--------------
+
+01234567
+abcabdcd
+    ^^
+
+DP:
+a  b  c  d
+3  3  0  0
+--------------
+
+01234567
+abcabdcd
+      ^^
+
+DP:
+a  b  c  d
+3  3  3  3
+```
+
 ```
 from collections import defaultdict
 
