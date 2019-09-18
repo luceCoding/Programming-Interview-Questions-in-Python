@@ -24,21 +24,26 @@ Expected Output = 'abdcd'
 ```
 class Solution:
     def minWindow(self, S: str, T: str) -> str:
+        
+        def trim(start):
+            t_idx = len(T)-1
+            while t_idx >= 0:
+                if S[start] == T[t_idx]:
+                    t_idx -= 1
+                if t_idx < 0:
+                    return start
+                start -= 1
+            return 0
+        
         window = S + ' '
-        t_idx = 0
-        s_idx = 0
+        t_idx = s_idx = 0
         while s_idx < len(S):
             if S[s_idx] == T[t_idx]:
                 t_idx += 1
                 if t_idx == len(T):
                     end = s_idx
-                    t_idx -= 1
-                    while t_idx >= 0:
-                        if S[s_idx] == T[t_idx]:
-                            t_idx -= 1
-                        s_idx -= 1
-                    s_idx += 1
-                    t_idx += 1
+                    s_idx = trim(s_idx)
+                    t_idx = 0
                     window = min(window, S[s_idx:end+1], key=lambda x: len(x))
             s_idx += 1
         return window if len(window) < len(S) else ''
