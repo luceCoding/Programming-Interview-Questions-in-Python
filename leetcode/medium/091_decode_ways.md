@@ -4,7 +4,7 @@
 
 - Runtime: O(2^N)
 - Space: O(N)
-- N = Number of elements in list
+- N = Number of characters in string
 
 We should be able to recognize that we can basically ask two questions, for each character, can we decode this character or if we can decode this character with the previous character?
 With this, you can build a recursion function to solve this solution.
@@ -32,13 +32,13 @@ class Solution(object):
 
 - Runtime: O(N)
 - Space: O(N)
-- N = Number of elements in list
+- N = Number of characters in string
 
 Since we can recognize that there exists a recursion function, this can tell us that there is also a dynamic programming solution too.
 We already know the two sub-problems, whether to decode current character or current + previous character.
 
 With any dynamic programming solution, we need some sort of array.
-We can see that a 2d array can be used to represent number of ways to decode a character.
+We can see that a 1d array can be used to represent number of ways to decode a character.
 With this, we can store the previous calculated numbers and check them as we go left to right in the string.
 
 So given s='123', dp[0] will represent an empty string, dp[1] will represent '1', dp[2] will represent '2' and so forth.
@@ -64,7 +64,7 @@ class Solution(object):
 
 - Runtime: O(N)
 - Space: O(1)
-- N = Number of elements in list
+- N = Number of characters in string
 
 You can further optimize space by just keeping just two variables to represent the previous character and the one before that previous character. We don't need the entire N array, once we use up the past DP elements, they will no longer be used anymore.
 
