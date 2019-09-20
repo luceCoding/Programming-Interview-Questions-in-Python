@@ -49,7 +49,7 @@ class Solution(object):
 
 To do an in-place quicksort with python, we have to avoid using string slicing.
 
-Note: There is an unstable version of in-place quick sort that have an O(1) space complexity.
+Note: There is an unstable version of in-place quick sort that has an O(1) space complexity.
 
 ```
 class Solution(object):
