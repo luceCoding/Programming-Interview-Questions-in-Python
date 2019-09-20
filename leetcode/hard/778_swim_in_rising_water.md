@@ -22,6 +22,16 @@ The logic goes as follows:
 5. Repeat.
 
 ```
+class Square(object):
+    
+    def __init__(self, elevation, x, y):
+        self.elevation = elevation
+        self.x = x
+        self.y = y
+        
+    def __lt__(self, other):
+        return self.elevation < other.elevation
+
 class Solution(object):
     def swimInWater(self, grid):
         
@@ -33,20 +43,20 @@ class Solution(object):
                 if _x >= 0 and _x < len(grid) and _y >= 0 and _y < len(grid):
                     yield (_x, _y)
         
-        if len(grid) == 0 or len(grid[0]) == 0:
+        if len(grid) == 0 or len(grid[0]) == 0:a
             return 0
-        min_heap = list([(grid[0][0], 0, 0)])
+        min_heap = list([Square(grid[0][0], 0, 0)])
         visited = set([(0, 0)])
         time = 0
         while len(min_heap) != 0:
             time += 1
-            while len(min_heap) != 0 and min_heap[0][0] <= time:
-                val, x, y = heapq.heappop(min_heap)
-                if x == len(grid)-1 and y == len(grid)-1:
+            while len(min_heap) != 0 and min_heap[0].elevation <= time:
+                popped_square = heapq.heappop(min_heap)
+                if popped_square.x == len(grid)-1 and popped_square.y == len(grid)-1:
                     return time
-                for _x, _y in get_neighbors(x, y):
+                for _x, _y in get_neighbors(popped_square.x, popped_square.y):
                     if (_x, _y) not in visited:
                         visited.add((_x, _y))
-                        heapq.heappush(min_heap, (grid[_x][_y], _x, _y))
+                        heapq.heappush(min_heap, Square(grid[_x][_y], _x, _y))
         return 0
 ```
