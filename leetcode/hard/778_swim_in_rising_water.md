@@ -1,10 +1,9 @@
 # 778. Swim in Rising Water
 
 ## Heap Solution
-- Runtime: O(T * Nlog(N))
+- Runtime: O(N * Nlog(N))
 - Space: O(N)
 - N = Number of elements in grid
-- T = Time
 
 You may have thought to use BFS for this question, but the problem is the fact that we cannot swim to an element in the grid until the water is at its level.
 So we have a second issue to figure out which elements are up to the water's level.
