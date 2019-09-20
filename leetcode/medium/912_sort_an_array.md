@@ -71,3 +71,41 @@ class Solution(object):
         quick_sort(0, len(nums)-1)
         return nums
 ```
+
+## Merge Sort
+
+- Runtime: O(Nlog(N))
+- Space: O(N)
+- N = Number of elements in list
+
+Merge sort first breaks up the list into elements of one.
+Then from those small elements, merges them together by comparing each left and right list.
+Each left and right list that gets returned is in sorted order, so its a simple two pointer solution to merge the two lists into a larger sorted list. Return this larger sorted list up the recursion and repeat until the entire subset is sorted.
+
+Merge sort is considered a stable sort.
+
+```
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        
+        def merge_sort(nums):
+            if len(nums) <= 1:
+                return nums
+            mid_idx = len(nums) // 2
+            left = merge_sort(nums[:mid_idx])
+            right = merge_sort(nums[mid_idx:])
+            left_idx = right_idx = 0
+            merged = list()
+            while left_idx < len(left) and right_idx < len(right):
+                if left[left_idx] < right[right_idx]:
+                    merged.append(left[left_idx])
+                    left_idx += 1
+                else:
+                    merged.append(right[right_idx])
+                    right_idx += 1
+            merged += left[left_idx:]
+            merged += right[right_idx:]
+            return merged
+        
+        return merge_sort(nums)
+```
