@@ -1,6 +1,6 @@
 # 75. Sort Colors
 
-## Two pointer one pass solution
+## Three pointer one pass solution
 
 - Runtime: O(N)
 - Space: O(1)
@@ -8,7 +8,7 @@
 
 Since we know the range of numbers, 0, 1 and 2, we can just use two pointers for each end of the array.
 The left pointer will point to the first unsorted number != 0 and the right pointer will point to the last unsorted number != 2.
-We will then traverse the array from left to right swapping the values with the current pointer to either the left or right depending if its a 0 or 2, ignoring 1s, then incrementing the left or right pointer.
+We will then traverse the array from left to right swapping the values with a third pointer to either the left or right depending if its a 0 or 2, ignoring 1s, then incrementing the left or right pointer.
 Eventually, when we reach the right pointer, it would have sorted the entire array and all the 1s will be in the middle.
 
 ```
@@ -17,15 +17,8 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left, right = 0, len(nums)-1
-        while left > right:
-            if nums[left] == 0:
-                left += 1
-            elif nums[right] == 2:
-                right -= 1
-            else:
-                break
-        curr_index = left
+        right = len(nums)-1
+        curr_index = left = 0
         while curr_index <= right:
             if nums[curr_index] == 0:
                 nums[curr_index], nums[left] = nums[left], nums[curr_index]
