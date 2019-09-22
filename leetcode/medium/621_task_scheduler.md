@@ -1,10 +1,9 @@
 # 621. Task Scheduler
 
 ## Heap solution
-- Runtime: O(Nlog(U))
-- Space: O(U)
+- Runtime: O(N) or O(N(log(26))
+- Space: O(1) or 26
 - N = Number of elements in array
-- U = Number of unique elements in array
 
 This question requires a greedy algothrim.
 We want to use the task that occurs the most first so we can reduce the amount of idle time there is.
@@ -30,27 +29,33 @@ ABCADEAFGA--A--A
 16
 ```
 
+We can first count the occurances for each character and place them into a heap.
+Each element in the heap will represent a different character of A-Z.
+We can then pop off at most N+1 amount of items from the heap.
+Each popped off item will have their occurances decremented and placed back into the heap if non-zero.
+We can repeat this process until there is nothing left in the heap.
+
+Since we will have at most 26 characters in the heap, due to the restriction of having on A-Z character range.
+We can then assume that sorting the heap will have a constant run-time of O(log(26)) or O(1).
+However, we will have to do sort the heap O(N) times for each element in the input.
+You can also think of it this way, since the heap will hold just occurances of each letter, the occurances all add up to N elements of the input array.
+
 ```
 from collections import Counter
 
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
-        n_intervals = 0
-        ch_to_count = Counter(tasks)
-        max_heap = [-count for count in ch_to_count.values()]
+        counter = Counter(tasks)
+        max_heap = list([-freq for freq in counter.values()])
         heapq.heapify(max_heap)
-        while len(max_heap) > 0:
+        n_intervals = 0
+        while len(max_heap):
             popped_items = list()
-            for _ in range(n+1):
-                if len(max_heap) > 0:
-                    popped_items.append(heapq.heappop(max_heap))
-                else:
-                    break
-                
-            max_heap += [count+1 for count in popped_items if count+1 != 0]
-            heapq.heapify(max_heap)
-            
-            n_intervals += len(popped_items) if len(max_heap) == 0 else n+1
-            
+            for _ in range(min(len(max_heap), n+1)):
+                popped_items.append(heapq.heappop(max_heap))
+            for freq in popped_items:
+                if freq != -1:
+                    heapq.heappush(max_heap, freq+1)
+            n_intervals += n+1 if len(max_heap) else len(popped_items)
         return n_intervals
 ```
