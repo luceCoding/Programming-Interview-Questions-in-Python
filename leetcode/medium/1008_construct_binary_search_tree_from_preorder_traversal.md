@@ -1,39 +1,32 @@
-## Recursive Solution
+## Recursive Solution with Ranges
 
-- Runtime: O(N^2)
-- Space: O(1)
+- Runtime: O(N)
+- Space: O(N)
 - N = Number of elements in array
 
 I've selected this question because it would be good to know at least one reconstruction method of a BST.
 Preorder traversal was selected because it is one of the easier ones to understand.
 Unlike the other traversals, preorder has a property of knowing what the root node is by looking at the first element of the list.
 
-Since we are reconstructing a BST and not a binary tree, we can identify which sections are the left and right subtree by comparing their values to the first element.
-The left subtree will have values less/equal than the root and right subtree will have values greater than the root.
+We can use the fact that we know what the root node is and set a upper and lower bound for the values in the left and right recursion calls. When we are out of bounds for either recursion, we now know we have reached the furthest possible value in the list and backtrack up to the parent node.
 
 ```
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
+    curr_idx = 0
     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
-        
-        def bst_helper(preorder):
-            if len(preorder) == 0:
+        def bst_creator(lower, upper):
+            if self.curr_idx >= len(preorder):
                 return None
-            transition_index = len(preorder)
-            for index, node in enumerate(preorder):
-                if node > preorder[0]:
-                    transition_index = index
-                    break
-            root = TreeNode(preorder[0])
-            root.left = bst_helper(preorder[1:transition_index])
-            root.right = bst_helper(preorder[transition_index:])
-            return root
-            
-        return bst_helper(preorder)
+            root_val = preorder[self.curr_idx]
+            if not lower <= root_val < upper:
+                return None
+            new_node = TreeNode(root_val)
+            self.curr_idx += 1
+            left_node = bst_creator(lower, root_val)
+            right_node = bst_creator(root_val, upper)
+            new_node.left = left_node
+            new_node.right = right_node
+            return new_node
+        
+        return bst_creator(float('-inf'), float('inf'))
 ```
