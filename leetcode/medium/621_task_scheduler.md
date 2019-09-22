@@ -35,9 +35,9 @@ We can then pop off at most N+1 amount of items from the heap.
 Each popped off item will have their occurances decremented and placed back into the heap if non-zero.
 We can repeat this process until there is nothing left in the heap.
 
-Since we will have at most 26 characters in the heap, due to the restriction of having on A-Z character range.
+Since we will have at most 26 characters in the heap, due to the restriction of having only a A-Z character range.
 We can then assume that sorting the heap will have a constant run-time of O(log(26)) or O(1).
-However, we will have to do sort the heap O(N) times for each element in the input.
+However, we will have sort the heap O(N) times for each element in the input.
 You can also think of it this way, since the heap will hold just occurances of each letter, the occurances all add up to N elements of the input array.
 
 ```
