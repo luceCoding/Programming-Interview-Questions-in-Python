@@ -94,7 +94,7 @@ class Solution:
         return traverse_helper(grid)
 ```
 
-## O(1) Space BFS Iterative Solution
+## Optimized Space BFS Iterative Solution
 - Runtime: O(N)
 - Space: O(N)
 - N = Number of elements in grid
