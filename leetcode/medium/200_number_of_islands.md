@@ -96,10 +96,10 @@ class Solution:
 
 ## O(1) Space BFS Iterative Solution
 - Runtime: O(N)
-- Space: O(1)
+- Space: O(N)
 - N = Number of elements in grid
 
-We can achieve O(1) space by reusing the given the grid. You should ask the interviewer if you are allowed to modify the original grid. We can then use another number such as "-1" to represented an already visited island, therefore, no longer needing a visited set during our BFS or DFS.
+We can achieve save some space by reusing the given the grid. You should ask the interviewer if you are allowed to modify the original grid. We can then use another number such as "-1" to represented an already visited island, therefore, no longer needing a visited set during our BFS or DFS.
 ```
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
