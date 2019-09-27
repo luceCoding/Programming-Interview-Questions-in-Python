@@ -11,7 +11,7 @@ Make sure when you code, you break down your methods else you may fail this ques
 
 To achieve O(N) run-time, we can use a summation system for each row, column and the two diagonals.
 Player 1 will increment by 1 and player 2 will decrement by 1.
-This means that for any given row, column or diagonal, if either equal N or -N, there is a straight line of the same player.
+This means that for any given row, column or diagonal, if either equal N or -N, there is a straight line for the same player.
 
 ```
 # (0,0) (0,1) (0,2) (0,3)
