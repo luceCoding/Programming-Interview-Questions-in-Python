@@ -49,7 +49,9 @@ class TicTacToe:
             self.diagonal1 += increment
         if row + col == self.n-1:
             self.diagonal2 += increment
-        if any([self.check_horizontal(player, row), self.check_vertical(player, col), self.check_diagonals(player, row, col)]):
+        if any([self.check_horizontal(player, row), \
+                self.check_vertical(player, col), \
+                self.check_diagonals(player, row, col)]):
             return player
         return 0
 
