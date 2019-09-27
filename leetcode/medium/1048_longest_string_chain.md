@@ -2,13 +2,13 @@
 
 ## Memoization with Recursion Solution
 
-- Runtime: O(N) * O(C^C) for worst case, O(N) + O(C^C) for best case
+- Runtime: O(NC) + O(C^C)
 - Space: O(C)
 - N = Number of words in list
 - C = Longest character word
 
 We can come up with a recursive solution quite easily by removing each letter and calling the next recursion function on each newly formed word.
-However, this would equate to a run-time of O(C^C), since we have to do this N times, it would then be O(N) * O(C^C).
+However, this would equate to a run-time of O(C^C), since we have to do this N times, and each time we have to delete each character O(NC), it would then be O(NC) + O(C^C).
 
 We can improve our run-time by using memoization, instead of redoing checks, we just check once for each path and save that result.
 So if we can only build a chain of 3 with 'abcd', if given 'abcde', when it comes to removing 'e', we don't need to check each character of 'abcd' again, instead just return 3.
