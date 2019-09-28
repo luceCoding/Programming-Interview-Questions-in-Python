@@ -35,7 +35,7 @@ class Solution:
             visited.add(node)
             global_visited.add(node)
             for neighbor in adj_list[node]:
-                if not top_sort(neighbor):
+                if not top_sort(neighbor, visited):
                     return False
             ordering.append(node)
             visited.remove(node)
