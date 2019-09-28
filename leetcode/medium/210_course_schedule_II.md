@@ -17,37 +17,35 @@ They are just saying that there exists one course and that course is course 0. E
 ```
 from collections import defaultdict
 
-class Solution(object):
-    def findOrder(self, numCourses, prerequisites):
+class Solution:
+    def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+        def get_adj_list():
+            adj_list = defaultdict(list)
+            for course, prereq in prerequisites:
+                adj_list[course].append(prereq)
+            for n in range(numCourses):
+                adj_list[n]
+            return adj_list
         
-        def get_graph(n_courses, prereqs):
-            graph = defaultdict(list)
-            for course, prereq in prereqs:
-                graph[course].append(prereq)
-            for n in range(n_courses):
-                graph[n]
-            return graph
-            
-        def dfs(node, global_visited, visited, graph, ordering):
-            if node in visited: # cycle detected
+        def top_sort(node, visited=set()):
+            if node in visited: # cycle
                 return False
             if node in global_visited:
                 return True
             visited.add(node)
             global_visited.add(node)
-            for neighbor in graph[node]:
-                if not dfs(neighbor, global_visited, visited, graph, ordering):
+            for neighbor in adj_list[node]:
+                if not top_sort(neighbor):
                     return False
-            visited.remove(node)
             ordering.append(node)
+            visited.remove(node)
             return True
         
-        graph = get_graph(numCourses, prerequisites)
-        ordering = list()
+        adj_list = get_adj_list()
         global_visited = set()
-        for node in graph:
-            if node not in global_visited:
-                if not dfs(node, global_visited, set(), graph, ordering):
-                    return []
+        ordering = list()
+        for node in adj_list:
+            if not top_sort(node):
+                return []
         return ordering
 ```
