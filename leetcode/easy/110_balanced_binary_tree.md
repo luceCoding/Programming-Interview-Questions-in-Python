@@ -15,7 +15,7 @@ However, no matter what, we will end up using at most O(H) space to traverse the
 ```
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-
+        
         def balance_helper(root):
             if root is None:
                 return 0
@@ -23,7 +23,7 @@ class Solution:
             right = balance_helper(root.right)
             if left == -1 or right == -1:
                 return -1
-            return max(left+1, right+1) if abs(left-right) <= 1 else -1
-
+            return max(left, right)+1 if abs(left-right) <= 1 else -1
+        
         return balance_helper(root) != -1
 ```
