@@ -25,5 +25,5 @@ class Solution:
                 return -1
             return max(left+1, right+1) if abs(left-right) <= 1 else -1
 
-        return True if balance_helper(root) != -1 else False
+        return balance_helper(root) != -1
 ```
