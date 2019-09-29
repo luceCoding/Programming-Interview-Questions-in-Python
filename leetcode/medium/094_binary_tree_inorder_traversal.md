@@ -47,15 +47,13 @@ class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         stack, result = list(), list()
         curr_node = root
-        while True:
-            if curr_node is not None: # Going down the tree
+        while stack or curr_node:
+            if curr_node:
                 stack.append(curr_node)
-                curr_node = curr_node.left
-            elif len(stack) > 0: # Going up the tree (backtracking)
-                curr_node = stack.pop()
-                result.append(curr_node.val)
-                curr_node = curr_node.right
+                curr_node = curr_node.left # go left
             else:
-                break
+                curr_node = stack.pop() # go up
+                result.append(curr_node.val)
+                curr_node = curr_node.right # go right
         return result
 ```
