@@ -6,7 +6,7 @@
 - N = Number of elements in tree
 - H = Height of tree
 
-Post order is left, right, node.
+Post order is (Left -> Right -> Node).
 
 The recusive solution is fairly easy. Most of the heavy lifting is abstracted away by the recursion call.
 
@@ -31,28 +31,24 @@ class Solution:
 - N = Number of elements in tree
 - H = Height of tree
 
-The iterative solution for post order is fairly diffucult to come up with on your own.
-It requires two stacks. 
-The first stack is used to traverse the tree but in the opposite direction (node -> right -> left).
-During the traversal, the 1st stack will transfer its nodes to the 2nd stack, this will place the nodes in the reverse order or post-order (left -> right -> node) when they are popped off the stack later.
-I recommend drawing this out, as its important to understand the relationships and responsibilities.
+Take a look back at how a preorder is done (Node -> Left -> Right).
+Compared to postorder (Left -> Right -> Node), what are some similarities? 
+You may notice that you can perform a postorder with an inverted preorder traversal.
+
+Another way to look at it is, since postorder is (Left -> Right -> Node), we can go (Node -> Right -> Left) and reverse the result at the end to get the postorder.
+
+So we can achieve an iterative postorder traversal via. an inverted preorder traversal.
 
 ```
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
-        if root is None:
-            return []
-        stack1, stack2 = list([root]), list()
-        result = list()
-        while len(stack1) > 0:
-            node = stack1.pop()
-            stack2.append(node)
-            if node.left is not None:
-                stack1.append(node.left)
-            if node.right is not None:
-                stack1.append(node.right)
-        while len(stack2) > 0:
-            node = stack2.pop()
-            result.append(node.val) # <-- Business logic goes here
-        return result
+        stack = list([root])
+        inverted_preorder = list()
+        while stack:
+            node = stack.pop()
+            if node:
+                inverted_preorder.append(node.val)
+                stack.append(node.left)
+                stack.append(node.right)
+        return inverted_preorder[::-1]
 ```
