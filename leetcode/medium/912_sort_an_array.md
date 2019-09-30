@@ -109,3 +109,23 @@ class Solution:
         
         return merge_sort(nums)
 ```
+
+## Bubble Sort
+
+- Runtime: O(N^2)
+- Space: O(1)
+- N = Number of elements in list
+
+Each time we perform a bubble sort, we are essential pushing the max value of the array to the back of the array.
+
+The advantage of bubble sort is the lack of memory or constant memory space.
+
+```
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        for i in reversed(range(0, len(nums))):
+            for curr in range(0, i):
+                if nums[curr] > nums[curr+1]:
+                    nums[curr], nums[curr+1] = nums[curr+1], nums[curr]
+        return nums
+```
