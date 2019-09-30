@@ -27,9 +27,8 @@ class Solution:
 
 ## Iterative Solution
 - Runtime: O(N)
-- Space: O(H)
+- Space: O(N)
 - N = Number of elements in tree
-- H = Height of tree
 
 Take a look back at how a preorder is done (Node -> Left -> Right).
 Compared to postorder (Left -> Right -> Node), what are some similarities? 
@@ -38,6 +37,9 @@ You may notice that you can perform a postorder with an inverted preorder traver
 Another way to look at it is, since postorder is (Left -> Right -> Node), we can go (Node -> Right -> Left) and reverse the result at the end to get the postorder.
 
 So we can achieve an iterative postorder traversal via. an inverted preorder traversal.
+
+Since we need to use an additional stack/list, which we then reverse as the result, we cannot get O(H) additional space.
+The best we can achieve is O(N) space.
 
 ```
 class Solution:
