@@ -6,7 +6,6 @@
 - N = Number of elements in list
 
 The preorder traversal is the pinnacle element.
-Without the preorder traversal, we will not be able to construct a binary tree given any combination of the other traversals.
 The property to be able to find the root node of the preorder traversal is key.
 
 Given preorder of [A,B,D,E,C,F,G] and inorder of [D,B,E,A,F,C,G].
