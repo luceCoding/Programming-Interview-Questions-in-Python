@@ -1,7 +1,7 @@
 # 295. Find Median from Data Stream
 
 ## Sort solution
-- Runtime: O(Nlog(N)) for addNum() and O(1) for findMedian()
+- Runtime: O(log(N)) for addNum() and O(1) for findMedian(), in total O(Nlog(N))
 - Space: O(N)
 - N = Number of elements in array
 
@@ -35,7 +35,7 @@ class MedianFinder:
 ```
 
 ## Two Heap Solution
-- Runtime: O(Nlog(N)) for addNum() and O(1) for findMedian()
+- Runtime: O(log(N)) for addNum() and O(1) for findMedian(), in total O(Nlog(N))
 - Space: O(N)
 - N = Number of elements in array
 
@@ -45,6 +45,8 @@ You can think of this as a divide and conquer approach.
 
 The only tricky part is to keep the two heaps balanced, balanced meaning the two heaps cannot differ in size by more than 1.
 Secondly, we need to keep the two heap property of smaller and larger sets.
+
+Once these two properties are met, finding the median can be done by using the two values on top of the heap if both heap sizes are the same or taking the top value of the larger heap.
 
 ```
 class MedianFinder:
