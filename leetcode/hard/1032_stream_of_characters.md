@@ -1,8 +1,8 @@
 # 1032. Stream of Characters
 
 ## Trie Solution
-- Run-time: O(N * Q)
-- Space: O(C)
+- Run-time: O(C * Q)
+- Space: O(C) + O(N)
 - N = Number of characters in stream
 - Q = Number of queries
 - C = Number of characters in word list
@@ -13,8 +13,10 @@ However, you may notice that if we built the trie structure beginning from left 
 This is because the new letter from the stream is at the right-most position while the trie structure starts at the left-most letter of each word in the word list.
 Instead of building it from the left to right, we can build the trie structure in reverse.
 That means, both the trie and the stream of letters would be traversed from the right to the left together.
-This can optimize for most outputs, however, there are still worst case inputs like a given word list of A's and a query of A's.
-This would result in an O(N * Q) run-time. 
+
+Each query will result in O(C) run-time, since we have N queries, this will total to O(C * Q).
+However, there are still worst case inputs like a given word list of ['baaaaaaaaaaaaaa'] and a query of a's.
+But for a general case, since the trie is built in reverse, if the most recent letter in the stream doesn't exist in the root, it will be less than O(C) for each query.
 
 ```
 from collections import defaultdict
