@@ -45,7 +45,7 @@ class TrieNode(object):
         self.is_word = False
 
     def __repr__(self):
-        return '{} {}'.format([ch for ch in self.next], self.is_word)
+        return '{} {}'.format(self.next.keys(), self.is_word)
 
     @staticmethod
     def create_tries(words):
