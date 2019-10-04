@@ -13,6 +13,7 @@ However, the run-time would be poor, O(N^2), you would need a visited set to avo
 
 You can further improve the space complexity by only starting at either the left-most number or the right-most number.
 That would mean you just traverse only in one direction, avoiding the need of a visited set.
+This solution requires two passes.
 
 ```
 class Solution:
