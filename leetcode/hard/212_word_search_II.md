@@ -6,12 +6,13 @@
 - R = Number of Rows
 - C = Number of Columns
 
-In order to figure out if a word exists in the list of words, it is require to do some sort of traversal on the board, generally DFS will do here.
+In order to figure out if a word exists in the board, it is required to do some sort of traversal on the board, generally DFS will do here.
 Secondly, by using a trie, we can traverse the board and trie together one character at a time.
 
 Each DFS will be for the worst case, traversing the longest word in the word list.
-For example, a board full of a's and word list of different lengths of a's. The longest word could end up being as long as all the elements on the board.
-So the run-time will total to O((R \* C)^2).
+For example, a board full of a's and word list of different lengths of a's.
+The longest word could end up being as long as all the elements on the board.
+So the run-time will total to O((R \* C)^2) but generally this will be lower for the average case with the use of the trie.
 
 ```
 from collections import defaultdict
