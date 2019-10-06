@@ -21,7 +21,7 @@ The pseudocode could be represented as such:
     - Select the edge with the min weight of an unvisited vertex from top of heap.
     - Add the selected vertex to the visited vertices.
     - Add selected vertex's neighboring edges of unvisited vertices into the heap.
-    
+
 Since we are sorting based on vertices, the sorting will take log(V) run-time.
 However, we have to sort this based on number of vertices or edges because we can be given a graph of islands or nodes that have edges to all nodes.
 That is why its O((V+E) log(V)) run-time.
@@ -31,14 +31,14 @@ from collections import defaultdict
 
 class Solution:
     def minimumCost(self, N: int, connections: List[List[int]]) -> int:
-        
+
         def create_adj_list(connections):
             adj_list = defaultdict(list)
             for city1, city2, cost in connections:
                 adj_list[city1].append(Vertex(city2, cost))
                 adj_list[city2].append(Vertex(city1, cost))
             return adj_list
-                
+
         adj_list = create_adj_list(connections)
         visited = set([N])
         min_heap = list(adj_list[N] if N in adj_list else [])
@@ -51,18 +51,19 @@ class Solution:
             visited.add(vertex.to)
             min_cost += vertex.cost
             for vertex in adj_list[vertex.to]:
-                heapq.heappush(min_heap, vertex)
+                if vertex.to not in visited:
+                    heapq.heappush(min_heap, vertex)
         return min_cost if len(visited) == N else -1
-    
+
 class Vertex(object):
-    
+
     def __init__(self, to, cost):
         self.to = to
         self.cost = cost
-        
+
     def __lt__(self, other):
         return self.cost < other.cost
-    
+
     def __repr__(self):
         return 'To: {}, Cost: {}'.format(self.to, self.cost)
 ```
