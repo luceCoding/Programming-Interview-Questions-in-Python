@@ -77,8 +77,13 @@ Final DP:
 ```
 
 The intuition is gathered by using the two questions we asked earlier, whether to keep this number or not.
+
 To not keep this number is simply looking at the current sum and the previous number.
+That is because if we could not use this number which can be defined that previous number + 0, then the previous number needs to be True to add up to this current sum.
+
 To keep this number, we have to look at the current sum - current number of the previous number.
+That would mean some previous sum from nums[:i] must have been True for us to perform sum(nums[:i]) + nums[i] == current sum.
+
 dp\[curr_sum][curr_num] = dp\[curr_sum][prev_num] or dp\[curr_sum-curr_num][prev_num]
 
 ```
