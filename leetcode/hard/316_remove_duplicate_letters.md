@@ -33,7 +33,8 @@ With this frame of reference we can reword the question into finding the biggest
 From examples 3 and 4, we can then denote that if a letter isn't the last occurring letter, we can build a much larger word that is closer to being lexicographic.
 So by using a monotonic stack, that is increasing by nature, we can achieve examples 1 and 3.
 A set should be obvious to avoid adding duplicate values into the stack.
-However, to achieve examples 2 an 5 with the monotonic stack, we have to add another invariant were we want all last occurring letters.
+However, to achieve examples 2 an 5 with the monotonic stack, we have to add another invariant were we want last occurring letters.
+We can skip letters we have already seen due to the fact that stack is monotonic, the letters in the stack are already in the best position so far, this is to achieve example 3.
 
 In summary, we can build the word from left to right using an increasing monotonic stack.
 When it comes to popping off the stack, we will continue to pop from the stack if the new letter is smaller than whats on top of the stack AND if whats on top of the stack isn't the last occurring letter.
