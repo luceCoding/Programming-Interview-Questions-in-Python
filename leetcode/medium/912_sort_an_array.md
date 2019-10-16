@@ -1,6 +1,6 @@
 # 912. Sort an Array
 
-## Quick Sort
+## Quick Sort In-Place
 
 - Runtime: O(Nlog(N)), worst case O(N^2)
 - Space: O(log(N))
@@ -17,37 +17,8 @@ The pivot is now in the correct place.
 We then partition the array in two halves and call a recursion on each half, they will be figuring out where the correct placement of the next pivot should be.
 This is where the log(N) comes into play, since each time we call the recursion, the array is half of what it use to be.
 
-If the pivot is always selected to be the smallest number of the array, we can have a worst case scenario of O(N^2).
+If the pivot is always selected to be the largest number of the array, we can have a worst case scenario of O(N^2).
 Hence, never creating two partitions.
-
-```
-class Solution(object):
-    def sortArray(self, nums):
-        
-        def quick_sort(nums):
-            if len(nums) == 0:
-                return []
-            pivot = nums[-1]
-            last_unsorted_idx = 0
-            for idx, n in enumerate(nums[:-1]):
-                if n <= pivot:
-                    nums[last_unsorted_idx], nums[idx] = nums[idx], nums[last_unsorted_idx]
-                    last_unsorted_idx += 1
-            nums[last_unsorted_idx], nums[-1] = nums[-1], nums[last_unsorted_idx]
-            left_sorted = quick_sort(nums[:last_unsorted_idx])
-            right_sorted = quick_sort(nums[last_unsorted_idx+1:])
-            return left_sorted + [nums[last_unsorted_idx]] + right_sorted
-        
-        return quick_sort(nums)
-```
-
-## Quick Sort In-Place
-
-- Runtime: O(Nlog(N)), worst case O(N^2)
-- Space: O(log(N))
-- N = Number of elements in list
-
-To do an in-place quicksort with python, we have to avoid using string slicing.
 
 Note: There is an unstable version of in-place quick sort that has an O(1) space complexity.
 
