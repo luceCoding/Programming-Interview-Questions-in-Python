@@ -2,11 +2,10 @@
 
 ## Solution
 
-- Runtime: O(N)
+- Run-time: O(1)
 - Space: O(N)
 - N = Given N
 
-This is a fair production code quality example.
 Make sure when you code, you break down your methods else you may fail this question.
 
 To achieve O(N) run-time, we can use a summation system for each row, column and the two diagonals.
