@@ -1,9 +1,10 @@
 # 778. Swim in Rising Water
 
 ## Heap Solution
-- Runtime: O(N * Nlog(N))
+- Runtime: O(T * Nlog(N))
 - Space: O(N)
 - N = Number of elements in grid
+- T = Time
 
 You may have thought to use BFS for this question, but the problem is the fact that we cannot swim to an element in the grid until the water is at its level.
 So we have a second issue to figure out which elements are up to the water's level.
@@ -16,7 +17,7 @@ The logic goes as follows:
 1. As long as there are elements in the heap.
 2. Increment time + 1.
 2. Continue popping off the min heap until the top of the heap is > time.
-2. For each popped off element, if the element popped off is the last element, return current time.
+2. For each popped off element, if the element popped off is the bottom-right element of the grid, return current time.
 2. Add all neighbors of the popped elements into the min heap. Keep a visited set to not add duplicate elements into the heap.
 5. Repeat.
 
