@@ -1,7 +1,7 @@
 # 295. Find Median from Data Stream
 
 ## Sort solution
-- Runtime: O(log(N)) for addNum() and O(1) for findMedian(), in total O(Nlog(N))
+- Runtime: O(log(N)) for addNum() and O(N) for findMedian(), in total O(Nlog(N))
 - Space: O(N)
 - N = Number of elements in array
 
