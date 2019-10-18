@@ -54,7 +54,6 @@ class Solution:
 We can further improve the run-time of the BFS by using a bi-directional BFS.
 If you imagine a circle, every time you expand the circle, the number of neighbors being visited almost doubles.
 Now if you used two circles and expanded them both simultaneously, when they touch, it would have visited less neighbors compared to using one circle.
-This decreases the run-time for some inputs, worst case, is the same as the first BFS solution.
 
 ```
 from collections import deque
