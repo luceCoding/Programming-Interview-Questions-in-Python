@@ -2,13 +2,14 @@
 
 ## Solution
 
-- Run-time: O(1)
-- Space: O(N)
+- Runtime: O(1)
+- Space: O(1)
 - N = Given N
 
+This is a fair production code quality example.
 Make sure when you code, you break down your methods else you may fail this question.
 
-To achieve O(N) run-time, we can use a summation system for each row, column and the two diagonals.
+To achieve O(1) run-time, we can use a summation system for each row, column and the two diagonals.
 Player 1 will increment by 1 and player 2 will decrement by 1.
 This means that for any given row, column or diagonal, if either equal N or -N, there is a straight line for the same player.
 
