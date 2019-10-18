@@ -1,7 +1,7 @@
 # 295. Find Median from Data Stream
 
 ## Sort solution
-- Runtime: O(log(N)) for addNum() and O(N) for findMedian(), in total O(Nlog(N))
+- Runtime: O(N) for addNum() and O(1) for findMedian(), in total O(N\*N) worst case)
 - Space: O(N)
 - N = Number of elements in array
 
@@ -9,6 +9,7 @@ This solution is fairly simple, as long as we keep a sorted order of numbers, we
 
 However, it is important to note that if we instead did a different approach where we would add the value into the list then sort it only when findMedian() was called, it would actually cause a slower run-time, O(N * Nlog(N)).
 The worst case is when we call findMedian() after each newly inserted number.
+We would basically be sorting the entire array N times.
 That is because every time we would sort, the list keeps growing, we aren't utilizing the fact that the list is already sorted.
 With an already sorted list, we can just perform a binary search and insert the new number instead of resorting an already sorted list for each number.
 
@@ -35,7 +36,7 @@ class MedianFinder:
 ```
 
 ## Two Heap Solution
-- Runtime: O(log(N)) for addNum() and O(1) for findMedian(), in total O(Nlog(N))
+- Runtime: O(log(N)) for addNum() and O(1) for findMedian(),in total O(Nlog(N)) worst case
 - Space: O(N)
 - N = Number of elements in array
 
