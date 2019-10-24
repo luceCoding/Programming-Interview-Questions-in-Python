@@ -1,4 +1,4 @@
-# 4. Median of Two Sorted Arrays
+# 22. Generate Parentheses
 
 ## Recursive Solution
 - Run-time: Less than O(2^2N)
