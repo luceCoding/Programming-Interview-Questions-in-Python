@@ -36,34 +36,33 @@ class Solution:
         return max(dp, default=0)
 ```
 
-## Dynamic Programming with Binary Search Solution
+## Binary Search Solution
 - Run-time: O(Nlog(N))
 - Space: O(N)
 - N = Number of elements in array
 
-Slightly modifying the previous approach.
-We can use a dynamic programming 1d array of 0s but instead store the subsequence themselves instead of what the previous longest subsequence were.
-The 1d array can be thought of as keeping a sorted array within itself, there will be a subset of indexes that would represent the longest subsequence.
+If we instead used a sorted array to keep a subsequence, we can decide whether or not we can create a larger subsequence with binary search.
+For each n, we can binary search the sorted array for the left-most number that is larger or equal to n.
+If that number is found, we can replace that number with n.
+If no number is found, we can append n to the end of the array, this basically means we can create a larger subsequence.
 
-With this sorted array, we can then binary search it to find where a given n should be placed.
-We want to find a number that is greater than or equal to n, then replace that number in the array.
-If a number isn't found, we can increase the range of indexes in the sorted array by 1 and add the new n at the end.
-By increasing the sorted array by 1, it shows that there is a longer subsequence.
-This won't exactly tell us the 'actual' subsequence because of the replacement and ordering but works since the question only cares about what is the longest subsequence.
+Since we replace numbers in the sorted array, the sorted array does not represent the 'actual' longest subsequence.
+We need to replace numbers in the array because we can potentially create a larger subsequence.
+For example, given an input of [1,2,3,99,4,5,6], when we reach number 5, if we didn't replace 99 in the sorted array, we can never increase the subsequence by 1 when the sorted array was [1,2,3,99] instead of [1,2,3,4].
 
 ```
 Input: [1,3,6,7,9,4,10,5,6]
 
-[0, 0, 0, 0, 0, 0, 0, 0, 0]
-[1, 0, 0, 0, 0, 0, 0, 0, 0]
-[1, 3, 0, 0, 0, 0, 0, 0, 0]
-[1, 3, 6, 0, 0, 0, 0, 0, 0]
-[1, 3, 6, 7, 0, 0, 0, 0, 0]
-[1, 3, 6, 7, 9, 0, 0, 0, 0]
-[1, 3, 4, 7, 9, 0, 0, 0, 0]
-[1, 3, 4, 7, 9, 10, 0, 0, 0]
-[1, 3, 4, 5, 9, 10, 0, 0, 0]
-[1, 3, 4, 5, 6, 10, 0, 0, 0]
+[]
+[1]
+[1, 3]
+[1, 3, 6]
+[1, 3, 6, 7]
+[1, 3, 6, 7, 9]
+[1, 3, 4, 7, 9]
+[1, 3, 4, 7, 9, 10]
+[1, 3, 4, 5, 9, 10]
+[1, 3, 4, 5, 6, 10]
 ```
 
 ```
@@ -71,25 +70,23 @@ class Solution(object):
     def lengthOfLIS(self, nums):
 
         def binary_search_insertion_idx(n):
-            left, right = 0, end_idx
+            left, right = 0, len(sorted_subseq) - 1 if len(sorted_subseq) != 0 else -1
             insert_idx = -1
             while left <= right:
                 mid_idx = left + ((right - left) // 2)
-                if memo[mid_idx] >= n:
+                if sorted_subseq[mid_idx] >= n:
                     insert_idx = mid_idx
                     right = mid_idx - 1 # go left
                 else: # go right
                     left = mid_idx + 1
             return insert_idx
 
-        memo = [0] * len(nums)
-        end_idx = -1
+        sorted_subseq = list()
         for n in nums:
             idx = binary_search_insertion_idx(n)
             if idx == -1: # no number found greater than n
-                end_idx += 1
-                memo[end_idx] = n
+                sorted_subseq.append(n)
             else: # found a number that is greater than n
-                memo[idx] = n
-        return end_idx + 1
+                sorted_subseq[idx] = n
+        return len(sorted_subseq)
 ```
