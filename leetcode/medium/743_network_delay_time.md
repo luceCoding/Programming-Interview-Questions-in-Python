@@ -1,9 +1,9 @@
 # 743. Network Delay Time
 
-## Dijkstra's Algorithm Solution
-- Run-time: O(N^2)
-- Space: O(N)
-- N = Number of Nodes
+## Simple Dijkstra's Algorithm Solution
+- Run-time: O(V^2)
+- Space: O(V)
+- V = Number of Vertices
 
 This version of Dijkstra is fairly straightforward.
 For each iteration from 1 to N.
@@ -45,5 +45,60 @@ class Solution:
 
 ## Dijkstra's Algorithm Solution with Heaps
 
+- Run-time: O((V + E)logV)
+- Space: O(V)
+- V = Vertices
+- E = Edges
+
+As explained in question #1135, there is no adaptable heap implementation in Python 3.7.
+Instead, we will be using a lazy deletion method, similar to question #1135.
+
+The only difference between Prim vs. Dijkstra is adding/updating with the previous weights in the heap nodes.
+In Prim's we only care about the next weight.
+In Dijkstra, since we want the shortest paths, we need to reevaluate the weights by checking if we can produce an even smaller weight.
+Therefore, we need to compare between the shortest path to neighboring vertex vs. the current vertex's shortest path + current weight to neighboring vertex.
+
 ```
+from collections import defaultdict
+
+class Solution:
+    def networkDelayTime(self, times: List[List[int]], N: int, K: int) -> int:
+
+        def create_adj_list():
+            adj_list = defaultdict(list)
+            for source, target, time in times:
+                adj_list[source].append([target, time])
+            return adj_list
+
+        def add_target(target, time):
+            new_node = [time, target, False]
+            target_to_heap_node[target] = new_node
+            heapq.heappush(min_heap, new_node)
+
+        adj_list = create_adj_list()
+        start_node = [0, K, False] # time, source, remove
+        target_to_heap_node = dict({K: start_node}) # key=target, val=time
+        min_heap = list([start_node])
+        times = defaultdict(lambda: float('inf')) # key=source, val=time
+        times[K] = 0
+        visited = set()
+        while min_heap:
+            time, source, remove = heapq.heappop(min_heap)
+            if remove: # lazy delete
+                continue
+            visited.add(source)
+            for next_target, t in adj_list[source]:
+                if next_target in visited:
+                    continue
+                next_time = t + time
+                if next_target in target_to_heap_node:
+                    node = target_to_heap_node[next_target]
+                    if next_time < node[0]:
+                        node[2] = True # lazy delete
+                        add_target(next_target, next_time)
+                else:
+                    add_target(next_target, next_time)
+            target_to_heap_node.pop(source)
+            times[source] = min(times[source], time)
+        return max(times.values()) if len(times) == N else -1
 ```
