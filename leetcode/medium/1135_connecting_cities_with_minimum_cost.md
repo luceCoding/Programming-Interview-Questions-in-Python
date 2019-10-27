@@ -23,8 +23,8 @@ If there was a real adaptable priority queue, there would be a feature to update
 To read more about adaptable priority queues, check out [Data Structures and Algorithms in Python 1st Edition](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275).
 
 This example is more of a lazy heap implementation, looking at the heapq documentation, they show an implementation of a lazy adaptable priority queue.
-This will help us to get O((V + E)logV) run-time.
-Without performing the lazy delete technique with a heaq, we would get O(V^2(V + E)logV) run-time.
+This will help us get O((V + E)logV) run-time.
+Without performing the lazy delete technique with a heaq, we would get O((V + E)^2logV) run-time.
 That is because in a undirected dense graph, we would be adding duplicate entries of the same nodes into the heap.
 There are a lot of incorrect implementations of Prim's Algorithm using heapq that do not perform lazy deletes out there, so be warned.
 
